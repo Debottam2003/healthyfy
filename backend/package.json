@@ -4,10 +4,12 @@
   "description": "This is a full stack project with a great vision this is a cooking recepie webapp where various recipes are available but most important think is users can generate recipes accordinng to their need and any type of custom healthy dishes",
   "license": "ISC",
   "author": "Debottam Kar, Shubhranil Karmakar, Gagan Mondal",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -16,5 +18,8 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
