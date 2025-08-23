@@ -23,3 +23,10 @@ create table if not exists Recipes (
     );
 
 -- alter table generations rename title to name;
+
+-- Step 1: Create the enum type
+-- CREATE TYPE meal_category AS ENUM ('main course', 'starter', 'dessert');
+
+-- Step 2: Add the new column using that type
+-- ALTER TABLE recipes 
+-- ADD COLUMN category meal_category;
