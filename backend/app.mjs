@@ -8,7 +8,7 @@ const PORT = 3333;
 
 async function main() { // entry point of the application
     try {
-        let { rows } = await pool.query("select * from recipes order by rid asc limit 70");
+        let { rows } = await pool.query("select * from recipes limit 20");
         app.get("/", (req, res) => {
             res.send(rows);
         });
