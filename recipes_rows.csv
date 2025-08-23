@@ -1,0 +1,461 @@
+rid,name,cuisine,recipe,category,imageurl
+1,Butter Chicken,Indian,"  <header>
+    <h1>Butter Chicken</h1>
+    <p>Creamy, rich, and full of flavor</p>
+  </header>
+
+  <main class=""container"">
+    <section>
+      <h2>Ingredients</h2>
+      <ul class=""ingredients"">
+        <li><input type=""checkbox""> 500g boneless chicken (cut into cubes)</li>
+        <li><input type=""checkbox""> 3 tbsp butter</li>
+        <li><input type=""checkbox""> 1 cup tomato puree</li>
+        <li><input type=""checkbox""> 1 medium onion (finely chopped)</li>
+        <li><input type=""checkbox""> 2 tsp ginger-garlic paste</li>
+        <li><input type=""checkbox""> 1 tsp red chili powder</li>
+        <li><input type=""checkbox""> 1 tsp garam masala</li>
+        <li><input type=""checkbox""> 1 tsp cumin powder</li>
+        <li><input type=""checkbox""> 1 tsp coriander powder</li>
+        <li><input type=""checkbox""> ½ cup fresh cream</li>
+        <li><input type=""checkbox""> 2 tbsp yogurt</li>
+        <li><input type=""checkbox""> 1 tbsp lemon juice</li>
+        <li><input type=""checkbox""> Salt to taste</li>
+        <li><input type=""checkbox""> Fresh coriander (for garnish)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Instructions</h2>
+      <ol>
+        <li>Marinate chicken with yogurt, lemon juice, red chili powder, and salt. Rest for 30 minutes.</li>
+        <li>Heat 1 tbsp butter in a pan, cook marinated chicken until half-done, then set aside.</li>
+        <li>In the same pan, melt remaining butter and sauté onions until golden.</li>
+        <li>Add ginger-garlic paste, tomato puree, cumin, coriander, and garam masala. Cook until the oil separates.</li>
+        <li>Add chicken back into the sauce and cook on medium heat for 10–15 minutes.</li>
+        <li>Stir in cream, simmer for 3–4 minutes, and adjust seasoning.</li>
+        <li>Garnish with fresh coriander and serve hot with naan or basmati rice.</li>
+      </ol>
+    </section>
+
+    <section class=""note"">
+      <strong>Chef’s Tip:</strong> For extra smoky flavor, place a hot charcoal in a small bowl inside the curry pot, add a drop of ghee, cover for 2 minutes, then remove.
+    </section>
+  </main>
+",main course,"https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&resize=440,400"
+2,Paneer Butter Masala,Indian,"
+  <h1>Paneer Tikka Masala</h1>
+  <p class=""intro"">A restaurant-style North Indian curry made with grilled paneer cubes simmered in a rich, spiced, and creamy tomato-based gravy. Perfect with naan, roti, or basmati rice.</p>
+
+  <div class=""section"">
+    <h2>Ingredients</h2>
+    <h3>For Paneer Tikka</h3>
+    <ul>
+      <li>300–400 g paneer (cottage cheese), cubed</li>
+      <li>1/2 cup thick yogurt (hung or Greek)</li>
+      <li>1 tbsp ginger-garlic paste</li>
+      <li>1 tsp red chili powder</li>
+      <li>1/2 tsp turmeric powder</li>
+      <li>1 tsp garam masala</li>
+      <li>1 tbsp lemon juice</li>
+      <li>1 tbsp gram flour (besan) or cornflour</li>
+      <li>1 tbsp oil</li>
+      <li>Salt to taste</li>
+      <li>1 onion and 1 bell pepper, cut into cubes (optional for skewering)</li>
+    </ul>
+    <h3>For Gravy</h3>
+    <ul>
+      <li>2 tbsp butter or oil</li>
+      <li>1 large onion, finely chopped</li>
+      <li>2 large tomatoes, pureed</li>
+      <li>1 tbsp ginger-garlic paste</li>
+      <li>1 tsp Kashmiri red chili powder</li>
+      <li>1 tsp coriander powder</li>
+      <li>1/2 tsp turmeric powder</li>
+      <li>1 tsp garam masala</li>
+      <li>2–3 tbsp cashew paste (or 1/4 cup cream)</li>
+      <li>1/2 cup water (adjust as needed)</li>
+      <li>Fresh coriander leaves, chopped (for garnish)</li>
+      <li>Salt to taste</li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Instructions</h2>
+    <ol>
+      <li>Mix yogurt, ginger-garlic paste, chili powder, turmeric, garam masala, lemon juice, oil, salt, and gram flour. Coat paneer cubes and (optionally) onion & capsicum. Marinate for 30 minutes.</li>
+      <li>Grill or pan-fry the marinated paneer and veggies until golden and slightly charred. Set aside.</li>
+      <li>Heat butter/oil in a pan. Sauté onions until golden brown.</li>
+      <li>Add ginger-garlic paste, cook 1 minute, then add tomato puree. Cook until oil separates.</li>
+      <li>Add chili powder, coriander powder, turmeric, and salt. Stir well.</li>
+      <li>Mix in cashew paste or cream. Simmer 2 minutes.</li>
+      <li>Add grilled paneer and veggies. Mix gently.</li>
+      <li>Sprinkle garam masala and cook 2–3 minutes more.</li>
+      <li>Garnish with fresh coriander and serve hot with naan, roti, or s",main course,https://www.ruchiskitchen.com/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3-500x375.jpg
+3,Rogan Josh,Indian,"<h1>Rogan Josh</h1>
+<p>A signature dish of Kashmiri cuisine, Rogan Josh is a rich, aromatic curry made with tender lamb cooked in a spiced yogurt-based gravy.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>500 g lamb or goat meat, cut into medium pieces</li>
+<li>3 tbsp mustard oil (or vegetable oil)</li>
+<li>2 large onions, finely sliced</li>
+<li>1 cup plain yogurt (whisked)</li>
+<li>2 tbsp ginger-garlic paste</li>
+<li>2–3 dried red chilies</li>
+<li>1 tsp Kashmiri red chili powder</li>
+<li>1 tsp fennel powder</li>
+<li>1/2 tsp dry ginger powder</li>
+<li>1 tsp garam masala</li>
+<li>2–3 green cardamoms</li>
+<li>1 black cardamom</li>
+<li>2–3 cloves</li>
+<li>1-inch cinnamon stick</li>
+<li>2 bay leaves</li>
+<li>1/2 cup water (adjust as needed)</li>
+<li>Salt to taste</li>
+<li>Fresh coriander leaves for garnish</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li>Heat mustard oil in a heavy-bottomed pan until it begins to smoke. Reduce heat.</li>
+<li>Add whole spices (cardamoms, cloves, cinnamon, bay leaves) and sauté for 30 seconds.</li>
+<li>Add sliced onions and fry until golden brown.</li>
+<li>Add ginger-garlic paste and cook for 1–2 minutes.</li>
+<li>Add lamb pieces and sear on high heat until browned on all sides.</li>
+<li>Lower the heat and add chili powder, fennel powder, dry ginger powder, and salt. Mix well.</li>
+<li>Slowly add whisked yogurt, stirring continuously to prevent curdling.</li>
+<li>Add water, cover, and simmer for 45–60 minutes until the meat is tender and the gravy thickens.</li>
+<li>Sprinkle garam masala and cook for another 2–3 minutes.</li>
+<li>Garnish with fresh coriander and serve hot with steamed rice or naan.</li>
+</ol>
+</div>",main course,https://headbangerskitchen.com/wp-content/uploads/2024/08/ROGANJOSH-H2.jpg
+4,"Biryani
+",Indian,"<h1>Chicken Biryani</h1>
+<p class=""intro"">A fragrant, spiced rice dish cooked with marinated chicken, aromatic spices, and basmati rice. A celebratory favorite in South Asian cuisine.</p>
+
+
+<div class=""section"">
+<h2>Ingredients</h2>
+<h3>For Chicken Marinade</h3>
+<ul>
+<li>500 g chicken, cut into pieces</li>
+<li>1 cup yogurt</li>
+<li>1 tbsp ginger-garlic paste</li>
+<li>1 tsp red chili powder</li>
+<li>1/2 tsp turmeric powder</li>
+<li>1 tsp garam masala</li>
+<li>1 tbsp lemon juice</li>
+<li>Salt to taste</li>
+</ul>
+
+
+<h3>For Rice</h3>
+<ul>
+<li>2 cups basmati rice (soaked 30 minutes)</li>
+<li>4 cups water</li>
+<li>2 bay leaves</li>
+<li>3–4 green cardamoms</li>
+<li>1 black cardamom</li>
+<li>4 cloves</li>
+<li>1 cinnamon stick</li>
+<li>1 tsp salt</li>
+</ul>
+
+
+<h3>Other Ingredients</h3>
+<ul>
+<li>3 tbsp ghee or oil</li>
+<li>2 large onions, thinly sliced and fried until golden (birista)</li>
+<li>2 green chilies, slit</li>
+<li>1/4 cup chopped mint leaves</li>
+<li>1/4 cup chopped coriander leaves</li>
+<li>1/4 tsp saffron soaked in 2 tbsp warm milk (optional)</li>
+</ul>
+</div>
+
+
+<div class=""section"">
+<h2>Instructions</h2>
+<ol>
+<li>Marinate chicken with yogurt, ginger-garlic paste, chili powder, turmeric, garam masala, lemon juice, and salt. Rest for 1 hour.</li>
+<li>Cook basmati rice with whole spices (bay leaves, cardamoms, cloves, cinnamon) until 70% cooked. Drain and set aside.</li>
+<li>Heat ghee/oil in a large pan. Add marinated chicken and cook until partially done.</li>
+<li>Layer half of the rice over the chicken. Add fried onions, mint, coriander, and a drizzle of saffron milk.</li>
+<li>Repeat with remaining rice and toppings. Cover tightly.</li>
+<li>Dum cook (steam) on low heat for 25–30 minutes until chicken is tender and rice is fully cooked.</li>
+<li>Fluff gently and serve hot with raita or salad.</li>
+</ol>
+</div>",main course,https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg
+5,Masala Dosa,Indian,"<h1>Masala Dosa</h1>
+<p>A crispy South Indian crepe made from fermented rice and lentil batter, filled with a spiced potato masala. Best enjoyed with coconut chutney and sambar.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Dosa Batter</h3>
+<ul>
+<li>2 cups rice</li>
+<li>1/2 cup urad dal (split black gram)</li>
+<li>1/4 tsp fenugreek seeds</li>
+<li>Salt to taste</li>
+<li>Water as needed</li>
+</ul>
+
+
+<h3>For Potato Masala</h3>
+<ul>
+<li>3 large potatoes, boiled & mashed</li>
+<li>1 large onion, thinly sliced</li>
+<li>2 green chilies, slit</li>
+<li>1-inch ginger, grated</li>
+<li>1/2 tsp turmeric powder</li>
+<li>1 tsp mustard seeds</li>
+<li>1 tsp urad dal</li>
+<li>8–10 curry leaves</li>
+<li>2 tbsp oil</li>
+<li>Salt to taste</li>
+<li>Fresh coriander leaves for garnish</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<h3>Preparing the Batter</h3>
+<ol>
+<li>Wash and soak rice, urad dal, and fenugreek seeds separately for 6 hours.</li>
+<li>Grind them into a smooth batter, mix well, and allow to ferment overnight (8–10 hours).</li>
+<li>Add salt and mix gently before making dosas.</li>
+</ol>
+
+
+<h3>Preparing the Masala</h3>
+<ol>
+<li>Heat oil in a pan. Add mustard seeds, urad dal, curry leaves, and let them splutter.</li>
+<li>Add onions, green chilies, and ginger. Sauté until onions turn soft.</li>
+<li>Add turmeric powder, mashed potatoes, and salt. Mix well.</li>
+<li>Garnish with fresh coriander leaves and set aside.</li>
+</ol>
+
+
+<h3>Making Masala Dosa</h3>
+<ol>
+<li>Heat a dosa tawa or non-stick pan. Pour a ladle of batter and spread into a thin circle.</li>
+<li>Drizzle a few drops of oil around the edges. Cook until golden and crisp.</li>
+</div>",main course,https://www.shutterstock.com/image-photo/paper-masala-dosa-south-indian-600nw-1008144772.jpg
+6,Chole Bhature,Indian,"<h1>Chole Bhature</h1>
+<p>A classic North Indian dish where spicy chickpea curry (Chole) is served with deep-fried fluffy bread (Bhature). A perfect indulgent weekend meal!</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Chole (Chickpea Curry)</h3>
+<ul>
+<li>2 cups chickpeas (soaked overnight)</li>
+<li>2 large onions, finely chopped</li>
+<li>3 large tomatoes, pureed</li>
+<li>2 green chilies, slit</li>
+<li>1 tbsp ginger-garlic paste</li>
+<li>1 tsp cumin seeds</li>
+<li>2 bay leaves</li>
+<li>1 tsp turmeric powder</li>
+<li>2 tsp coriander powder</li>
+<li>1 tsp red chili powder</li>
+<li>2 tsp chole masala (or garam masala)</li>
+<li>1/2 tsp amchur (dry mango powder)</li>
+<li>Salt to taste</li>
+<li>2 tbsp oil</li>
+<li>Fresh coriander leaves for garnish</li>
+</ul>
+
+
+<h3>For Bhature</h3>
+<ul>
+<li>2 cups all-purpose flour (maida)</li>
+<li>2 tbsp semolina (sooji)</li>
+<li>1/2 cup yogurt</li>
+<li>1/2 tsp baking powder</li>
+<li>1/4 tsp baking soda</li>
+<li>1 tsp sugar</li>
+<li>1/2 tsp salt</li>
+<li>Water (as needed)</li>
+<li>Oil (for deep frying)</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<h3>Preparing Chole</h3>
+<ol>
+<li>Pressure cook soaked chickpeas with salt until soft (4–5 whistles).</li>
+<li>Heat oil in a pan. Add cumin seeds and bay leaves.</li>
+<li>Add onions and sauté until golden brown.</li>
+<li>Add ginger-garlic paste and green chilies. Cook for 1–2 minutes.</li>
+<li>Add tomato puree and cook until oil separates.</li>
+<li>Add turmeric, coriander powder, chili powder, and chole masala. Mix well.</li>
+<li>Add boiled chickpeas with some water. Simmer for 15–20 minutes until thick.</li>
+<li>Sprinkle amchur and garnish with coriander leaves.</li>
+</ol>
+
+
+<h3>Preparing Bhature</h3>
+<ol>
+<li>Mix flour, semolina, baking powder, baking soda, sugar, and salt.</li>
+<li>Add yogurt and knead into a soft dough, adding water as needed.</li>
+<li>Cover and rest for 2 hours.</li>
+<li>Divide dough into balls and roll into circles.</li>
+<li>Deep fry in hot oil until golden and puffed.</li>
+</ol>
+
+
+<h3>Serving</h3>
+<p>Serve hot Chole with fluffy Bhature, sliced onions, and pickles for an authentic experience.</p>
+</div>",main course,"https://cdn.zeptonow.com/production///tr:w-600,ar-100-100,pr-true,f-auto,q-80/web/recipes/chola-bhatura.png"
+7,Dal Makhani,Indian,"<h1>Dal Makhani</h1>
+<p class=""intro"">A rich and creamy North Indian lentil dish made with whole black lentils (urad dal) and red kidney beans (rajma), slow-cooked with butter, cream, and aromatic spices.</p>
+
+
+<div class=""section"">
+<h2>Ingredients</h2>
+<ul>
+<li>1 cup whole black urad dal (black gram)</li>
+<li>1/4 cup rajma (kidney beans)</li>
+<li>1 large onion, finely chopped</li>
+<li>2 large tomatoes, pureed</li>
+<li>1 tbsp ginger-garlic paste</li>
+<li>2 green chilies, slit</li>
+<li>1 tsp cumin seeds</li>
+<li>2–3 cloves</li>
+<li>1-inch cinnamon stick</li>
+<li>2 bay leaves</li>
+<li>1/2 tsp turmeric powder</li>
+<li>1 tsp red chili powder</li>
+<li>1 tsp coriander powder</li>
+<li>1 tsp garam masala</li>
+<li>3 tbsp butter</li>
+<li>2 tbsp fresh cream</li>
+<li>2 tbsp oil</li>
+<li>Salt to taste</li>
+<li>Fresh coriander for garnish</li>
+</ul>
+</div>
+
+
+<div class=""section"">
+<h2>Instructions</h2>
+<ol>
+<li>Soak urad dal and rajma overnight. Pressure cook with salt until soft (about 5–6 whistles).</li>
+<li>Heat oil and butter in a pan. Add cumin seeds, bay leaves, cloves, and cinnamon. Sauté for 1 minute.</li>
+<li>Add onions and sauté until golden brown.</li>
+<li>Add ginger-garlic paste and green chilies. Cook for 1–2 minutes.</li>
+<li>Add tomato puree, turmeric, chili powder, coriander powder, and salt. Cook until oil separates.</li>
+<li>Add cooked dal and rajma with some of the cooking liquid. Mix well and simmer on low heat for 30–40 minutes, stirring occasionally.</li>
+<li>Stir in garam masala, butter, and cream. Simmer for another 5 minutes.</li>
+<li>Garnish with fresh coriander and a drizzle of cream before serving.</li>
+</ol>
+</div>",main course,https://www.cookwithmanali.com/wp-content/uploads/2019/04/Restaurant-Style-Dal-Makhani.jpg
+8,Pani Puri,Indian,"<h1>Pani Puri</h1>
+<p>A popular Indian street food consisting of crispy hollow puris filled with spicy, tangy water, potato filling, and chutneys. Known as Golgappa or Phuchka in different regions.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Puris (or use store-bought)</h3>
+<ul>
+<li>1 cup semolina (sooji/rava)</li>
+<li>2 tbsp all-purpose flour</li>
+<li>1/4 tsp baking soda</li>
+<li>Salt to taste</li>
+<li>Water as needed</li>
+<li>Oil for deep frying</li>
+</ul>
+
+
+<h3>For Spiced Pani (water)</h3>
+<ul>
+<li>1 cup mint leaves</li>
+<li>1/2 cup coriander leaves</li>
+<li>2 green chilies</li>
+<li>1-inch ginger</li>
+<li>2 tbsp tamarind pulp</li>
+<li>1 tsp roasted cumin powder</li>
+<li>1/2 tsp black salt</li>
+<li>Salt to taste</li>
+<li>4 cups cold water</li>
+</ul>
+
+
+<h3>For Filling</h3>
+<ul>
+<li>2 medium potatoes, boiled & mashed</li>
+<li>1/2 cup boiled chickpeas</li>
+<li>1 small onion, finely chopped (optional)</li>
+<li>1/2 tsp chaat masala</li>
+<li>Salt and lemon juice to taste</li>
+</ul>
+
+
+<h3>For Sweet Chutney (optional)</h3>
+<ul>
+<li>1/2 cup tamarind pulp</li>
+<li>1/2 cup jaggery or sugar</li>
+<li>1/2 tsp roasted cumin powder</li>
+<li>A pinch of black salt</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Puris:</strong> Knead semolina, flour, salt, and soda with water into a stiff dough. Rest for 15–20 minutes. Roll out small discs and deep fry until puffed and crispy.</li>
+<li><strong>Spiced Pani:</strong> Blend mint, coriander, chilies, ginger, tamarind, cumin, and salts into a smooth paste. Mix with 4 cups cold water and adjust seasoning. Chill before serving.</li>
+<li><strong>Filling:</strong> Mix boiled potatoes, chickpeas, onion, chaat masala, salt, and lemon juice.</li>
+<li><strong>Sweet Chutney:</strong> Boil tamarind pulp with jaggery, cumin, and salt until slightly thickened. Cool before use.</li>
+<li><strong>Assembly:</strong> Crack the top of each puri, stuff with filling, drizzle with chutney, and dip into spiced water. Serve immediately.</li>
+</ol>
+</div>",starter,https://static01.nyt.com/images/2024/01/17/multimedia/ND-Pani-Puri-mflg/ND-Pani-Puri-mflg-mediumSquareAt3X.jpg
+9,Gulab Jamun,Indian,"<h1>Gulab Jamun</h1>
+<p>A classic Indian dessert made of soft, deep-fried milk solids (khoya or milk powder balls) soaked in a fragrant sugar syrup flavored with cardamom, rose water, or saffron.</p>
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Gulab Jamun Balls</h3>
+<ul>
+<li>1 cup milk powder</li>
+<li>1/4 cup all-purpose flour (maida)</li>
+<li>2 tbsp ghee (clarified butter)</li>
+<li>1/4 cup milk (add gradually as needed)</li>
+<li>1/4 tsp baking soda</li>
+<li>Oil or ghee for deep frying</li>
+</ul>
+
+
+<h3>For Sugar Syrup</h3>
+<ul>
+<li>2 cups sugar</li>
+<li>2 cups water</li>
+<li>4–5 green cardamom pods</li>
+<li>1 tsp rose water (or a few saffron strands)</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Sugar Syrup:</strong> In a pan, add sugar, water, and cardamom. Bring to a boil and simmer until slightly sticky (about 8–10 minutes). Add rose water or saffron and keep warm.</li>
+<li><strong>Dough:</strong> Mix milk powder, flour, baking soda, and ghee. Add milk gradually to form a soft, smooth dough. Do not over-knead. Rest for 10 minutes.</li>
+<li><strong>Shaping:</strong> Divide into small portions and roll into smooth balls without cracks.</li>
+<li><strong>Frying:</strong> Heat oil/ghee on low-medium heat. Fry balls until golden brown, stirring gently for even cooking.</li>
+<li><strong>Soaking:</strong> Remove fried balls and immediately immerse them in warm sugar syrup. Let them soak for at least 2 hours before serving.</li>
+</ol>
+</div>",dessert,https://media.istockphoto.com/id/163064596/photo/gulab-jamun.jpg?s=612x612&w=0&k=20&c=JvJ4AAs-N5pRzzRmVg1lG0talC3QoUt0ZGiO1NKz-kQ=

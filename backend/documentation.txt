@@ -1,0 +1,22 @@
+----------API Documentation----------
+
+* Login API route POST
+  -> handler
+
+* Logout API route POST
+  -> handler
+
+* Register API route POST
+  -> handler
+
+* User Profile API route GET
+  -> Auth middleware, handler 
+
+* Recipe API route GET
+  -> Auth middleware, handler
+
+* Particular Recipe API route GET
+  -> Auth middleware, handler
+
+* Create Recipe API route POST
+  -> Auth middleware, handler

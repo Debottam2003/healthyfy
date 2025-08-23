@@ -19,6 +19,8 @@ create table if not exists Recipes (
     rid serial PRIMARY KEY,
 	Name Text unique not null,
 	Cuisine Text not null,
+	ImageURL Text not null,
+	type text, 
 	Recipe Text not null
     );
 
