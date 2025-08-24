@@ -1,44 +1,35 @@
 INSERT INTO "public"."recipes" ("name", "cuisine", "type", "recipe", "category", "imageurl") VALUES (
-  'Dumplings
- ','Chinese','non veg',
-  '<h1>Dumplings</h1>
-<p>Har Gow is a classic Cantonese dim sum starter — translucent dumplings filled with juicy shrimp and wrapped in a delicate, chewy skin.</p>
-
-
+'Fried Rice (Yangzhou)',
+'Chinese','non veg',
+'<h1>Yangzhou Fried Rice (Yangzhou Chao Fan)</h1>
+<p>Yangzhou Fried Rice is a classic Chinese dish known for its colorful mix of vegetables, egg, shrimp, and BBQ pork, stir-fried with rice to create a flavorful and hearty meal.</p>
 <div>
 <h2>Ingredients</h2>
-<h3>For the Filling</h3>
 <ul>
-<li>250g shrimp, peeled and deveined</li>
-<li>1 tbsp bamboo shoots or water chestnuts, finely chopped</li>
-<li>1 tsp soy sauce</li>
+<li>3 cups cooked jasmine rice (preferably day-old)</li>
+<li>2 eggs, beaten</li>
+<li>100g shrimp, peeled and deveined</li>
+<li>100g Chinese BBQ pork (Char Siu), diced</li>
+<li>1/2 cup green peas</li>
+<li>1 small carrot, diced</li>
+<li>2 spring onions, chopped</li>
+<li>2 tbsp soy sauce</li>
 <li>1 tsp sesame oil</li>
-<li>1/2 tsp sugar</li>
-<li>1/4 tsp white pepper</li>
-<li>1 tsp cornstarch</li>
-</ul>
-
-
-<h3>For the Dumpling Dough</h3>
-<ul>
-<li>1 cup wheat starch</li>
-<li>1/2 cup tapioca starch</li>
-<li>3/4 cup boiling water</li>
-<li>1 tbsp vegetable oil</li>
+<li>2 tbsp vegetable oil</li>
+<li>Salt and white pepper, to taste</li>
 </ul>
 </div>
-
-
 <div>
 <h2>Instructions</h2>
 <ol>
-<li><strong>Prepare Filling:</strong> Chop shrimp into small pieces, mix with bamboo shoots, soy sauce, sesame oil, sugar, pepper, and cornstarch. Set aside.</li>
-<li><strong>Make Dough:</strong> In a bowl, combine wheat starch and tapioca starch. Pour in boiling water, stirring quickly. Add oil and knead into a smooth dough.</li>
-<li><strong>Shape Wrappers:</strong> Roll dough into a log, cut into small pieces, and flatten each into thin round wrappers.</li>
-<li><strong>Assemble Dumplings:</strong> Place a spoonful of filling in the center of each wrapper. Fold and pleat to seal.</li>
-<li><strong>Steam:</strong> Place dumplings on parchment in a bamboo steamer. Steam over boiling water for 6–8 minutes until translucent and cooked.</li>
-<li><strong>Serve:</strong> Serve hot with soy sauce or chili oil.</li>
+<li><strong>Prepare Ingredients:</strong> Dice BBQ pork, carrot, and spring onions. Beat eggs and set aside.</li>
+<li><strong>Scramble Eggs:</strong> Heat 1 tbsp oil in a wok, scramble the eggs, then remove and set aside.</li>
+<li><strong>Cook Shrimp:</strong> Add shrimp to the wok with a little oil and cook until pink. Remove and set aside.</li>
+<li><strong>Stir-fry Vegetables:</strong> Add peas and carrot to the wok. Stir-fry for 2–3 minutes.</li>
+<li><strong>Add Rice:</strong> Add cooked rice, breaking up clumps. Stir-fry with vegetables.</li>
+<li><strong>Combine:</strong> Add eggs, shrimp, BBQ pork, soy sauce, sesame oil, and white pepper. Stir-fry until everything is heated through.</li>
+<li><strong>Serve:</strong> Garnish with spring onions and serve hot.</li>
 </ol>
 </div>
-','starter', 'https://images.eatsmarter.com/sites/default/files/styles/max_size/public/steamed-dim-sum-493553.jpg'
+','main course', 'https://cdn.sanity.io/images/2r0kdewr/production/82f8a09e19a456b94077b31d23861a5b03905307-1000x667.jpg'
 );
