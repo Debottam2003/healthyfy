@@ -3,7 +3,10 @@ import cors from 'cors';
 import pool from './db.mjs';
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
 const PORT = 3333;
 
 async function main() { // entry point of the application
