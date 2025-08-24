@@ -1,35 +1,65 @@
 INSERT INTO "public"."recipes" ("name", "cuisine", "type", "recipe", "category", "imageurl") VALUES (
-'Fried Rice (Yangzhou)',
-'Chinese','non veg',
-'<h1>Yangzhou Fried Rice (Yangzhou Chao Fan)</h1>
-<p>Yangzhou Fried Rice is a classic Chinese dish known for its colorful mix of vegetables, egg, shrimp, and BBQ pork, stir-fried with rice to create a flavorful and hearty meal.</p>
+'Churros',
+'French','non veg',
+'<h1>Churros (Crispy Cinnamon-Sugar Sticks)</h1>
+<p>Golden, crispy-on-the-outside and custardy-inside churros rolled in cinnamon sugar, served with silky chocolate dipping sauce. This recipe uses a simple stovetop dough that pipes and fries beautifully.</p>
 <div>
 <h2>Ingredients</h2>
+<div>
+<div>
+<div>Churro Dough</div>
 <ul>
-<li>3 cups cooked jasmine rice (preferably day-old)</li>
-<li>2 eggs, beaten</li>
-<li>100g shrimp, peeled and deveined</li>
-<li>100g Chinese BBQ pork (Char Siu), diced</li>
-<li>1/2 cup green peas</li>
-<li>1 small carrot, diced</li>
-<li>2 spring onions, chopped</li>
-<li>2 tbsp soy sauce</li>
-<li>1 tsp sesame oil</li>
-<li>2 tbsp vegetable oil</li>
-<li>Salt and white pepper, to taste</li>
+<li>1 cup (240 ml) water</li>
+<li>2 tbsp (28 g) unsalted butter (or neutral oil)</li>
+<li>1 tbsp sugar</li>
+<li>1/2 tsp fine salt</li>
+<li>1 cup (125 g) all-purpose flour</li>
+<li>1 large egg</li>
+<li>1/2 tsp vanilla extract (optional)</li>
+<li>Neutral oil for frying (about 3–4 cups)</li>
 </ul>
+</div>
+<div>
+<div>Cinnamon Sugar</div>
+<ul>
+<li>1/2 cup (100 g) granulated sugar</li>
+<li>1–2 tsp ground cinnamon</li>
+<li>Pinch of salt</li>
+</ul>
+<div>Chocolate Sauce (Optional)</div>
+<ul>
+<li>100 g dark or semi-sweet chocolate, chopped</li>
+<li>1/2 cup (120 ml) heavy cream or milk</li>
+<li>1 tsp butter (optional, for shine)</li>
+<li>Pinch of salt</li>
+</ul>
+</div>
+</div>
 </div>
 <div>
 <h2>Instructions</h2>
 <ol>
-<li><strong>Prepare Ingredients:</strong> Dice BBQ pork, carrot, and spring onions. Beat eggs and set aside.</li>
-<li><strong>Scramble Eggs:</strong> Heat 1 tbsp oil in a wok, scramble the eggs, then remove and set aside.</li>
-<li><strong>Cook Shrimp:</strong> Add shrimp to the wok with a little oil and cook until pink. Remove and set aside.</li>
-<li><strong>Stir-fry Vegetables:</strong> Add peas and carrot to the wok. Stir-fry for 2–3 minutes.</li>
-<li><strong>Add Rice:</strong> Add cooked rice, breaking up clumps. Stir-fry with vegetables.</li>
-<li><strong>Combine:</strong> Add eggs, shrimp, BBQ pork, soy sauce, sesame oil, and white pepper. Stir-fry until everything is heated through.</li>
-<li><strong>Serve:</strong> Garnish with spring onions and serve hot.</li>
+<li><strong>Make cinnamon sugar:</strong> Mix sugar, cinnamon, and a pinch of salt in a shallow dish; set aside.</li>
+<li><strong>Cook the dough:</strong> In a saucepan over medium heat, combine water, butter, sugar, and salt. Bring to a gentle simmer. Add flour all at once and stir vigorously with a wooden spoon until the mixture forms a smooth ball and a thin film coats the pan (1–2 minutes).</li>
+<li><strong>Cool slightly & add egg:</strong> Transfer dough to a bowl. Rest 3–5 minutes to cool slightly, then beat in egg (and vanilla) until glossy and pipeable. It may look separated at first—keep mixing until smooth.</li>
+<li><strong>Heat oil:</strong> In a deep pot, heat oil to <code>175–185°C</code> (350–365°F). Maintain temperature between batches.</li>
+<li><strong>Pipe:</strong> Spoon dough into a piping bag fitted with a large open star tip (e.g., 1M/2D). Pipe 10–15 cm (4–6 in) lengths directly into the hot oil, cutting with scissors.</li>
+<li><strong>Fry:</strong> Fry 2–3 minutes per side until deeply golden and crisp. Avoid crowding. Remove with a spider and drain briefly on a rack or paper towels.</li>
+<li><strong>Coat:</strong> While still warm, roll churros in cinnamon sugar to coat evenly.</li>
+<li><strong>Chocolate sauce:</strong> Warm cream to steaming (not boiling); pour over chopped chocolate with butter and salt. Rest 1 minute, then whisk smooth.</li>
+<li><strong>Serve:</strong> Enjoy immediately—best within 10–15 minutes for peak crispness.</li>
 </ol>
 </div>
-','main course', 'https://cdn.sanity.io/images/2r0kdewr/production/82f8a09e19a456b94077b31d23861a5b03905307-1000x667.jpg'
+<div>
+<h3>Tips & Variations</h3>
+<ul>
+<li><strong>No piping bag?</strong> Use a strong zip-top bag with a star nozzle inserted, or cut a <code>1 cm</code> corner (texture will be smoother but still tasty).</li>
+<li><strong>Extra crisp:</strong> Dry the dough an extra minute in the pan before adding egg; fry at the higher end of the temperature range.</li>
+<li><strong>Fill them:</strong> Pipe a small hole and inject <em>dulce de leche</em>, chocolate, or vanilla pastry cream.</li>
+<li><strong>Baked/Air-fryer:</strong> Pipe onto a lined tray; bake at <code>205°C</code> (400°F) 15–20 min then broil briefly, or air-fry at <code>190°C</code> (375°F) 8–10 min. Brush lightly with melted butter and toss in cinnamon sugar.</li>
+<li><strong>Make ahead:</strong> Unfried piped dough can be frozen on a tray; fry from frozen, adding 1–2 extra minutes.</li>
+</ul>
+<p><strong>Safety:</strong> Use a deep pot and never fill over halfway. Keep kids and pets clear of the hot oil area.</p>
+</div>
+','main course', 'https://www.allrecipes.com/thmb/qq9s8jlKplKUDEo3Gtk15EAJpHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-recipe-24700-churros-VAT-hero-03-4x3-a7f6af1860934b0385f84ab9f13f2613.jpg'
 );
