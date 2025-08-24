@@ -1,37 +1,44 @@
 INSERT INTO "public"."recipes" ("name", "cuisine", "type", "recipe", "category", "imageurl") VALUES (
-  'Panettone','Itallian','non veg',
-  '<div>
-    <h1>Panettone</h1>
-    <p><strong>Servings:</strong> 10-12 | <strong>Prep Time:</strong> 4 hrs (including rising) | <strong>Cook Time:</strong> 50 mins</p>
+  'Dumplings
+ ','Chinese','non veg',
+  '<h1>Dumplings</h1>
+<p>Har Gow is a classic Cantonese dim sum starter — translucent dumplings filled with juicy shrimp and wrapped in a delicate, chewy skin.</p>
 
-    <h2>Ingredients</h2>
-    <ul>
-        <li><input type="checkbox"> 4 cups all-purpose flour</li>
-        <li><input type="checkbox"> ½ cup sugar</li>
-        <li><input type="checkbox"> 1 packet active dry yeast</li>
-        <li><input type="checkbox"> 1 cup warm milk</li>
-        <li><input type="checkbox"> 4 large eggs</li>
-        <li><input type="checkbox"> ½ cup unsalted butter, softened</li>
-        <li><input type="checkbox"> 1 tsp vanilla extract</li>
-        <li><input type="checkbox"> ½ cup candied fruit</li>
-        <li><input type="checkbox"> ½ cup raisins</li>
-        <li><input type="checkbox"> Zest of 1 lemon</li>
-        <li><input type="checkbox"> Pinch of salt</li>
-    </ul>
 
-    <h2>Instructions</h2>
-    <ol>
-        <li>Dissolve yeast in warm milk and let sit for 10 minutes.</li>
-        <li>In a large bowl, combine flour, sugar, and salt.</li>
-        <li>Add eggs, softened butter, vanilla, and lemon zest. Mix until combined.</li>
-        <li>Knead the dough for 10 minutes until smooth and elastic.</li>
-        <li>Cover and let rise for 2 hours or until doubled in size.</li>
-        <li>Mix in candied fruit and raisins gently.</li>
-        <li>Place dough in a greased panettone mold or tall baking tin.</li>
-        <li>Let rise for another hour.</li>
-        <li>Bake in a preheated oven at 180°C (350°F) for about 45-50 minutes or until golden brown.</li>
-        <li>Cool completely before slicing and serving.</li>
-    </ol>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Filling</h3>
+<ul>
+<li>250g shrimp, peeled and deveined</li>
+<li>1 tbsp bamboo shoots or water chestnuts, finely chopped</li>
+<li>1 tsp soy sauce</li>
+<li>1 tsp sesame oil</li>
+<li>1/2 tsp sugar</li>
+<li>1/4 tsp white pepper</li>
+<li>1 tsp cornstarch</li>
+</ul>
+
+
+<h3>For the Dumpling Dough</h3>
+<ul>
+<li>1 cup wheat starch</li>
+<li>1/2 cup tapioca starch</li>
+<li>3/4 cup boiling water</li>
+<li>1 tbsp vegetable oil</li>
+</ul>
 </div>
-','dessert', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9zz3bqZ5LOZecfeZMv2rlyyCORoNSOTZ-hw&s'
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Filling:</strong> Chop shrimp into small pieces, mix with bamboo shoots, soy sauce, sesame oil, sugar, pepper, and cornstarch. Set aside.</li>
+<li><strong>Make Dough:</strong> In a bowl, combine wheat starch and tapioca starch. Pour in boiling water, stirring quickly. Add oil and knead into a smooth dough.</li>
+<li><strong>Shape Wrappers:</strong> Roll dough into a log, cut into small pieces, and flatten each into thin round wrappers.</li>
+<li><strong>Assemble Dumplings:</strong> Place a spoonful of filling in the center of each wrapper. Fold and pleat to seal.</li>
+<li><strong>Steam:</strong> Place dumplings on parchment in a bamboo steamer. Steam over boiling water for 6–8 minutes until translucent and cooked.</li>
+<li><strong>Serve:</strong> Serve hot with soy sauce or chili oil.</li>
+</ol>
+</div>
+','starter', 'https://images.eatsmarter.com/sites/default/files/styles/max_size/public/steamed-dim-sum-493553.jpg'
 );
