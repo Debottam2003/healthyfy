@@ -3,8 +3,10 @@ import loginHandler from '../controllers/loginHandler.mjs';
 import registerHandler from "../controllers/registerHandler.mjs"
 import logoutHandler from '../controllers/logoutHandler.mjs';
 import homeHandler from '../controllers/homeHandler.mjs';
-import generateHandler from '../controllers/generate.mjs';
+import generateHandler from '../controllers/generateHandler.mjs';
 import verifier from '../middleware/verifier.mjs';
+import profileHandler from '../controllers/profileHandler.mjs';
+import registerHandler from '../controllers/registerHandler.mjs';
 
 const router = Router();
 
@@ -13,6 +15,8 @@ router.route("/login").post(loginHandler);
 router.route("/register").post(registerHandler);
 router.route("/logout").post(logoutHandler);
 router.route("/generate").get(verifier, generateHandler);
+router.route("/profile").get(profileHandler);
+router.route("/recipe/:rid").get(recipeHandler);
 
 // fallback route
 router.use((req, res) => {
