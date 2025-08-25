@@ -53,7 +53,7 @@ function RecipeCard() {
               <img
               id="loveIMG"
               // ONCLICK...?
-              src="../../public/images/love.svg"
+              src="../../public/images/whiteLove.png"
               alt="like"
               style={{height:"35px",width:"35px",cursor:"pointer"}}
               />
