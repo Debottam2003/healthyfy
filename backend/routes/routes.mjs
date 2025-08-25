@@ -15,7 +15,7 @@ router.route("/login").post(loginHandler);
 router.route("/register").post(registerHandler);
 router.route("/logout").get(verifier, logoutHandler);
 router.route("/generate").post(verifier, generateHandler);
-router.route("/profile").get(profileHandler);
+router.route("/profile/:uid").get(profileHandler);
 router.route("/recipe/:rid").get(recipeHandler);
 
 // fallback route
