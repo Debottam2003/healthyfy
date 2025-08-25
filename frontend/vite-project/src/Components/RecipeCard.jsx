@@ -108,6 +108,10 @@ function RecipeCard() {
               </div>
 
               <button
+                id= {recipe.rid}
+                onClick={(e) => {
+                  window.location.href = `http://localhost:3333/healthyfy/recipe/${e.target.id}`;
+                }}
                 style={{
                   marginTop: "16px",
                   width: "100%",

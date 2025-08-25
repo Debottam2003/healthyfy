@@ -13,7 +13,7 @@ const profileHandler = async (req, res) => {
             return res.status(200).json(user);
         }
     } catch (err) {
-        errorHandler(req, res);
+        errorHandler(req, res); 
     }
 };
 

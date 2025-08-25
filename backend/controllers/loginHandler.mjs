@@ -1,5 +1,7 @@
 import errorHandler from "../error.mjs";
 import pool from '../db.mjs';
+import jwt from 'jsonwebtoken';
+let secret = "this is the secret key for healthyfy app";
 
 const loginHandler = async (req, res) => {
     try {
@@ -12,6 +14,8 @@ const loginHandler = async (req, res) => {
                 return res.status(400).send("Wrong email or password");
             }
             else if (password === rows[0].password) {
+                let token = jwt.sign({ email }, secret, { expiresIn: '1h' });
+                res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'None' });
                 return res.status(200).json({ message: "Welcome to Healthyfy again." });
             } else {
                 return res.status(400).send("Wrong email or password");

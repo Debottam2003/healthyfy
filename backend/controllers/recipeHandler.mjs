@@ -9,7 +9,8 @@ const recipeHandler = async (req, res) => {
         if (rows.length === 0) {
             return res.status(404).json({ error: "Recipe not found" });
         } else {
-            return res.json(rows[0]);
+            // return res.json(rows[0]);
+            return res.send(rows[0].recipe);
         }
     } catch (error) {
         console.error(error);
