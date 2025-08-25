@@ -8,7 +8,7 @@ function login() {
     // reset();
   }
   return (
-    <div>
+    <div className="auth-form">
       <form onSubmit={handleSubmit(submitForm)}>
         <input type="email" {...register("email")} requires />
         <intput type="password" {...register("password")} requires />
