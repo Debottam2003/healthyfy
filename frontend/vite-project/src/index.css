@@ -24,3 +24,17 @@ body {
     transition-duration:0.8;
     transform: scale(1.1);
 }
+.nav{
+    position:fixed;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 100vh;
+    width: 5vw;
+    /* background-color: #fff; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 5px white;
+}
