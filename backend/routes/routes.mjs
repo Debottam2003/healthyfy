@@ -6,7 +6,7 @@ import homeHandler from '../controllers/homeHandler.mjs';
 import generateHandler from '../controllers/generateHandler.mjs';
 import verifier from '../middleware/verifier.mjs';
 import profileHandler from '../controllers/profileHandler.mjs';
-import registerHandler from '../controllers/registerHandler.mjs';
+import recipeHandler from '../controllers/recipeHandler.mjs';
 
 const router = Router();
 
