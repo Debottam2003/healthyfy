@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-function login() {
+function Login() {
   let { register, handleSubmit, reset } = useForm();
   function submitForm(data) {
     console.log(data);
@@ -19,4 +19,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
