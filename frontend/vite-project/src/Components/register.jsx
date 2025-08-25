@@ -16,11 +16,12 @@ const formStyles = {
   background: "#232323",
   padding: "2rem",
   borderRadius: "8px",
-  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.95)",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
   display: "flex",
   flexDirection: "column",
   gap: "1rem",
   minWidth: "275px",
+  border: "none",
 };
 
 const inputStyles = {

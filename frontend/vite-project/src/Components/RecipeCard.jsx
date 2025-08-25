@@ -27,90 +27,97 @@ function RecipeCard() {
 
   return (
     <>
-      {data.map((recipe) => (
-        <div
-          className="cards"
-          key={recipe.rid}
-          style={{
-            width: "350px",
-            border: "1px solid #000",
-            borderRadius: "16px",
-            boxShadow: "0 0px 10px gold",
-            overflow: "hidden",
-            background: "#000000fc",
-            fontFamily: "cursive",
-            color: "#ddd",
-          }}
-        >
-          <img
-            src={recipe.imageurl}
-            alt="Recipe"
-            style={{ width: "100%", height: "200px", objectFit: "cover" }}
-          />
-          <div style={{ padding: "16px" }}>
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "nowrap",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <h2
+      {data.map((recipe) => {
+        // normalize recipe type
+        return (
+          <div
+            className="cards"
+            key={recipe.rid}
+            style={{
+              width: "350px",
+              border: "1px solid rgb(0, 0, 0)",
+              borderRadius: "16px",
+              boxShadow: "0 0px 10px rgb(255, 215, 0)",
+              overflow: "hidden",
+              background: "rgba(0, 0, 0, 0.988)",
+              fontFamily: "cursive",
+              color: "rgb(221, 221, 221)",
+            }}
+          >
+            <img
+              src={recipe.imageurl}
+              alt="Recipe"
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
+            <div style={{ padding: "16px" }}>
+              <div
                 style={{
-                  margin: "0 0 8px 0",
-                  fontSize: "1.5rem",
-                  color: "#ddd",
+                  display: "flex",
+                  flexWrap: "nowrap",
+                  justifyContent: "space-between",
+                  alignItems: "center",
                 }}
               >
-                {recipe.name}
-              </h2>
-              <img
-                onClick={() => toggleLike(recipe.rid)}
-                src={liked[recipe.rid] ? "/images/redLove.png" : "/images/whiteLove.png"}
-                alt="like"
-                style={{ height: "35px", width: "35px", cursor: "pointer" }}
-              />
+                <h2
+                  style={{
+                    margin: "0 0 8px 0",
+                    fontSize: "1.5rem",
+                    color: "rgb(221, 221, 221)",
+                  }}
+                >
+                  {recipe.name}
+                </h2>
+                <img
+                  onClick={() => toggleLike(recipe.rid)}
+                  src={
+                    liked[recipe.rid]
+                      ? "/images/redLove.png"
+                      : "/images/whiteLove.png"
+                  }
+                  alt="like"
+                  style={{ height: "35px", width: "35px", cursor: "pointer" }}
+                />
+              </div>
+
+              <div>{recipe.cuisine?.toUpperCase()}</div>
+              <br />
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  fontSize: "0.95rem",
+                  color: "rgb(221, 221, 221)",
+                }}
+              >
+                <span>❤️ 100</span>
+                <span>{recipe.type === "veg" ? "🟢 Veg" : "🔴 Non Veg"}</span>
+              </div>
+
+              <button
+                style={{
+                  marginTop: "16px",
+                  width: "100%",
+                  padding: "10px 0",
+                  background:
+                    recipe.type === "non veg"
+                      ? "linear-gradient(90deg, rgb(176, 31, 20) 0%, rgb(249, 201, 56) 100%)"
+                      : "linear-gradient(90deg, rgb(18, 130, 64) 0%, rgb(74, 194, 37) 100%)",
+                  color: "rgb(255, 255, 255)",
+                  border: "none",
+                  borderRadius: "8px",
+                  fontWeight: "bold",
+                  fontSize: "1rem",
+                  cursor: "pointer",
+                  transition: "background 0.2s",
+                }}
+              >
+                View Recipe
+              </button>
             </div>
-
-            <div>{recipe.cuisine.toUpperCase()}</div>
-            <br />
-
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                fontSize: "0.95rem",
-                color: "#ddd",
-              }}
-            >
-              <span>❤️ 100</span>
-              <span>{recipe.type === "veg" ? "🟢 Veg" : "🔴 Non Veg"}</span>
-            </div>
-
-            <button
-              style={{
-                marginTop: "16px",
-                width: "100%",
-                padding: "10px 0",
-                background:
-                  recipe.type === "non veg"
-                    ? "linear-gradient(90deg, #b01f14 0%, #f9c938 100%)"
-                    : "linear-gradient(90deg, #128240 0%, #4ac225 100%)",
-                color: "#fff",
-                border: "none",
-                borderRadius: "8px",
-                fontWeight: "bold",
-                fontSize: "1rem",
-                cursor: "pointer",
-                transition: "background 0.2s",
-              }}
-            >
-              View Recipe
-            </button>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </>
   );
 }

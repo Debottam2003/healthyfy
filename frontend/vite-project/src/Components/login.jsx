@@ -21,6 +21,7 @@ const formStyles = {
   flexDirection: "column",
   gap: "1rem",
   minWidth: "275px",
+  border: "none"
 };
 
 const inputStyles = {
@@ -55,9 +56,11 @@ function Login() {
       );
       console.log("Response:", response.status);
       console.log("Response:", response.statusText);
+      alert("Login Successful");
       // reset();
     } catch (error) {
       console.error("Login failed:", error.message);
+      alert("Login Unsuccessful");
     }
   }
 
