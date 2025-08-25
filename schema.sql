@@ -32,3 +32,8 @@ create table if not exists Recipes (
 -- Step 2: Add the new column using that type
 -- ALTER TABLE recipes 
 -- ADD COLUMN category meal_category;
+
+create table if not exists Likes(
+	uid int references husers(uid) not null ,
+	rid int references recipes(rid) not null , primary key ( uid , rid )      
+);
