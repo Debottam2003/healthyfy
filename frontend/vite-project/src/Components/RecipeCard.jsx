@@ -26,9 +26,8 @@ function RecipeCard() {
   };
 
   return (
-    <>
+    <div className="recipe-cards" style={{display:"flex",flexWrap:"wrap",gap:"20px",justifyContent:"center",padding:"20px"}}>
       {data.map((recipe) => {
-        // normalize recipe type
         return (
           <div
             className="cards"
@@ -118,7 +117,7 @@ function RecipeCard() {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 

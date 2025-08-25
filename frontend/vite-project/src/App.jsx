@@ -1,12 +1,15 @@
-import Navber from "./Components/Navber";
-import MultipleInteractionCard from "./Components/RecipeCard"
+import Navber from "./Components/Navbar";
+import MultipleInteractionCard from "./Components/RecipeCard";
+import Footer from "./Components/Footer";
+
 function App() {
   return (
   <>
   <Navber/>
-    <div className="recipes-area">
+  <div className="recipes-area">
       <MultipleInteractionCard />
-    </div>
+      <Footer></Footer>
+  </div>
   </>
   );
 }
