@@ -1,65 +1,58 @@
 INSERT INTO "public"."recipes" ("name", "cuisine", "type", "recipe", "category", "imageurl") VALUES (
-'Churros',
-'French','non veg',
-'<h1>Churros (Crispy Cinnamon-Sugar Sticks)</h1>
-<p>Golden, crispy-on-the-outside and custardy-inside churros rolled in cinnamon sugar, served with silky chocolate dipping sauce. This recipe uses a simple stovetop dough that pipes and fries beautifully.</p>
-<div>
-<h2>Ingredients</h2>
-<div>
-<div>
-<div>Churro Dough</div>
+'Satay with Peanut Sauce',
+'Thai','non veg',
+'<h1>Satay with Peanut Sauce</h1>
+<p>Satay is a Southeast Asian favorite: marinated, skewered, and grilled meat served with a rich, savory-sweet peanut sauce. This version uses chicken, but you can swap in tofu, beef, or prawns.</p>
+<h2>Ingredients (serves 4)</h2>
+<h3>For the Satay</h3>
 <ul>
-<li>1 cup (240 ml) water</li>
-<li>2 tbsp (28 g) unsalted butter (or neutral oil)</li>
-<li>1 tbsp sugar</li>
-<li>1/2 tsp fine salt</li>
-<li>1 cup (125 g) all-purpose flour</li>
-<li>1 large egg</li>
-<li>1/2 tsp vanilla extract (optional)</li>
-<li>Neutral oil for frying (about 3–4 cups)</li>
+<li>700 g (1.5 lb) boneless chicken thighs or breast, cut into thin strips</li>
+<li>12–16 bamboo skewers (soaked in water 30 minutes)</li>
 </ul>
-</div>
-<div>
-<div>Cinnamon Sugar</div>
+<h4>Satay Marinade</h4>
 <ul>
-<li>1/2 cup (100 g) granulated sugar</li>
-<li>1–2 tsp ground cinnamon</li>
-<li>Pinch of salt</li>
+<li>2 tbsp soy sauce</li>
+<li>1 tbsp fish sauce (optional)</li>
+<li>2 tbsp brown sugar or palm sugar</li>
+<li>2 tbsp neutral oil</li>
+<li>1 tbsp curry powder (or 1–2 tsp red curry paste)</li>
+<li>1 tsp ground coriander</li>
+<li>1 tsp ground cumin</li>
+<li>2 cloves garlic, minced</li>
+<li>1 tsp grated ginger</li>
+<li>1 tbsp lime juice</li>
 </ul>
-<div>Chocolate Sauce (Optional)</div>
+<h3>Peanut Sauce</h3>
 <ul>
-<li>100 g dark or semi-sweet chocolate, chopped</li>
-<li>1/2 cup (120 ml) heavy cream or milk</li>
-<li>1 tsp butter (optional, for shine)</li>
-<li>Pinch of salt</li>
+<li>1/2 cup creamy peanut butter</li>
+<li>3/4 cup coconut milk (or water for lighter)</li>
+<li>1–2 tbsp red curry paste (or 1 tsp chili-garlic sauce)</li>
+<li>1–2 tbsp soy sauce</li>
+<li>1–2 tbsp brown sugar or palm sugar</li>
+<li>1–2 tbsp lime juice</li>
+<li>1 tsp rice vinegar (optional)</li>
+<li>2 tsp fish sauce (optional)</li>
+<li>Warm water as needed to thin</li>
 </ul>
-</div>
-</div>
-</div>
-<div>
+<h3>To Serve</h3>
+<ul>
+<li>Cucumber slices, red onion, fresh coriander</li>
+<li>Lime wedges</li>
+<li>Steamed jasmine rice or rice cakes</li>
+</ul>
 <h2>Instructions</h2>
 <ol>
-<li><strong>Make cinnamon sugar:</strong> Mix sugar, cinnamon, and a pinch of salt in a shallow dish; set aside.</li>
-<li><strong>Cook the dough:</strong> In a saucepan over medium heat, combine water, butter, sugar, and salt. Bring to a gentle simmer. Add flour all at once and stir vigorously with a wooden spoon until the mixture forms a smooth ball and a thin film coats the pan (1–2 minutes).</li>
-<li><strong>Cool slightly & add egg:</strong> Transfer dough to a bowl. Rest 3–5 minutes to cool slightly, then beat in egg (and vanilla) until glossy and pipeable. It may look separated at first—keep mixing until smooth.</li>
-<li><strong>Heat oil:</strong> In a deep pot, heat oil to <code>175–185°C</code> (350–365°F). Maintain temperature between batches.</li>
-<li><strong>Pipe:</strong> Spoon dough into a piping bag fitted with a large open star tip (e.g., 1M/2D). Pipe 10–15 cm (4–6 in) lengths directly into the hot oil, cutting with scissors.</li>
-<li><strong>Fry:</strong> Fry 2–3 minutes per side until deeply golden and crisp. Avoid crowding. Remove with a spider and drain briefly on a rack or paper towels.</li>
-<li><strong>Coat:</strong> While still warm, roll churros in cinnamon sugar to coat evenly.</li>
-<li><strong>Chocolate sauce:</strong> Warm cream to steaming (not boiling); pour over chopped chocolate with butter and salt. Rest 1 minute, then whisk smooth.</li>
-<li><strong>Serve:</strong> Enjoy immediately—best within 10–15 minutes for peak crispness.</li>
+<li><strong>Marinate:</strong> In a bowl, whisk all marinade ingredients. Add chicken strips, coat well, and marinate 30 minutes (up to 8 hours).</li>
+<li><strong>Skewer:</strong> Thread chicken onto soaked skewers in a serpentine fashion.</li>
+<li><strong>Make peanut sauce:</strong> In a small saucepan, combine peanut butter and coconut milk over low heat. Stir in curry paste, soy, sugar, lime juice, and optional fish sauce/vinegar. Simmer gently 2–3 minutes, thinning with warm water to a pourable consistency. Taste and balance salty-sour-sweet-heat.</li>
+<li><strong>Grill/Cook:</strong> Preheat grill, grill pan, or broiler to high. Lightly oil grates. Cook skewers 2–3 minutes per side (5–7 minutes total) until cooked through and lightly charred.</li>
+<li><strong>Serve:</strong> Rest 2 minutes. Plate with peanut sauce, cucumber, herbs, and lime. Serve with rice.</li>
 </ol>
-</div>
-<div>
-<h3>Tips & Variations</h3>
+<h2>Tips & Variations</h2>
 <ul>
-<li><strong>No piping bag?</strong> Use a strong zip-top bag with a star nozzle inserted, or cut a <code>1 cm</code> corner (texture will be smoother but still tasty).</li>
-<li><strong>Extra crisp:</strong> Dry the dough an extra minute in the pan before adding egg; fry at the higher end of the temperature range.</li>
-<li><strong>Fill them:</strong> Pipe a small hole and inject <em>dulce de leche</em>, chocolate, or vanilla pastry cream.</li>
-<li><strong>Baked/Air-fryer:</strong> Pipe onto a lined tray; bake at <code>205°C</code> (400°F) 15–20 min then broil briefly, or air-fry at <code>190°C</code> (375°F) 8–10 min. Brush lightly with melted butter and toss in cinnamon sugar.</li>
-<li><strong>Make ahead:</strong> Unfried piped dough can be frozen on a tray; fry from frozen, adding 1–2 extra minutes.</li>
+<li><strong>Tofu satay:</strong> Use extra-firm tofu (pressed), marinate gently, and grill until crisp edges form.</li>
+<li><strong>Beef/prawn:</strong> Thin-sliced beef cooks quickly; prawns need only 1–2 minutes per side.</li>
+<li><strong>Make-ahead:</strong> Peanut sauce keeps 1 week refrigerated. Rewarm with a splash of water.</li>
 </ul>
-<p><strong>Safety:</strong> Use a deep pot and never fill over halfway. Keep kids and pets clear of the hot oil area.</p>
-</div>
-','main course', 'https://www.allrecipes.com/thmb/qq9s8jlKplKUDEo3Gtk15EAJpHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-recipe-24700-churros-VAT-hero-03-4x3-a7f6af1860934b0385f84ab9f13f2613.jpg'
+','starter', 'https://www.splenda.com/wp-content/themes/bistrotheme/assets/recipe-images/beef-satay-with-peanut-sauce.jpg'
 );
