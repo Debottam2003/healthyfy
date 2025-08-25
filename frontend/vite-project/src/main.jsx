@@ -8,5 +8,5 @@ createRoot(document.getElementById('root')).render(
     {/* <h1>Healthyfy</h1> */}
     <Test />
     {/* <App /> */}
-  </>,
+  </>
 )
