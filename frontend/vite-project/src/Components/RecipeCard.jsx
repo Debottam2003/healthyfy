@@ -69,7 +69,7 @@ function RecipeCard() {
                 width: "100%",
                 padding: "10px 0",
                 background:
-                  "linear-gradient(90deg, #b01f14ff 0%, #f9c938ff 100%)",
+                  recipe.type === "non veg" ? "linear-gradient(90deg, #b01f14ff 0%, #f9c938ff 100%)" : "linear-gradient(90deg, #248d04ff 0%, #9beabcff 100%)",
                 color: "#fff",
                 border: "none",
                 borderRadius: "8px",
