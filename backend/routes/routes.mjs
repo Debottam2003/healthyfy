@@ -13,8 +13,8 @@ const router = Router();
 router.route("/").get(homeHandler);
 router.route("/login").post(loginHandler);
 router.route("/register").post(registerHandler);
-router.route("/logout").post(logoutHandler);
-router.route("/generate").get(verifier, generateHandler);
+router.route("/logout").get(verifier, logoutHandler);
+router.route("/generate").post(verifier, generateHandler);
 router.route("/profile").get(profileHandler);
 router.route("/recipe/:rid").get(recipeHandler);
 
