@@ -41,15 +41,23 @@ function RecipeCard() {
             style={{ width: "100%", height: "200px", objectFit: "cover" }}
           />
           <div style={{ padding: "16px" }}>
-            <h2
+            <div style={{display:"flex",flexWrap:"no-wrap",justifyContent:"space-between"}}>
+              <h2
               style={{
                 margin: "0 0 8px 0",
                 fontSize: "1.5rem",
                 color: "#ddddddff",
-              }}
-            >
+              }}>
               {recipe.name}
             </h2>
+              <img
+              id="loveIMG"
+              // ONCLICK...?
+              src="../../public/images/love.svg"
+              alt="like"
+              style={{height:"35px",width:"35px",cursor:"pointer"}}
+              />
+            </div>
             <div>{recipe.cuisine.toUpperCase()}</div>
             <br />
             <div
@@ -60,7 +68,7 @@ function RecipeCard() {
                 color: "#ddddddff",
               }}
             >
-              <span>❤️100 Likes</span>
+              <span>❤️100</span>
               <span> {recipe.type === "veg" ? "🟢 Veg" : "🔴 Non Veg"} </span>
             </div>
             <button
@@ -69,7 +77,7 @@ function RecipeCard() {
                 width: "100%",
                 padding: "10px 0",
                 background:
-                  recipe.type === "non veg" ? "linear-gradient(90deg, #b01f14ff 0%, #f9c938ff 100%)" : "linear-gradient(90deg, #248d04ff 0%, #9beabcff 100%)",
+                  recipe.type === "non veg" ? "linear-gradient(90deg, #b01f14ff 0%, #f9c938ff 100%)"  :                           "linear-gradient(90deg, #128240ff 0%, #4ac225ff 100%)",
                 color: "#fff",
                 border: "none",
                 borderRadius: "8px",

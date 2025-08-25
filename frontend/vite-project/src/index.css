@@ -20,23 +20,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-.cards:hover {
-    transition: 0.5s ease-in-out;
-    transform: translateY(-15px);
-    /* animation: rotateCard 2s infinite; */
+#loveIMG:hover{
+    transition-duration:0.8;
+    transform: scale(1.1);
 }
-/* @keyframes rotateCard {
-    0% {
-        transform: rotate(10deg);
-    }
-    33% {
-        transform: rotate(0deg);
-    }
-    66% {
-        transform: rotate(-10deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-} */
