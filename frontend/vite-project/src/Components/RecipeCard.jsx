@@ -26,42 +26,56 @@ function RecipeCard() {
   };
 
   return (
-    <div className="recipe-cards" style={{display:"flex",flexWrap:"wrap",gap:"20px",justifyContent:"center",padding:"20px"}}>
+    <div
+      className="recipe-cards"
+      style={{
+        columnCount: 3, // number of columns
+        columnGap: "20px",
+        padding: "20px",
+      }}
+    >
       {data.map((recipe) => {
+        // OPTIONAL: Uncomment if you want random heights instead
+        // const randomHeight = Math.floor(Math.random() * 150) + 250;
+
         return (
           <div
             className="cards"
             key={recipe.rid}
             style={{
-              width: "350px",
-              border: "1px solid rgb(0, 0, 0)",
+              breakInside: "avoid",
+              marginBottom: "20px",
               borderRadius: "16px",
-              boxShadow: "0 0px 10px rgb(255, 215, 0)",
               overflow: "hidden",
-              background: "rgba(0, 0, 0, 0.988)",
-              fontFamily: "cursive",
-              color: "rgb(221, 221, 221)",
+              background: "rgba(242, 242, 242, 0.99)",
+              fontFamily: "arial, sans-serif",
+              color: "rgba(0, 0, 0, 1)",
+              // height: `${randomHeight}px`,  // <- enable for random sized cards
             }}
           >
             <img
               src={recipe.imageurl}
               alt="Recipe"
-              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+              style={{
+                width: "100%",
+                height: "auto",
+                objectFit: "cover",
+              }}
             />
             <div style={{ padding: "16px" }}>
               <div
                 style={{
-                  display: "flex",
                   flexWrap: "nowrap",
-                  justifyContent: "space-between",
                   alignItems: "center",
+                  display: "flex",
+                  justifyContent: "space-between",
                 }}
               >
                 <h2
                   style={{
                     margin: "0 0 8px 0",
                     fontSize: "1.5rem",
-                    color: "rgb(221, 221, 221)",
+                    color: "rgba(0, 0, 0, 1)",
                   }}
                 >
                   {recipe.name}
@@ -86,7 +100,7 @@ function RecipeCard() {
                   display: "flex",
                   justifyContent: "space-between",
                   fontSize: "0.95rem",
-                  color: "rgb(221, 221, 221)",
+                  color: "rgba(0, 0, 0, 1)",
                 }}
               >
                 <span>❤️ 100</span>
@@ -102,7 +116,7 @@ function RecipeCard() {
                     recipe.type === "non veg"
                       ? "linear-gradient(90deg, rgb(176, 31, 20) 0%, rgb(249, 201, 56) 100%)"
                       : "linear-gradient(90deg, rgb(18, 130, 64) 0%, rgb(74, 194, 37) 100%)",
-                  color: "rgb(255, 255, 255)",
+                  color: "rgba(233, 233, 233, 1)",
                   border: "none",
                   borderRadius: "8px",
                   fontWeight: "bold",

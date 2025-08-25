@@ -17,7 +17,6 @@ const loginHandler = async (req, res) => {
                 return res.status(400).send("Wrong email or password");
             }
         }
-        res.send("ok");
     } catch (error) {
         errorHandler(req, res);
     }

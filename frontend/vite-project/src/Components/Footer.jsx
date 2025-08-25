@@ -20,7 +20,7 @@ function Header() {
         <FaYoutube style={{ cursor: 'pointer', fontSize: '2rem' }} />
         <br />
         <div>
-          <p><pre>debottam@gmail.com   samratkarmakarnaihati@gmail.com   gaganchoda@gmail.com</pre></p>
+          <pre>debottam@gmail.com   samratkarmakarnaihati@gmail.com   gaganchoda@gmail.com</pre>
         </div>
       </footer>
     </div>
