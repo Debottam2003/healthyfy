@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import pool from './db.mjs';
 import router from './routes/routes.mjs';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 app.use(cors({
@@ -9,6 +10,8 @@ app.use(cors({
     credentials: true
 }));
 const PORT = 3333;
+app.use(express.json());
+app.use(cookieParser());
 
 app.use("/healthyfy", router);
 
