@@ -5,8 +5,8 @@ import Test from './Test.jsx'
 
 createRoot(document.getElementById('root')).render(
   <>
-    <h1>Healthyfy</h1>
-    {/* <Test /> */}
-    <App />
+    {/* <h1>Healthyfy</h1> */}
+    <Test />
+    {/* <App /> */}
   </>
 )
