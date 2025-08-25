@@ -1,62 +1,61 @@
-import * as React from 'react';
-import AspectRatio from '@mui/joy/AspectRatio';
-import Card from '@mui/joy/Card';
-import CardContent from '@mui/joy/CardContent';
-import CardOverflow from '@mui/joy/CardOverflow';
-import Divider from '@mui/joy/Divider';
-import Typography from '@mui/joy/Typography';
-import IconButton from '@mui/joy/IconButton';
-import Link from '@mui/joy/Link';
-import Favorite from '@mui/icons-material/Favorite';
+import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react';
 
-export default function MultipleInteractionCard() {
+function RecipeCard() {
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await fetch('https://api.example.com/recipes');
+  //     const data = await response.json();
+  //     console.log(data);
+  //   }
+  // },[]);
   return (
-    <Card variant="outlined" sx={{ width: 320 }}>
-      <CardOverflow>
-        <AspectRatio ratio="2">
-          <img
-            src="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318"
-            srcSet="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x"
-            loading="lazy"
-            alt="Dish Preview"
-          />
-        </AspectRatio>
-        <IconButton
-          aria-label="Like minimal photography"
-          size="md"
-          variant="solid"
-          color="danger"
-          sx={{
-            position: 'absolute',
-            zIndex: 2,
-            borderRadius: '50%',
-            right: '1rem',
-            bottom: 0,
-            transform: 'translateY(50%)',
+    <div className='cards' style={{
+      maxWidth: '350px',
+      border: '1px solid #000000ff',
+      borderRadius: '16px',
+      boxShadow: '0 0px 10px gold',
+      overflow: 'hidden',
+      background: '#000000fc',
+      fontFamily: 'cursive',
+      color: '#ddddddff',
+    }}>
+      <img
+        src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2024-05-pad-see-ew%2Fpad-see-ew-357"
+        alt="Recipe"
+        style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+      />
+      <div style={{ padding: '16px' }}>
+        <h2 style={{ margin: '0 0 8px 0', fontSize: '1.5rem', color: '#ddddddff' }}>Delicious Avocado Toast</h2>
+        <p style={{ margin: '0 0 12px 0', color: '#ddddddff' }}>
+          Creamy avocado on toasted sourdough, topped with chili flakes and a drizzle of olive oil.
+        </p>
+        <div>Italian</div><br />
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.95rem', color: '#ddddddff' }}>
+          <span>❤️100 Likes</span>
+          <span>🔴 Non Veg </span>
+        </div>
+        <button
+          style={{
+            marginTop: '16px',
+            width: '100%',
+            padding: '10px 0',
+            background: 'linear-gradient(90deg, #b01f14ff 0%, #f9c938ff 100%)',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '8px',
+            fontWeight: 'bold',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            transition: 'background 0.2s'
           }}
         >
-          <Favorite />
-        </IconButton>
-      </CardOverflow>
-      <CardContent>
-        <Typography level="title-md">
-          <Link href="#" overlay underline="none">
-            Dish Name
-          </Link>
-        </Typography>
-        <Typography level="body-sm">
-          <Link href="#" overlay underline="none"> 
-            Cuisine Name
-          </Link>
-        </Typography>
-      </CardContent>
-      <CardOverflow variant="soft">
-        <Divider inset="context" />
-        <CardContent orientation="horizontal">
-          <Typography level="body-xs">1000 Likes</Typography>
-          <Divider orientation="vertical" />
-        </CardContent>
-      </CardOverflow>
-    </Card>
-  );
+          View Recipe
+        </button>
+      </div>
+    </div>
+  )
 }
+
+export default RecipeCard

@@ -1,8 +1,11 @@
+import MultipleInteractionCard from "./Components/RecipeCard"
 function App() {
   return (
-    <>
-      <h1>This is healthyfy</h1>
-    </>
+    <div className="recipes-area">
+      {new Array(25).fill(0).map((_, index) => (
+        <MultipleInteractionCard key={index} />
+      ))}
+    </div>
   );
 }
 
