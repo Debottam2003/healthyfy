@@ -1,7 +1,2514 @@
-INSERT INTO "public"."recipes" ("name", "cuisine", "type", "recipe", "category", "imageurl") VALUES (
-'Satay with Peanut Sauce',
-'Thai','non veg',
-'<h1>Satay with Peanut Sauce</h1>
+INSERT INTO "public"."recipes" ("rid", "name", "cuisine", "recipe", "category", "imageurl", "type") VALUES ('1', 'Butter Chicken', 'Indian', '  <header>
+    <h1>Butter Chicken</h1>
+    <p>Creamy, rich, and full of flavor</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Ingredients</h2>
+      <ul class="ingredients">
+        <li><input type="checkbox"> 500g boneless chicken (cut into cubes)</li>
+        <li><input type="checkbox"> 3 tbsp butter</li>
+        <li><input type="checkbox"> 1 cup tomato puree</li>
+        <li><input type="checkbox"> 1 medium onion (finely chopped)</li>
+        <li><input type="checkbox"> 2 tsp ginger-garlic paste</li>
+        <li><input type="checkbox"> 1 tsp red chili powder</li>
+        <li><input type="checkbox"> 1 tsp garam masala</li>
+        <li><input type="checkbox"> 1 tsp cumin powder</li>
+        <li><input type="checkbox"> 1 tsp coriander powder</li>
+        <li><input type="checkbox"> ½ cup fresh cream</li>
+        <li><input type="checkbox"> 2 tbsp yogurt</li>
+        <li><input type="checkbox"> 1 tbsp lemon juice</li>
+        <li><input type="checkbox"> Salt to taste</li>
+        <li><input type="checkbox"> Fresh coriander (for garnish)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Instructions</h2>
+      <ol>
+        <li>Marinate chicken with yogurt, lemon juice, red chili powder, and salt. Rest for 30 minutes.</li>
+        <li>Heat 1 tbsp butter in a pan, cook marinated chicken until half-done, then set aside.</li>
+        <li>In the same pan, melt remaining butter and sauté onions until golden.</li>
+        <li>Add ginger-garlic paste, tomato puree, cumin, coriander, and garam masala. Cook until the oil separates.</li>
+        <li>Add chicken back into the sauce and cook on medium heat for 10–15 minutes.</li>
+        <li>Stir in cream, simmer for 3–4 minutes, and adjust seasoning.</li>
+        <li>Garnish with fresh coriander and serve hot with naan or basmati rice.</li>
+      </ol>
+    </section>
+
+    <section class="note">
+      <strong>Chef’s Tip:</strong> For extra smoky flavor, place a hot charcoal in a small bowl inside the curry pot, add a drop of ghee, cover for 2 minutes, then remove.
+    </section>
+  </main>
+', 'main course', 'https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&resize=440,400', 'non veg'), ('2', 'Paneer Butter Masala', 'Indian', '
+  <h1>Paneer Tikka Masala</h1>
+  <p class="intro">A restaurant-style North Indian curry made with grilled paneer cubes simmered in a rich, spiced, and creamy tomato-based gravy. Perfect with naan, roti, or basmati rice.</p>
+
+  <div class="section">
+    <h2>Ingredients</h2>
+    <h3>For Paneer Tikka</h3>
+    <ul>
+      <li>300–400 g paneer (cottage cheese), cubed</li>
+      <li>1/2 cup thick yogurt (hung or Greek)</li>
+      <li>1 tbsp ginger-garlic paste</li>
+      <li>1 tsp red chili powder</li>
+      <li>1/2 tsp turmeric powder</li>
+      <li>1 tsp garam masala</li>
+      <li>1 tbsp lemon juice</li>
+      <li>1 tbsp gram flour (besan) or cornflour</li>
+      <li>1 tbsp oil</li>
+      <li>Salt to taste</li>
+      <li>1 onion and 1 bell pepper, cut into cubes (optional for skewering)</li>
+    </ul>
+    <h3>For Gravy</h3>
+    <ul>
+      <li>2 tbsp butter or oil</li>
+      <li>1 large onion, finely chopped</li>
+      <li>2 large tomatoes, pureed</li>
+      <li>1 tbsp ginger-garlic paste</li>
+      <li>1 tsp Kashmiri red chili powder</li>
+      <li>1 tsp coriander powder</li>
+      <li>1/2 tsp turmeric powder</li>
+      <li>1 tsp garam masala</li>
+      <li>2–3 tbsp cashew paste (or 1/4 cup cream)</li>
+      <li>1/2 cup water (adjust as needed)</li>
+      <li>Fresh coriander leaves, chopped (for garnish)</li>
+      <li>Salt to taste</li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Instructions</h2>
+    <ol>
+      <li>Mix yogurt, ginger-garlic paste, chili powder, turmeric, garam masala, lemon juice, oil, salt, and gram flour. Coat paneer cubes and (optionally) onion & capsicum. Marinate for 30 minutes.</li>
+      <li>Grill or pan-fry the marinated paneer and veggies until golden and slightly charred. Set aside.</li>
+      <li>Heat butter/oil in a pan. Sauté onions until golden brown.</li>
+      <li>Add ginger-garlic paste, cook 1 minute, then add tomato puree. Cook until oil separates.</li>
+      <li>Add chili powder, coriander powder, turmeric, and salt. Stir well.</li>
+      <li>Mix in cashew paste or cream. Simmer 2 minutes.</li>
+      <li>Add grilled paneer and veggies. Mix gently.</li>
+      <li>Sprinkle garam masala and cook 2–3 minutes more.</li>
+      <li>Garnish with fresh coriander and serve hot with naan, roti, or s', 'main course', 'https://www.ruchiskitchen.com/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3-500x375.jpg', 'veg'), ('3', 'Rogan Josh', 'Indian', '<h1>Rogan Josh</h1>
+<p>A signature dish of Kashmiri cuisine, Rogan Josh is a rich, aromatic curry made with tender lamb cooked in a spiced yogurt-based gravy.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>500 g lamb or goat meat, cut into medium pieces</li>
+<li>3 tbsp mustard oil (or vegetable oil)</li>
+<li>2 large onions, finely sliced</li>
+<li>1 cup plain yogurt (whisked)</li>
+<li>2 tbsp ginger-garlic paste</li>
+<li>2–3 dried red chilies</li>
+<li>1 tsp Kashmiri red chili powder</li>
+<li>1 tsp fennel powder</li>
+<li>1/2 tsp dry ginger powder</li>
+<li>1 tsp garam masala</li>
+<li>2–3 green cardamoms</li>
+<li>1 black cardamom</li>
+<li>2–3 cloves</li>
+<li>1-inch cinnamon stick</li>
+<li>2 bay leaves</li>
+<li>1/2 cup water (adjust as needed)</li>
+<li>Salt to taste</li>
+<li>Fresh coriander leaves for garnish</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li>Heat mustard oil in a heavy-bottomed pan until it begins to smoke. Reduce heat.</li>
+<li>Add whole spices (cardamoms, cloves, cinnamon, bay leaves) and sauté for 30 seconds.</li>
+<li>Add sliced onions and fry until golden brown.</li>
+<li>Add ginger-garlic paste and cook for 1–2 minutes.</li>
+<li>Add lamb pieces and sear on high heat until browned on all sides.</li>
+<li>Lower the heat and add chili powder, fennel powder, dry ginger powder, and salt. Mix well.</li>
+<li>Slowly add whisked yogurt, stirring continuously to prevent curdling.</li>
+<li>Add water, cover, and simmer for 45–60 minutes until the meat is tender and the gravy thickens.</li>
+<li>Sprinkle garam masala and cook for another 2–3 minutes.</li>
+<li>Garnish with fresh coriander and serve hot with steamed rice or naan.</li>
+</ol>
+</div>', 'main course', 'https://headbangerskitchen.com/wp-content/uploads/2024/08/ROGANJOSH-H2.jpg', 'veg'), ('4', 'Biryani
+', 'Indian', '<h1>Chicken Biryani</h1>
+<p class="intro">A fragrant, spiced rice dish cooked with marinated chicken, aromatic spices, and basmati rice. A celebratory favorite in South Asian cuisine.</p>
+
+
+<div class="section">
+<h2>Ingredients</h2>
+<h3>For Chicken Marinade</h3>
+<ul>
+<li>500 g chicken, cut into pieces</li>
+<li>1 cup yogurt</li>
+<li>1 tbsp ginger-garlic paste</li>
+<li>1 tsp red chili powder</li>
+<li>1/2 tsp turmeric powder</li>
+<li>1 tsp garam masala</li>
+<li>1 tbsp lemon juice</li>
+<li>Salt to taste</li>
+</ul>
+
+
+<h3>For Rice</h3>
+<ul>
+<li>2 cups basmati rice (soaked 30 minutes)</li>
+<li>4 cups water</li>
+<li>2 bay leaves</li>
+<li>3–4 green cardamoms</li>
+<li>1 black cardamom</li>
+<li>4 cloves</li>
+<li>1 cinnamon stick</li>
+<li>1 tsp salt</li>
+</ul>
+
+
+<h3>Other Ingredients</h3>
+<ul>
+<li>3 tbsp ghee or oil</li>
+<li>2 large onions, thinly sliced and fried until golden (birista)</li>
+<li>2 green chilies, slit</li>
+<li>1/4 cup chopped mint leaves</li>
+<li>1/4 cup chopped coriander leaves</li>
+<li>1/4 tsp saffron soaked in 2 tbsp warm milk (optional)</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h2>Instructions</h2>
+<ol>
+<li>Marinate chicken with yogurt, ginger-garlic paste, chili powder, turmeric, garam masala, lemon juice, and salt. Rest for 1 hour.</li>
+<li>Cook basmati rice with whole spices (bay leaves, cardamoms, cloves, cinnamon) until 70% cooked. Drain and set aside.</li>
+<li>Heat ghee/oil in a large pan. Add marinated chicken and cook until partially done.</li>
+<li>Layer half of the rice over the chicken. Add fried onions, mint, coriander, and a drizzle of saffron milk.</li>
+<li>Repeat with remaining rice and toppings. Cover tightly.</li>
+<li>Dum cook (steam) on low heat for 25–30 minutes until chicken is tender and rice is fully cooked.</li>
+<li>Fluff gently and serve hot with raita or salad.</li>
+</ol>
+</div>', 'main course', 'https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg', 'non veg'), ('5', 'Masala Dosa', 'Indian', '<h1>Masala Dosa</h1>
+<p>A crispy South Indian crepe made from fermented rice and lentil batter, filled with a spiced potato masala. Best enjoyed with coconut chutney and sambar.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Dosa Batter</h3>
+<ul>
+<li>2 cups rice</li>
+<li>1/2 cup urad dal (split black gram)</li>
+<li>1/4 tsp fenugreek seeds</li>
+<li>Salt to taste</li>
+<li>Water as needed</li>
+</ul>
+
+
+<h3>For Potato Masala</h3>
+<ul>
+<li>3 large potatoes, boiled & mashed</li>
+<li>1 large onion, thinly sliced</li>
+<li>2 green chilies, slit</li>
+<li>1-inch ginger, grated</li>
+<li>1/2 tsp turmeric powder</li>
+<li>1 tsp mustard seeds</li>
+<li>1 tsp urad dal</li>
+<li>8–10 curry leaves</li>
+<li>2 tbsp oil</li>
+<li>Salt to taste</li>
+<li>Fresh coriander leaves for garnish</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<h3>Preparing the Batter</h3>
+<ol>
+<li>Wash and soak rice, urad dal, and fenugreek seeds separately for 6 hours.</li>
+<li>Grind them into a smooth batter, mix well, and allow to ferment overnight (8–10 hours).</li>
+<li>Add salt and mix gently before making dosas.</li>
+</ol>
+
+
+<h3>Preparing the Masala</h3>
+<ol>
+<li>Heat oil in a pan. Add mustard seeds, urad dal, curry leaves, and let them splutter.</li>
+<li>Add onions, green chilies, and ginger. Sauté until onions turn soft.</li>
+<li>Add turmeric powder, mashed potatoes, and salt. Mix well.</li>
+<li>Garnish with fresh coriander leaves and set aside.</li>
+</ol>
+
+
+<h3>Making Masala Dosa</h3>
+<ol>
+<li>Heat a dosa tawa or non-stick pan. Pour a ladle of batter and spread into a thin circle.</li>
+<li>Drizzle a few drops of oil around the edges. Cook until golden and crisp.</li>
+</div>', 'main course', 'https://www.shutterstock.com/image-photo/paper-masala-dosa-south-indian-600nw-1008144772.jpg', 'veg'), ('6', 'Chole Bhature', 'Indian', '<h1>Chole Bhature</h1>
+<p>A classic North Indian dish where spicy chickpea curry (Chole) is served with deep-fried fluffy bread (Bhature). A perfect indulgent weekend meal!</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Chole (Chickpea Curry)</h3>
+<ul>
+<li>2 cups chickpeas (soaked overnight)</li>
+<li>2 large onions, finely chopped</li>
+<li>3 large tomatoes, pureed</li>
+<li>2 green chilies, slit</li>
+<li>1 tbsp ginger-garlic paste</li>
+<li>1 tsp cumin seeds</li>
+<li>2 bay leaves</li>
+<li>1 tsp turmeric powder</li>
+<li>2 tsp coriander powder</li>
+<li>1 tsp red chili powder</li>
+<li>2 tsp chole masala (or garam masala)</li>
+<li>1/2 tsp amchur (dry mango powder)</li>
+<li>Salt to taste</li>
+<li>2 tbsp oil</li>
+<li>Fresh coriander leaves for garnish</li>
+</ul>
+
+
+<h3>For Bhature</h3>
+<ul>
+<li>2 cups all-purpose flour (maida)</li>
+<li>2 tbsp semolina (sooji)</li>
+<li>1/2 cup yogurt</li>
+<li>1/2 tsp baking powder</li>
+<li>1/4 tsp baking soda</li>
+<li>1 tsp sugar</li>
+<li>1/2 tsp salt</li>
+<li>Water (as needed)</li>
+<li>Oil (for deep frying)</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<h3>Preparing Chole</h3>
+<ol>
+<li>Pressure cook soaked chickpeas with salt until soft (4–5 whistles).</li>
+<li>Heat oil in a pan. Add cumin seeds and bay leaves.</li>
+<li>Add onions and sauté until golden brown.</li>
+<li>Add ginger-garlic paste and green chilies. Cook for 1–2 minutes.</li>
+<li>Add tomato puree and cook until oil separates.</li>
+<li>Add turmeric, coriander powder, chili powder, and chole masala. Mix well.</li>
+<li>Add boiled chickpeas with some water. Simmer for 15–20 minutes until thick.</li>
+<li>Sprinkle amchur and garnish with coriander leaves.</li>
+</ol>
+
+
+<h3>Preparing Bhature</h3>
+<ol>
+<li>Mix flour, semolina, baking powder, baking soda, sugar, and salt.</li>
+<li>Add yogurt and knead into a soft dough, adding water as needed.</li>
+<li>Cover and rest for 2 hours.</li>
+<li>Divide dough into balls and roll into circles.</li>
+<li>Deep fry in hot oil until golden and puffed.</li>
+</ol>
+
+
+<h3>Serving</h3>
+<p>Serve hot Chole with fluffy Bhature, sliced onions, and pickles for an authentic experience.</p>
+</div>', 'main course', 'https://cdn.zeptonow.com/production///tr:w-600,ar-100-100,pr-true,f-auto,q-80/web/recipes/chola-bhatura.png', 'veg'), ('7', 'Dal Makhani', 'Indian', '<h1>Dal Makhani</h1>
+<p class="intro">A rich and creamy North Indian lentil dish made with whole black lentils (urad dal) and red kidney beans (rajma), slow-cooked with butter, cream, and aromatic spices.</p>
+
+
+<div class="section">
+<h2>Ingredients</h2>
+<ul>
+<li>1 cup whole black urad dal (black gram)</li>
+<li>1/4 cup rajma (kidney beans)</li>
+<li>1 large onion, finely chopped</li>
+<li>2 large tomatoes, pureed</li>
+<li>1 tbsp ginger-garlic paste</li>
+<li>2 green chilies, slit</li>
+<li>1 tsp cumin seeds</li>
+<li>2–3 cloves</li>
+<li>1-inch cinnamon stick</li>
+<li>2 bay leaves</li>
+<li>1/2 tsp turmeric powder</li>
+<li>1 tsp red chili powder</li>
+<li>1 tsp coriander powder</li>
+<li>1 tsp garam masala</li>
+<li>3 tbsp butter</li>
+<li>2 tbsp fresh cream</li>
+<li>2 tbsp oil</li>
+<li>Salt to taste</li>
+<li>Fresh coriander for garnish</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h2>Instructions</h2>
+<ol>
+<li>Soak urad dal and rajma overnight. Pressure cook with salt until soft (about 5–6 whistles).</li>
+<li>Heat oil and butter in a pan. Add cumin seeds, bay leaves, cloves, and cinnamon. Sauté for 1 minute.</li>
+<li>Add onions and sauté until golden brown.</li>
+<li>Add ginger-garlic paste and green chilies. Cook for 1–2 minutes.</li>
+<li>Add tomato puree, turmeric, chili powder, coriander powder, and salt. Cook until oil separates.</li>
+<li>Add cooked dal and rajma with some of the cooking liquid. Mix well and simmer on low heat for 30–40 minutes, stirring occasionally.</li>
+<li>Stir in garam masala, butter, and cream. Simmer for another 5 minutes.</li>
+<li>Garnish with fresh coriander and a drizzle of cream before serving.</li>
+</ol>
+</div>', 'main course', 'https://www.cookwithmanali.com/wp-content/uploads/2019/04/Restaurant-Style-Dal-Makhani.jpg', 'veg'), ('8', 'Pani Puri', 'Indian', '<h1>Pani Puri</h1>
+<p>A popular Indian street food consisting of crispy hollow puris filled with spicy, tangy water, potato filling, and chutneys. Known as Golgappa or Phuchka in different regions.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Puris (or use store-bought)</h3>
+<ul>
+<li>1 cup semolina (sooji/rava)</li>
+<li>2 tbsp all-purpose flour</li>
+<li>1/4 tsp baking soda</li>
+<li>Salt to taste</li>
+<li>Water as needed</li>
+<li>Oil for deep frying</li>
+</ul>
+
+
+<h3>For Spiced Pani (water)</h3>
+<ul>
+<li>1 cup mint leaves</li>
+<li>1/2 cup coriander leaves</li>
+<li>2 green chilies</li>
+<li>1-inch ginger</li>
+<li>2 tbsp tamarind pulp</li>
+<li>1 tsp roasted cumin powder</li>
+<li>1/2 tsp black salt</li>
+<li>Salt to taste</li>
+<li>4 cups cold water</li>
+</ul>
+
+
+<h3>For Filling</h3>
+<ul>
+<li>2 medium potatoes, boiled & mashed</li>
+<li>1/2 cup boiled chickpeas</li>
+<li>1 small onion, finely chopped (optional)</li>
+<li>1/2 tsp chaat masala</li>
+<li>Salt and lemon juice to taste</li>
+</ul>
+
+
+<h3>For Sweet Chutney (optional)</h3>
+<ul>
+<li>1/2 cup tamarind pulp</li>
+<li>1/2 cup jaggery or sugar</li>
+<li>1/2 tsp roasted cumin powder</li>
+<li>A pinch of black salt</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Puris:</strong> Knead semolina, flour, salt, and soda with water into a stiff dough. Rest for 15–20 minutes. Roll out small discs and deep fry until puffed and crispy.</li>
+<li><strong>Spiced Pani:</strong> Blend mint, coriander, chilies, ginger, tamarind, cumin, and salts into a smooth paste. Mix with 4 cups cold water and adjust seasoning. Chill before serving.</li>
+<li><strong>Filling:</strong> Mix boiled potatoes, chickpeas, onion, chaat masala, salt, and lemon juice.</li>
+<li><strong>Sweet Chutney:</strong> Boil tamarind pulp with jaggery, cumin, and salt until slightly thickened. Cool before use.</li>
+<li><strong>Assembly:</strong> Crack the top of each puri, stuff with filling, drizzle with chutney, and dip into spiced water. Serve immediately.</li>
+</ol>
+</div>', 'starter', 'https://static01.nyt.com/images/2024/01/17/multimedia/ND-Pani-Puri-mflg/ND-Pani-Puri-mflg-mediumSquareAt3X.jpg', 'veg'), ('9', 'Gulab Jamun', 'Indian', '<h1>Gulab Jamun</h1>
+<p>A classic Indian dessert made of soft, deep-fried milk solids (khoya or milk powder balls) soaked in a fragrant sugar syrup flavored with cardamom, rose water, or saffron.</p>
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Gulab Jamun Balls</h3>
+<ul>
+<li>1 cup milk powder</li>
+<li>1/4 cup all-purpose flour (maida)</li>
+<li>2 tbsp ghee (clarified butter)</li>
+<li>1/4 cup milk (add gradually as needed)</li>
+<li>1/4 tsp baking soda</li>
+<li>Oil or ghee for deep frying</li>
+</ul>
+
+
+<h3>For Sugar Syrup</h3>
+<ul>
+<li>2 cups sugar</li>
+<li>2 cups water</li>
+<li>4–5 green cardamom pods</li>
+<li>1 tsp rose water (or a few saffron strands)</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Sugar Syrup:</strong> In a pan, add sugar, water, and cardamom. Bring to a boil and simmer until slightly sticky (about 8–10 minutes). Add rose water or saffron and keep warm.</li>
+<li><strong>Dough:</strong> Mix milk powder, flour, baking soda, and ghee. Add milk gradually to form a soft, smooth dough. Do not over-knead. Rest for 10 minutes.</li>
+<li><strong>Shaping:</strong> Divide into small portions and roll into smooth balls without cracks.</li>
+<li><strong>Frying:</strong> Heat oil/ghee on low-medium heat. Fry balls until golden brown, stirring gently for even cooking.</li>
+<li><strong>Soaking:</strong> Remove fried balls and immediately immerse them in warm sugar syrup. Let them soak for at least 2 hours before serving.</li>
+</ol>
+</div>', 'dessert', 'https://media.istockphoto.com/id/163064596/photo/gulab-jamun.jpg?s=612x612&w=0&k=20&c=JvJ4AAs-N5pRzzRmVg1lG0talC3QoUt0ZGiO1NKz-kQ=', 'veg'), ('10', 'Rasgulla', 'Indian', '<h1>Rasgulla</h1>
+<p>Rasgulla is a famous Bengali sweet made from soft chenna (Indian cottage cheese) balls cooked in light sugar syrup until spongy and juicy.</p>
+
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>1 liter full cream milk</li>
+<li>2 tbsp lemon juice or vinegar (diluted in water)</li>
+<li>1.5 cups sugar</li>
+<li>4 cups water</li>
+<li>2–3 green cardamom pods (optional)</li>
+<li>1 tsp rose water (optional)</li>
+</ul>
+</div>
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Chenna:</strong> Boil milk in a pan. Add diluted lemon juice/vinegar gradually while stirring until the milk curdles. Strain using a muslin cloth and wash with cold water to remove sourness. Hang for 30 minutes to drain excess water.</li>
+<li><strong>Knead Dough:</strong> Transfer chenna to a plate and knead with your palm for 8–10 minutes until smooth and soft. Divide into equal portions and roll into smooth balls without cracks.</li>
+<li><strong>Prepare Syrup:</strong> In a deep pot, add sugar, water, and cardamom. Bring to a rolling boil.</li>
+<li><strong>Cook Rasgullas:</strong> Gently drop the balls into the boiling syrup. Cover and cook on medium flame for 15–18 minutes, ensuring they double in size. Do not overcrowd the pan.</li>
+<li><strong>Rest & Flavor:</strong> Allow them to cool in the syrup. Add rose water if desired. Refrigerate and serve chilled.</li>
+</ol>
+</div>', 'dessert', 'https://www.chezshuchi.com/images/rasgulla11.JPG', 'veg'), ('11', 'Margherita Pizza', 'Itallian', '<div>
+    <h1>Margherita Pizza</h1>
+    
+    <h2>Ingredients</h2>
+    <p><strong>For the Dough:</strong></p>
+    <ul>
+        <li><input type="checkbox"> 2 cups all-purpose flour</li>
+        <li><input type="checkbox"> 1 tsp salt</li>
+        <li><input type="checkbox"> 1 tsp sugar</li>
+        <li><input type="checkbox"> 1 tsp dry yeast</li>
+        <li><input type="checkbox"> ¾ cup warm water</li>
+        <li><input type="checkbox"> 1 tbsp olive oil</li>
+    </ul>
+
+    <p><strong>For the Topping:</strong></p>
+    <ul>
+        <li><input type="checkbox"> ½ cup tomato sauce</li>
+        <li><input type="checkbox"> 150 g fresh mozzarella cheese</li>
+        <li><input type="checkbox"> Fresh basil leaves (6–8)</li>
+        <li><input type="checkbox"> 1–2 tbsp olive oil</li>
+        <li><input type="checkbox"> Salt to taste</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li> <span>Prepare the Dough:</span> Mix warm water, sugar, and yeast. Let rest for 10 minutes. Add flour, salt, olive oil and knead until smooth. Let rise for 1–1.5 hours.</li> 
+        <li><span>Shape the Base:</span> Preheat oven to 250°C. Punch down dough, roll into a 10-inch circle.</li>
+        <li><span>Add the Toppings:</span> Spread tomato sauce, add mozzarella slices, basil leaves, drizzle olive oil.</li>
+        <li><span>Bake:</span> Bake for 7–10 minutes until crust is golden and cheese melts.</li>
+    </ol>
+    
+    <p>Enjoy your delicious homemade Margherita Pizza!</p>
+</div>
+', 'main course', 'https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg', 'veg'), ('12', 'Spaghetti Carbonara', 'Itallian', '<div>
+    <h1>Spaghetti Carbonara</h1>
+    
+    <h2>Ingredients</h2>
+    <ul>
+        <li><input type="checkbox"> 200g spaghetti</li>
+        <li><input type="checkbox"> 100g pancetta or guanciale (cut into small cubes)</li>
+        <li><input type="checkbox"> 2 large eggs</li>
+        <li><input type="checkbox"> 50g grated Parmesan cheese</li>
+        <li><input type="checkbox"> 2 cloves garlic (optional)</li>
+        <li><input type="checkbox"> Salt and freshly ground black pepper</li>
+        <li><input type="checkbox"> 1 tbsp olive oil</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li><span>Cook the Pasta:</span> Bring salted water to a boil. Cook spaghetti until al dente. Reserve ½ cup pasta water before draining.</li>
+        <li><span>Prepare the Sauce:</span> In a bowl, whisk eggs with Parmesan cheese and a pinch of black pepper.</li>
+        <li><span>Cook Pancetta:</span> Heat olive oil in a pan, add pancetta and cook until crispy. Optionally add garlic for flavor, then remove.</li>
+        <li><span>Combine:</span> Add cooked spaghetti to the pan, remove from heat, then add egg mixture. Stir quickly to create a creamy sauce, adding reserved pasta water if needed.</li>
+        <li><span>Serve:</span> Plate the pasta and sprinkle extra Parmesan and black pepper on top.</li>
+    </ol>
+
+    <p>Enjoy your authentic Spaghetti Carbonara!</p>
+</div>
+', 'main course', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiZuXvUPIs4I6w64PeRs1exfx0KO5xStab4w&s', 'non veg'), ('13', 'Fettuccine Alfredo', 'Itallian', '<div>
+    <h1>Fettuccine Alfredo</h1>
+    
+    <h2>Ingredients</h2>
+    <ul>
+        <li><input type="checkbox"> 250g fettuccine pasta</li>
+        <li><input type="checkbox"> 1 cup heavy cream</li>
+        <li><input type="checkbox"> ½ cup unsalted butter</li>
+        <li><input type="checkbox"> 1 cup grated Parmesan cheese</li>
+        <li><input type="checkbox"> 2 cloves garlic (optional, minced)</li>
+        <li><input type="checkbox"> Salt and black pepper to taste</li>
+        <li><input type="checkbox"> Fresh parsley (for garnish)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li><span>Cook Pasta:</span> Boil salted water, cook fettuccine until al dente, then drain and set aside.</li>
+        <li><span>Make Sauce:</span> In a large pan, melt butter over medium heat. Add garlic (optional) and sauté for 1 minute.</li>
+        <li><span>Add Cream:</span> Pour in heavy cream, stir, and simmer for 2–3 minutes.</li>
+        <li><span>Add Cheese:</span> Reduce heat and add Parmesan cheese. Stir until smooth and creamy.</li>
+        <li><span>Combine:</span> Add cooked fettuccine to the sauce and toss well to coat.</li>
+        <li><span>Serve:</span> Garnish with chopped parsley and extra Parmesan. Serve immediately.</li>
+    </ol>
+
+    <p><strong>Tip:</strong> For a richer flavor, add a pinch of nutmeg or a splash of white wine while cooking the sauce.</p>
+
+    <p>Enjoy your creamy Fettuccine Alfredo!</p>
+</div>
+
+', 'main course', 'https://pinchofyum.com/wp-content/uploads/Mushroom-Fettuccine-Recipe.jpg', 'non veg'), ('14', 'Risotto alla Milanese', 'Itallian', '<div>
+    <h1>Risotto alla Milanese</h1>
+    
+    <h2>Ingredients</h2>
+    <ul>
+        <li><input type="checkbox"> 1 ½ cups Arborio rice</li>
+        <li><input type="checkbox"> 4 cups beef or chicken stock (kept warm)</li>
+        <li><input type="checkbox"> ½ cup dry white wine</li>
+        <li><input type="checkbox"> 1 small onion (finely chopped)</li>
+        <li><input type="checkbox"> 3 tbsp unsalted butter</li>
+        <li><input type="checkbox"> 2 tbsp olive oil</li>
+        <li><input type="checkbox"> Pinch of saffron threads</li>
+        <li><input type="checkbox"> ½ cup grated Parmesan cheese</li>
+        <li><input type="checkbox"> Salt and pepper to taste</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li><span>Prepare Saffron:</span> Soak saffron threads in 2 tbsp warm stock and set aside.</li>
+        <li><span>Cook Onion:</span> In a large pan, heat olive oil and 1 tbsp butter. Sauté onion until soft.</li>
+        <li><span>Toast Rice:</span> Add Arborio rice and stir for 2 minutes until lightly translucent.</li>
+        <li><span>Add Wine:</span> Pour in white wine and stir until absorbed.</li>
+        <li><span>Cook Risotto:</span> Add warm stock one ladle at a time, stirring constantly. Allow each addition to absorb before adding more.</li>
+        <li><span>Add Saffron:</span> Mix in saffron-infused stock halfway through cooking.</li>
+        <li><span>Finish:</span> When rice is creamy and al dente (about 18–20 minutes), stir in remaining butter and Parmesan. Season with salt and pepper.</li>
+        <li><span>Serve:</span> Plate immediately and enjoy while warm.</li>
+    </ol>
+
+    <p><strong>Tip:</strong> For an extra creamy texture, add a splash of cream at the end, but traditionally it is just butter and Parmesan.</p>
+
+    <p>Enjoy your authentic Risotto alla Milanese!</p>
+</div>
+', 'main course', 'https://www.foodandwine.com/thmb/7k2NvESTb9NXno2_zo8GGakas-I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-milanese-risotto-hero-03-e552efcf3d844a37ad25a632447fa12a.jpg', 'non veg'), ('16', 'Lasagna al Forno', 'Itallian', '<div>
+    <h1>Lasagna al Forno</h1>
+    
+    <h2>Ingredients</h2>
+    <p><strong>For the Meat Sauce:</strong></p>
+    <ul>
+        <li><input type="checkbox"> 500g ground beef (or beef & pork mix)</li>
+        <li><input type="checkbox"> 1 onion, finely chopped</li>
+        <li><input type="checkbox"> 2 cloves garlic, minced</li>
+        <li><input type="checkbox"> 400g canned crushed tomatoes</li>
+        <li><input type="checkbox"> 2 tbsp tomato paste</li>
+        <li><input type="checkbox"> ½ cup red wine (optional)</li>
+        <li><input type="checkbox"> Olive oil for cooking</li>
+        <li><input type="checkbox"> Salt and pepper to taste</li>
+        <li><input type="checkbox"> Fresh basil or oregano (optional)</li>
+    </ul>
+
+    <p><strong>For the Béchamel Sauce:</strong></p>
+    <ul>
+        <li><input type="checkbox"> 4 tbsp butter</li>
+        <li><input type="checkbox"> 4 tbsp all-purpose flour</li>
+        <li><input type="checkbox"> 4 cups milk (warm)</li>
+        <li><input type="checkbox"> Pinch of nutmeg</li>
+        <li><input type="checkbox"> Salt and pepper to taste</li>
+    </ul>
+
+    <p><strong>Other:</strong></p>
+    <ul>
+        <li><input type="checkbox"> 12 lasagna sheets (pre-cooked or no-boil)</li>
+        <li><input type="checkbox"> 200g mozzarella cheese (shredded)</li>
+        <li><input type="checkbox"> 100g grated Parmesan cheese</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li><span>Prepare Meat Sauce:</span> In a pan, heat olive oil, sauté onion and garlic. Add ground meat and cook until browned. Stir in tomato paste, crushed tomatoes, and wine. Simmer for 20–30 mins. Season with salt, pepper, and herbs.</li>
+        <li><span>Make Béchamel Sauce:</span> In a saucepan, melt butter, stir in flour to make a roux. Gradually add warm milk, whisking constantly until smooth and thick. Season with salt, pepper, and a pinch of nutmeg.</li>
+        <li><span>Assemble Lasagna:</span> Preheat oven to 180°C (350°F). In a baking dish, layer as follows: meat sauce → lasagna sheets → béchamel → mozzarella. Repeat layers. Finish with béchamel and sprinkle Parmesan on top.</li>
+        <li><span>Bake:</span> Cover with foil and bake for 25 mins, then remove foil and bake for another 15 mins until golden and bubbling.</li>
+        <li><span>Serve:</span> Let rest for 10 mins before slicing and serving.</li>
+    </ol>
+
+    <p><strong>Tip:</strong> For extra flavor, add a splash of cream to the béchamel or use a mix of cheeses (Mozzarella, Parmesan, and Gruyère).</p>
+
+    <p>Enjoy your classic Lasagna al Forno!</p>
+</div>
+', 'main course', 'https://xoxobella.com/wp-content/uploads/2024/03/lasagna_al_forno_featured.jpg', 'non veg'), ('17', 'Gnocchi al Pesto', 'Itallian', '<div>
+    <h1>Gnocchi al Pesto</h1>
+    
+    <h2>Ingredients</h2>
+    <ul>
+        <li><input type="checkbox"> 500g potato gnocchi (fresh or store-bought)</li>
+        <li><input type="checkbox"> ½ cup fresh basil pesto</li>
+        <li><input type="checkbox"> 2 tbsp extra-virgin olive oil</li>
+        <li><input type="checkbox"> 2 tbsp grated Parmesan cheese</li>
+        <li><input type="checkbox"> Salt to taste</li>
+        <li><input type="checkbox"> Pine nuts (optional, for garnish)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li><span>Cook Gnocchi:</span> Bring a large pot of salted water to a boil. Add gnocchi and cook until they float to the surface (about 2–3 minutes). Drain and reserve a little cooking water.</li>
+        <li><span>Prepare Sauce:</span> In a large bowl or pan, mix pesto with olive oil. Add a splash of gnocchi cooking water to loosen the sauce.</li>
+        <li><span>Combine:</span> Toss the hot gnocchi in the pesto sauce until well coated.</li>
+        <li><span>Serve:</span> Plate the gnocchi, sprinkle with Parmesan and garnish with pine nuts if desired.</li>
+    </ol>
+
+    <p><strong>Tip:</strong> Use homemade pesto for the best flavor. You can also add a few cherry tomatoes for a fresh touch.</p>
+
+    <p>Enjoy your delicious Gnocchi al Pesto!</p>
+</div>
+', 'main course', 'https://qbcucina.com/cdn/shop/articles/img-1713808789633_a37501db-2cb5-404a-9bff-eed4f8c45977_1200x.png?v=1713810591', 'veg'), ('18', 'Ossobuco', 'Itallian', '<div>
+    <h1>Ossobuco</h1>
+    
+    <h2>Ingredients</h2>
+    <p><strong>For the Ossobuco:</strong></p>
+    <ul>
+        <li><input type="checkbox"> 4 veal shanks (about 2 inches thick)</li>
+        <li><input type="checkbox"> Salt and pepper to taste</li>
+        <li><input type="checkbox"> ½ cup all-purpose flour (for dredging)</li>
+        <li><input type="checkbox"> 3 tbsp olive oil</li>
+        <li><input type="checkbox"> 2 tbsp butter</li>
+        <li><input type="checkbox"> 1 onion, finely chopped</li>
+        <li><input type="checkbox"> 1 carrot, finely chopped</li>
+        <li><input type="checkbox"> 1 celery stalk, finely chopped</li>
+        <li><input type="checkbox"> 2 cloves garlic, minced</li>
+        <li><input type="checkbox"> 1 cup dry white wine</li>
+        <li><input type="checkbox"> 400g canned crushed tomatoes</li>
+        <li><input type="checkbox"> 2 cups beef or veal stock</li>
+        <li><input type="checkbox"> 1 bay leaf</li>
+        <li><input type="checkbox"> Fresh thyme sprigs</li>
+    </ul>
+
+    <p><strong>For the Gremolata:</strong></p>
+    <ul>
+        <li><input type="checkbox"> 2 tbsp fresh parsley, finely chopped</li>
+        <li><input type="checkbox"> Zest of 1 lemon</li>
+        <li><input type="checkbox"> 1 clove garlic, minced</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li><span>Prepare the Meat:</span> Season veal shanks with salt and pepper, then dredge lightly in flour.</li>
+        <li><span>Brown the Shanks:</span> Heat olive oil and butter in a heavy pot. Brown the shanks on all sides, then remove and set aside.</li>
+        <li><span>Make the Base:</span> Sauté onion, carrot, celery, and garlic until softened.</li>
+        <li><span>Deglaze:</span> Pour in white wine and simmer until reduced by half.</li>
+        <li><span>Add Liquids:</span> Stir in tomatoes, stock, bay leaf, and thyme. Return veal shanks to the pot.</li>
+        <li><span>Simmer:</span> Cover and cook on low heat for 1.5–2 hours until meat is tender and nearly falling off the bone.</li>
+        <li><span>Prepare Gremolata:</span> Mix parsley, lemon zest, and garlic.</li>
+        <li><span>Serve:</span> Plate the shanks, spoon over the sauce, and sprinkle gremolata on top.</li>
+    </ol>
+
+    <p><strong>Tip:</strong> Serve Ossobuco with Risotto alla Milanese or creamy polenta for a traditional pairing.</p>
+
+    <p>Enjoy your authentic Ossobuco!</p>
+</div>
+', 'main course', 'https://recipecontent.fooby.ch/16315_3-2_1920-1280.jpg', 'non veg'), ('20', 'Ravioli di Ricotta e Spinaci', 'Itallian', '<div>
+    <h1>Ravioli di Ricotta e Spinaci</h1>
+    <h2>Ingredients:</h2>
+    <ul>
+        <li><input type="checkbox">300g fresh pasta sheets</li>
+        <li><input type="checkbox">250g ricotta cheese</li>
+        <li><input type="checkbox">150g fresh spinach</li>
+        <li><input type="checkbox">50g grated Parmesan cheese</li>
+        <li><input type="checkbox">1 egg</li>
+        <li><input type="checkbox">Salt and pepper to taste</li>
+        <li><input type="checkbox">A pinch of nutmeg</li>
+        <li><input type="checkbox">Butter and sage for dressing</li>
+    </ul>
+    
+    <h2>Instructions:</h2>
+    <ol>
+        <li>Cook the spinach in boiling water, drain well, and chop finely.</li>
+        <li>Mix spinach with ricotta, Parmesan, egg, salt, pepper, and nutmeg to create the filling.</li>
+        <li>Roll out the pasta sheets and cut into small squares.</li>
+        <li>Place a teaspoon of filling in the center of each square, fold, and seal edges well.</li>
+        <li>Cook ravioli in salted boiling water for 3-4 minutes.</li>
+        <li>In a pan, melt butter and add sage leaves, then toss the ravioli in the sauce.</li>
+        <li>Serve hot with extra Parmesan cheese on top.</li>
+    </ol>
+</div>
+', 'main course', 'https://cookingitalians.com/wp-content/uploads/2024/11/Ravioli-di-Ricotta-e-Spinaci.jpg', 'non veg'), ('21', 'Tiramisu', 'Itallian', '<div>
+    <h1>Tiramisu Recipe</h1>
+    
+    <h2>Ingredients</h2>
+    <ul>
+        <li><input type="checkbox"> 6 egg yolks</li>
+        <li><input type="checkbox"> 3/4 cup sugar</li>
+        <li><input type="checkbox"> 2/3 cup milk</li>
+        <li><input type="checkbox"> 1 1/4 cups heavy cream</li>
+        <li><input type="checkbox"> 1/2 teaspoon vanilla extract</li>
+        <li><input type="checkbox"> 8 oz mascarpone cheese</li>
+        <li><input type="checkbox"> 24 ladyfingers</li>
+        <li><input type="checkbox"> 1 cup strong brewed coffee, cooled</li>
+        <li><input type="checkbox"> 1 tablespoon cocoa powder (for dusting)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>In a saucepan, whisk together egg yolks and sugar, then whisk in milk. Cook over medium heat until mixture boils. Boil gently for 1 minute, then remove from heat and cool slightly.</li>
+        <li>Cover and chill in the refrigerator for 1 hour.</li>
+        <li>In a medium bowl, beat cream with vanilla until stiff peaks form.</li>
+        <li>Whisk mascarpone into the chilled egg mixture until smooth.</li>
+        <li>In a small bowl, combine coffee with 2 tablespoons of rum or liqueur (optional).</li>
+        <li>Quickly dip each ladyfinger into the coffee mixture and layer in a 9x13 inch dish.</li>
+        <li>Spread half of the mascarpone mixture over the ladyfingers, then half of the whipped cream.</li>
+        <li>Repeat layers and finish with whipped cream on top.</li>
+        <li>Dust with cocoa powder and refrigerate for at least 4 hours before serving.</li>
+    </ol>
+</div>
+', 'dessert', 'https://littlespicejar.com/wp-content/uploads/2019/06/The-Easiest-Eggless-Tiramisu-14-735x1102.jpg', 'non veg'), ('22', 'Panettone', 'Itallian', '<div>
+    <h1>Panettone</h1>
+    <p><strong>Servings:</strong> 10-12 | <strong>Prep Time:</strong> 4 hrs (including rising) | <strong>Cook Time:</strong> 50 mins</p>
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li><input type="checkbox"> 4 cups all-purpose flour</li>
+        <li><input type="checkbox"> ½ cup sugar</li>
+        <li><input type="checkbox"> 1 packet active dry yeast</li>
+        <li><input type="checkbox"> 1 cup warm milk</li>
+        <li><input type="checkbox"> 4 large eggs</li>
+        <li><input type="checkbox"> ½ cup unsalted butter, softened</li>
+        <li><input type="checkbox"> 1 tsp vanilla extract</li>
+        <li><input type="checkbox"> ½ cup candied fruit</li>
+        <li><input type="checkbox"> ½ cup raisins</li>
+        <li><input type="checkbox"> Zest of 1 lemon</li>
+        <li><input type="checkbox"> Pinch of salt</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Dissolve yeast in warm milk and let sit for 10 minutes.</li>
+        <li>In a large bowl, combine flour, sugar, and salt.</li>
+        <li>Add eggs, softened butter, vanilla, and lemon zest. Mix until combined.</li>
+        <li>Knead the dough for 10 minutes until smooth and elastic.</li>
+        <li>Cover and let rise for 2 hours or until doubled in size.</li>
+        <li>Mix in candied fruit and raisins gently.</li>
+        <li>Place dough in a greased panettone mold or tall baking tin.</li>
+        <li>Let rise for another hour.</li>
+        <li>Bake in a preheated oven at 180°C (350°F) for about 45-50 minutes or until golden brown.</li>
+        <li>Cool completely before slicing and serving.</li>
+    </ol>
+</div>
+', 'dessert', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9zz3bqZ5LOZecfeZMv2rlyyCORoNSOTZ-hw&s', 'non veg'), ('23', 'Kung Pao Chicken
+ ', 'Chinese', '<h1>Kung Pao Chicken</h1>
+<p>Kung Pao Chicken is a classic Chinese stir-fry dish made with diced chicken, peanuts, vegetables, and chili peppers in a flavorful sweet, savory, and spicy sauce.</p>
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Chicken Marinade</h3>
+<ul>
+<li>500g boneless chicken breast or thigh, diced</li>
+<li>1 tbsp soy sauce</li>
+<li>1 tsp cornstarch</li>
+<li>1 tsp rice wine or sherry</li>
+</ul>
+
+
+<h3>For Sauce</h3>
+<ul>
+<li>2 tbsp soy sauce</li>
+<li>1 tbsp dark soy sauce</li>
+<li>1 tbsp rice vinegar</li>
+<li>1 tbsp hoisin sauce</li>
+<li>1 tbsp sugar</li>
+<li>1 tsp cornstarch</li>
+<li>1/4 cup chicken broth or water</li>
+</ul>
+
+
+<h3>Other Ingredients</h3>
+<ul>
+<li>2 tbsp vegetable oil</li>
+<li>6–8 dried red chilies</li>
+<li>2 garlic cloves, minced</li>
+<li>1-inch ginger, minced</li>
+<li>1/2 cup roasted peanuts</li>
+<li>1/2 red bell pepper, diced</li>
+<li>1/2 green bell pepper, diced</li>
+<li>3–4 spring onions, chopped</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Marinate Chicken:</strong> Mix diced chicken with soy sauce, cornstarch, and rice wine. Set aside for 15–20 minutes.</li>
+<li><strong>Prepare Sauce:</strong> In a bowl, whisk soy sauces, vinegar, hoisin, sugar, cornstarch, and chicken broth.</li>
+<li><strong>Stir-fry:</strong> Heat oil in a wok. Add dried chilies and stir-fry until fragrant. Add garlic and ginger, then chicken. Cook until chicken turns golden.</li>
+<li><strong>Add Veggies:</strong> Toss in bell peppers and stir-fry for 2–3 minutes.</li>
+<li><strong>Combine:</strong> Pour in the sauce and cook until it thickens and coats the chicken. Add peanuts and spring onions. Mix well.</li>
+<li><strong>Serve:</strong> Serve hot with steamed rice or noodles.</li>
+</ol>
+</div>
+', 'main course', 'https://www.kitchensanctuary.com/wp-content/uploads/2019/10/Kung-Pao-Chicken-square-FS-39-new-500x500.jpg', 'non veg'), ('24', 'Sweet and Sour Pork
+ ', 'Chinese', '<h1>Sweet and Sour Pork</h1>
+<p>Sweet and Sour Pork is a popular Chinese dish featuring crispy fried pork tossed in a tangy, sweet, and savory sauce with colorful vegetables.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<h3>For Pork</h3>
+<ul>
+<li>500g pork shoulder or tenderloin, cut into bite-sized cubes</li>
+<li>1 tbsp soy sauce</li>
+<li>1 tbsp rice wine or sherry</li>
+<li>1 egg</li>
+<li>1/2 cup cornstarch (for coating)</li>
+<li>Oil for deep frying</li>
+</ul>
+
+
+<h3>For Sauce</h3>
+<ul>
+<li>3 tbsp ketchup</li>
+<li>2 tbsp rice vinegar</li>
+<li>2 tbsp sugar</li>
+<li>1 tbsp soy sauce</li>
+<li>1/2 cup pineapple juice (from canned pineapple)</li>
+<li>1 tsp cornstarch mixed with 2 tbsp water (slurry)</li>
+</ul>
+
+
+<h3>Other Ingredients</h3>
+<ul>
+<li>1 red bell pepper, diced</li>
+<li>1 green bell pepper, diced</li>
+<li>1 onion, cut into chunks</li>
+<li>1/2 cup pineapple chunks</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Marinate Pork:</strong> Mix pork cubes with soy sauce, rice wine, and egg. Coat with cornstarch evenly.</li>
+<li><strong>Fry Pork:</strong> Heat oil and deep fry pork pieces until golden and crispy. Drain excess oil on paper towels.</li>
+<li><strong>Prepare Sauce:</strong> In a pan, combine ketchup, vinegar, sugar, soy sauce, and pineapple juice. Bring to a boil, then add cornstarch slurry to thicken.</li>
+<li><strong>Cook Vegetables:</strong> Stir-fry bell peppers, onion, and pineapple chunks briefly for crunch.</li>
+<li><strong>Combine:</strong> Add fried pork to the pan, pour over the sauce, and toss everything until well coated.</li>
+<li><strong>Serve:</strong> Serve hot with steamed rice.</li>
+</ol>
+</div>
+', 'main course', 'https://noshingwiththenolands.com/wp-content/uploads/2021/02/Sweet-and-Sour-Pork-Close-up-1200-x-1200.jpg', 'non veg'), ('25', 'Mapo Tofu
+ ', 'Chinese', '<h1>Mapo Tofu</h1>
+<p>Mapo Tofu is a famous Sichuan dish made with soft tofu, ground pork or beef, fermented bean paste, and Sichuan peppercorns for a spicy, numbing flavor.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>400g soft tofu, cubed</li>
+<li>200g ground pork or beef</li>
+<li>2 tbsp doubanjiang (fermented chili bean paste)</li>
+<li>1 tbsp douchi (fermented black beans), optional</li>
+<li>2 garlic cloves, minced</li>
+<li>1-inch ginger, minced</li>
+<li>2 spring onions, chopped</li>
+<li>1 cup chicken broth or water</li>
+<li>1 tbsp soy sauce</li>
+<li>1 tsp sugar</li>
+<li>1 tbsp cornstarch mixed with 2 tbsp water</li>
+<li>1 tbsp Sichuan peppercorns, toasted & ground</li>
+<li>2 tbsp vegetable oil</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Tofu:</strong> Blanch tofu cubes in hot salted water for 2–3 minutes to firm them up. Drain and set aside.</li>
+<li><strong>Cook Meat:</strong> Heat oil in a wok, add ground pork/beef, and stir-fry until browned.</li>
+<li><strong>Add Aromatics:</strong> Stir in garlic, ginger, and doubanjiang (plus douchi if using). Cook until fragrant.</li>
+<li><strong>Sauce:</strong> Add chicken broth, soy sauce, and sugar. Bring to a simmer.</li>
+<li><strong>Tofu:</strong> Gently slide in tofu cubes. Simmer for 5 minutes, allowing flavors to infuse.</li>
+<li><strong>Thicken:</strong> Stir in cornstarch slurry and cook until the sauce thickens slightly.</li>
+<li><strong>Finish:</strong> Sprinkle ground Sichuan peppercorns and chopped spring onions on top before serving.</li>
+</ol>
+</div>
+', 'main course', 'https://www.seriouseats.com/thmb/CaR7btHrJgEO3OKZD1Z_795VmII=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2011__07__2021-02-12-Mapo-Tofu-MHOM-10-804db1211f1d47dbae505341d1e7b994.jpg', 'veg'), ('26', 'Dumplings
+ ', 'Chinese', '<h1>Dumplings</h1>
+<p>Har Gow is a classic Cantonese dim sum starter — translucent dumplings filled with juicy shrimp and wrapped in a delicate, chewy skin.</p>
+
+
+<div>
+<h2>Ingredients</h2>
+<h3>For the Filling</h3>
+<ul>
+<li>250g shrimp, peeled and deveined</li>
+<li>1 tbsp bamboo shoots or water chestnuts, finely chopped</li>
+<li>1 tsp soy sauce</li>
+<li>1 tsp sesame oil</li>
+<li>1/2 tsp sugar</li>
+<li>1/4 tsp white pepper</li>
+<li>1 tsp cornstarch</li>
+</ul>
+
+
+<h3>For the Dumpling Dough</h3>
+<ul>
+<li>1 cup wheat starch</li>
+<li>1/2 cup tapioca starch</li>
+<li>3/4 cup boiling water</li>
+<li>1 tbsp vegetable oil</li>
+</ul>
+</div>
+
+
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Filling:</strong> Chop shrimp into small pieces, mix with bamboo shoots, soy sauce, sesame oil, sugar, pepper, and cornstarch. Set aside.</li>
+<li><strong>Make Dough:</strong> In a bowl, combine wheat starch and tapioca starch. Pour in boiling water, stirring quickly. Add oil and knead into a smooth dough.</li>
+<li><strong>Shape Wrappers:</strong> Roll dough into a log, cut into small pieces, and flatten each into thin round wrappers.</li>
+<li><strong>Assemble Dumplings:</strong> Place a spoonful of filling in the center of each wrapper. Fold and pleat to seal.</li>
+<li><strong>Steam:</strong> Place dumplings on parchment in a bamboo steamer. Steam over boiling water for 6–8 minutes until translucent and cooked.</li>
+<li><strong>Serve:</strong> Serve hot with soy sauce or chili oil.</li>
+</ol>
+</div>
+', 'starter', 'https://images.eatsmarter.com/sites/default/files/styles/max_size/public/steamed-dim-sum-493553.jpg', 'non veg'), ('27', 'Chow Mein
+ ', 'Chinese', '<h1>Chow Mein</h1>
+<p>Chow Mein is a popular Chinese stir-fried noodle dish with vegetables, soy sauce, and optional meat or tofu, known for its savory flavor and quick cooking style.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>200g egg noodles (or wheat noodles)</li>
+<li>2 tbsp vegetable oil</li>
+<li>2 garlic cloves, minced</li>
+<li>1 onion, sliced</li>
+<li>1 carrot, julienned</li>
+<li>1 bell pepper, sliced</li>
+<li>1 cup cabbage, shredded</li>
+<li>2 spring onions, chopped</li>
+<li>100g chicken, beef, shrimp, or tofu (optional)</li>
+</ul>
+<h3>Sauce</h3>
+<ul>
+<li>2 tbsp soy sauce</li>
+<li>1 tbsp oyster sauce (optional)</li>
+<li>1 tbsp hoisin sauce</li>
+<li>1 tsp sesame oil</li>
+<li>1/2 tsp sugar</li>
+<li>1/4 cup chicken broth or water</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Cook Noodles:</strong> Boil noodles according to package instructions, drain, and set aside.</li>
+<li><strong>Prepare Sauce:</strong> In a small bowl, whisk together soy sauce, oyster sauce, hoisin sauce, sesame oil, sugar, and broth.</li>
+<li><strong>Stir-fry Protein:</strong> Heat oil in a wok, cook chicken/shrimp/tofu until done. Remove and set aside.</li>
+<li><strong>Cook Vegetables:</strong> In the same wok, stir-fry garlic, onion, carrot, bell pepper, and cabbage for 2–3 minutes.</li>
+<li><strong>Combine:</strong> Add cooked noodles, protein, and sauce. Toss everything together over high heat until well coated.</li>
+<li><strong>Serve:</strong> Garnish with chopped spring onions and serve hot.</li>
+</ol>
+</div>
+', 'main course', 'https://i.ytimg.com/vi/gbygXUDbf2Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCCbRvjuTJjSuiR5OSYJuE9AKfsDg', 'non veg'), ('28', 'Hot and Sour Soup', 'Chinese', '<h1>Hot and Sour Soup</h1>
+<p>Hot and Sour Soup is a classic Chinese comfort dish that’s savory, tangy, and spicy, packed with mushrooms, tofu, and vegetables in a flavorful broth.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>4 cups chicken or vegetable broth</li>
+<li>1 cup mushrooms (shiitake or button), sliced</li>
+<li>100g firm tofu, cut into strips</li>
+<li>1/2 cup bamboo shoots, julienned</li>
+<li>1 small carrot, julienned</li>
+<li>2 tbsp soy sauce</li>
+<li>1 tbsp rice vinegar</li>
+<li>1 tbsp chili paste or sriracha</li>
+<li>1 tsp sesame oil</li>
+<li>1 tsp sugar</li>
+<li>1 tbsp cornstarch mixed with 2 tbsp water</li>
+<li>1 egg, lightly beaten</li>
+<li>2 spring onions, chopped</li>
+<li>1/2 tsp ground white pepper</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Simmer Broth:</strong> In a pot, bring broth to a boil. Add mushrooms, tofu, bamboo shoots, and carrot. Simmer for 5 minutes.</li>
+<li><strong>Season:</strong> Stir in soy sauce, vinegar, chili paste, sesame oil, sugar, and white pepper.</li>
+<li><strong>Thicken:</strong> Slowly add cornstarch slurry, stirring until soup slightly thickens.</li>
+<li><strong>Egg Ribbon:</strong> Pour in beaten egg in a thin stream, stirring gently to form ribbons.</li>
+<li><strong>Finish:</strong> Garnish with chopped spring onions.</li>
+<li><strong>Serve:</strong> Serve hot as a starter with Chinese meals.</li>
+</ol>
+</div>
+', 'starter', 'https://www.cookwithmanali.com/wp-content/uploads/2024/01/Hot-and-Sour-Soup-Vegetarian.jpg', 'non veg'), ('29', 'Spring Rolls', 'Chinese', '<h1>Spring Rolls</h1>
+<p>Spring Rolls are a crispy and delicious Chinese starter, filled with vegetables (and sometimes meat), wrapped in thin pastry sheets, and deep-fried to golden perfection.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>12 spring roll wrappers</li>
+<li>1 cup cabbage, shredded</li>
+<li>1 carrot, julienned</li>
+<li>1/2 cup bean sprouts</li>
+<li>1/2 cup cooked chicken, shrimp, or tofu (optional)</li>
+<li>2 garlic cloves, minced</li>
+<li>1 tbsp soy sauce</li>
+<li>1 tsp sesame oil</li>
+<li>1/2 tsp sugar</li>
+<li>2 tbsp vegetable oil (for stir-frying)</li>
+<li>Oil for deep frying</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Filling:</strong> Heat 2 tbsp oil in a pan, stir-fry garlic, cabbage, carrot, and bean sprouts. Add soy sauce, sesame oil, sugar, and protein if using. Cook for 3–4 minutes. Let cool.</li>
+<li><strong>Wrap:</strong> Place a spoonful of filling on a wrapper. Fold sides over and roll tightly, sealing edges with water or flour paste.</li>
+<li><strong>Fry:</strong> Heat oil in a deep pan. Fry rolls in batches until golden brown and crispy.</li>
+<li><strong>Drain:</strong> Place fried rolls on paper towels to remove excess oil.</li>
+<li><strong>Serve:</strong> Serve hot with sweet chili sauce or soy dipping sauce.</li>
+</ol>
+</div>
+', 'starter', 'https://www.giallozafferano.com/images/276-27601/Chinese-Spring-Rolls_1200x800.jpg', 'non veg'), ('30', 'Wonton Soup', 'Chinese', '<h1>Wonton Soup</h1>
+<p>Wonton Soup is a comforting Chinese starter featuring delicate dumplings filled with seasoned pork or shrimp, simmered in a clear and flavorful broth.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Wontons</h3>
+<ul>
+<li>25 wonton wrappers</li>
+<li>200g ground pork (or shrimp, finely chopped)</li>
+<li>2 garlic cloves, minced</li>
+<li>1 tsp fresh ginger, grated</li>
+<li>1 tbsp soy sauce</li>
+<li>1 tsp sesame oil</li>
+<li>1/4 tsp white pepper</li>
+<li>1 spring onion, finely chopped</li>
+</ul>
+<h3>For the Soup</h3>
+<ul>
+<li>4 cups chicken broth</li>
+<li>1 tbsp soy sauce</li>
+<li>1 tsp sesame oil</li>
+<li>1 slice fresh ginger</li>
+<li>2–3 spring onions, chopped</li>
+<li>Salt and pepper, to taste</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Wonton Filling:</strong> In a bowl, mix pork (or shrimp), garlic, ginger, soy sauce, sesame oil, pepper, and chopped spring onion.</li>
+<li><strong>Assemble Wontons:</strong> Place 1 tsp filling in the center of each wrapper. Fold into a triangle, seal edges with water, and pinch corners together.</li>
+<li><strong>Cook Wontons:</strong> Bring a pot of water to boil. Drop in wontons and cook for 3–4 minutes until they float. Remove and set aside.</li>
+<li><strong>Prepare Broth:</strong> In another pot, heat chicken broth with soy sauce, ginger, and sesame oil. Simmer for 5 minutes, then remove ginger slice.</li>
+<li><strong>Combine:</strong> Add cooked wontons to the broth. Simmer for 1–2 minutes.</li>
+<li><strong>Serve:</strong> Garnish with chopped spring onions and serve hot.</li>
+</ol>
+</div>
+', 'starter', 'https://iamhomesteader.com/wp-content/uploads/2022/03/wonton-soup-1.jpg', 'non veg'), ('31', 'Fried Rice (Yangzhou)', 'Chinese', '<h1>Yangzhou Fried Rice (Yangzhou Chao Fan)</h1>
+<p>Yangzhou Fried Rice is a classic Chinese dish known for its colorful mix of vegetables, egg, shrimp, and BBQ pork, stir-fried with rice to create a flavorful and hearty meal.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>3 cups cooked jasmine rice (preferably day-old)</li>
+<li>2 eggs, beaten</li>
+<li>100g shrimp, peeled and deveined</li>
+<li>100g Chinese BBQ pork (Char Siu), diced</li>
+<li>1/2 cup green peas</li>
+<li>1 small carrot, diced</li>
+<li>2 spring onions, chopped</li>
+<li>2 tbsp soy sauce</li>
+<li>1 tsp sesame oil</li>
+<li>2 tbsp vegetable oil</li>
+<li>Salt and white pepper, to taste</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Ingredients:</strong> Dice BBQ pork, carrot, and spring onions. Beat eggs and set aside.</li>
+<li><strong>Scramble Eggs:</strong> Heat 1 tbsp oil in a wok, scramble the eggs, then remove and set aside.</li>
+<li><strong>Cook Shrimp:</strong> Add shrimp to the wok with a little oil and cook until pink. Remove and set aside.</li>
+<li><strong>Stir-fry Vegetables:</strong> Add peas and carrot to the wok. Stir-fry for 2–3 minutes.</li>
+<li><strong>Add Rice:</strong> Add cooked rice, breaking up clumps. Stir-fry with vegetables.</li>
+<li><strong>Combine:</strong> Add eggs, shrimp, BBQ pork, soy sauce, sesame oil, and white pepper. Stir-fry until everything is heated through.</li>
+<li><strong>Serve:</strong> Garnish with spring onions and serve hot.</li>
+</ol>
+</div>
+', 'main course', 'https://cdn.sanity.io/images/2r0kdewr/production/82f8a09e19a456b94077b31d23861a5b03905307-1000x667.jpg', 'non veg'), ('32', 'Sushi (Nigiri)', 'Japanese', '<h1>Nigiri Sushi</h1>
+<p>Nigiri Sushi is a traditional Japanese dish made with hand-pressed vinegared rice topped with fresh slices of raw fish like salmon, tuna, or shrimp.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>2 cups sushi rice</li>
+<li>2 1/2 cups water</li>
+<li>1/3 cup rice vinegar</li>
+<li>2 tbsp sugar</li>
+<li>1 tsp salt</li>
+<li>Fresh fish (salmon, tuna, shrimp, etc.), thinly sliced</li>
+<li>Wasabi (optional)</li>
+<li>Soy sauce, for dipping</li>
+<li>Pickled ginger, for serving</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Cook Rice:</strong> Rinse sushi rice under cold water until water runs clear. Combine with water in a rice cooker or pot and cook until tender. Let cool slightly.</li>
+<li><strong>Season Rice:</strong> Mix rice vinegar, sugar, and salt. Gently fold into cooked rice. Let cool to room temperature.</li>
+<li><strong>Prepare Fish:</strong> Slice fresh fish into thin, rectangular slices about 2–3 inches long.</li>
+<li><strong>Shape Rice:</strong> Wet hands with water, take a small amount of rice, and shape into an oval mound.</li>
+<li><strong>Assemble Nigiri:</strong> Place a small dab of wasabi on the rice (optional). Lay a slice of fish over the rice and press gently.</li>
+<li><strong>Serve:</strong> Serve nigiri sushi with soy sauce, pickled ginger, and wasabi.</li>
+</ol>
+</div>
+', 'main course', 'https://www.craftycookbook.com/wp-content/uploads/2024/04/nigiri-sushi-1200.jpg', 'non veg'), ('33', 'Ramen', 'Japanese', '<h1>Ramen</h1>
+<p>Ramen is a beloved Japanese noodle soup consisting of Chinese-style wheat noodles served in a rich broth, often flavored with soy sauce or miso, and topped with sliced pork, egg, and vegetables.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Broth</h3>
+<ul>
+<li>4 cups chicken or pork broth</li>
+<li>2 tbsp soy sauce</li>
+<li>1 tbsp miso paste</li>
+<li>1 tbsp sake (optional)</li>
+<li>1 clove garlic, minced</li>
+<li>1 tsp ginger, grated</li>
+<li>1 tsp sesame oil</li>
+</ul>
+<h3>For the Noodles & Toppings</h3>
+<ul>
+<li>200g fresh ramen noodles</li>
+<li>2 boiled eggs (soft or medium)</li>
+<li>100g chashu pork (or chicken, optional)</li>
+<li>1 sheet nori (seaweed), cut into strips</li>
+<li>1/2 cup corn kernels</li>
+<li>2 spring onions, chopped</li>
+<li>Bean sprouts (optional)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Broth:</strong> In a pot, combine broth, soy sauce, miso paste, sake, garlic, ginger, and sesame oil. Simmer for 15–20 minutes.</li>
+<li><strong>Cook Noodles:</strong> In another pot, cook ramen noodles according to package instructions. Drain and set aside.</li>
+<li><strong>Prepare Toppings:</strong> Slice boiled eggs in half. Slice chashu pork. Prepare other toppings.</li>
+<li><strong>Assemble:</strong> Place noodles in bowls. Ladle hot broth over noodles. Top with pork, eggs, nori, corn, spring onions, and other toppings as desired.</li>
+<li><strong>Serve:</strong> Serve hot and enjoy your comforting bowl of ramen.</li>
+</ol>
+</div>
+', 'main course', 'https://soomfoods.com/cdn/shop/articles/45_d115125d-8365-4865-af0e-5a8f42b577af_1600x.png?v=1750100505', 'non veg'), ('34', 'Tempura', 'Japanese', '<h1>Tempura</h1>
+<p>Tempura is a classic Japanese dish of seafood and vegetables lightly coated in a delicate batter and deep-fried until golden and crispy.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Tempura Batter</h3>
+<ul>
+<li>1 cup all-purpose flour</li>
+<li>1 cup ice-cold water</li>
+<li>1 egg, lightly beaten</li>
+<li>1/4 cup cornstarch (optional, for extra crispiness)</li>
+<li>Pinch of baking soda (optional)</li>
+</ul>
+<h3>For the Tempura</h3>
+<ul>
+<li>6 shrimp, peeled and deveined</li>
+<li>1 sweet potato, thinly sliced</li>
+<li>1 zucchini, sliced</li>
+<li>1 bell pepper, cut into strips</li>
+<li>1/2 cup broccoli florets</li>
+<li>Vegetable oil, for deep frying</li>
+</ul>
+<h3>For the Dipping Sauce (Tentsuyu)</h3>
+<ul>
+<li>1 cup dashi (or substitute with light broth)</li>
+<li>2 tbsp soy sauce</li>
+<li>2 tbsp mirin</li>
+<li>Grated daikon (optional)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Sauce:</strong> In a small pot, combine dashi, soy sauce, and mirin. Simmer for 2–3 minutes. Set aside.</li>
+<li><strong>Heat Oil:</strong> Heat vegetable oil in a deep pan to 170–180°C (340–360°F).</li>
+<li><strong>Mix Batter:</strong> In a bowl, mix egg with ice-cold water. Add flour and cornstarch, stirring lightly (do not overmix; lumps are fine).</li>
+<li><strong>Coat & Fry:</strong> Dip shrimp and vegetables into the batter, then fry in hot oil until golden and crisp. Do not overcrowd the pan.</li>
+<li><strong>Drain:</strong> Remove and place on paper towels to drain excess oil.</li>
+<li><strong>Serve:</strong> Serve hot with dipping sauce and grated daikon if desired.</li>
+</ol>
+</div>
+', 'starter', 'https://twosleevers.com/wp-content/uploads/2023/03/Shrimp-Tempura-1-500x500.png', 'non veg'), ('35', 'Okonomiyaki', 'Japanese', '<h1>Okonomiyaki</h1>
+<p>Okonomiyaki is a savory Japanese pancake made with a batter of flour, grated yam, cabbage, and various toppings like pork belly, seafood, and okonomiyaki sauce.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>1 cup all-purpose flour</li>
+<li>2/3 cup dashi (or water)</li>
+<li>1 egg</li>
+<li>1/2 cup grated nagaimo (Japanese yam, optional)</li>
+<li>2 cups cabbage, finely shredded</li>
+<li>2 spring onions, chopped</li>
+<li>4–6 slices pork belly (or bacon)</li>
+<li>Vegetable oil, for frying</li>
+</ul>
+<h3>Toppings</h3>
+<ul>
+<li>Okonomiyaki sauce (store-bought or homemade)</li>
+<li>Japanese mayonnaise</li>
+<li>Bonito flakes (katsuobushi)</li>
+<li>Aonori (dried seaweed flakes)</li>
+<li>Pickled ginger (optional)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Make Batter:</strong> In a bowl, whisk flour, dashi, egg, and grated yam until smooth.</li>
+<li><strong>Add Vegetables:</strong> Mix in shredded cabbage and chopped spring onions.</li>
+<li><strong>Heat Pan:</strong> Heat a skillet with a little oil over medium heat. Pour in batter to form a pancake shape.</li>
+<li><strong>Add Pork:</strong> Place slices of pork belly on top of the batter.</li>
+<li><strong>Cook:</strong> Fry until bottom is golden brown, then flip carefully. Cook until pork is crisp and pancake is cooked through.</li>
+<li><strong>Top & Serve:</strong> Drizzle with okonomiyaki sauce and mayonnaise. Sprinkle with bonito flakes and aonori. Serve hot.</li>
+</ol>
+</div>
+', 'starter', 'https://static01.nyt.com/images/2023/10/10/multimedia/08EATrex-Okonomiyaki-wjth/08EATrex-Okonomiyaki-wjth-mediumSquareAt3X.jpg', 'non veg'), ('36', 'Takoyaki', 'Japanese', '<h1>Takoyaki</h1>
+<p>Takoyaki is a popular Japanese street food consisting of crispy, golden batter balls filled with diced octopus, tempura scraps, pickled ginger, and green onions, topped with savory sauces and bonito flakes.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>1 cup all-purpose flour</li>
+<li>2 large eggs</li>
+<li>2 cups dashi (or water with dashi powder)</li>
+<li>1/2 tsp soy sauce</li>
+<li>1/2 tsp baking powder</li>
+<li>150g octopus, cooked and diced</li>
+<li>2 tbsp tenkasu (tempura scraps)</li>
+<li>2 tbsp pickled ginger, chopped</li>
+<li>2 spring onions, finely chopped</li>
+<li>Vegetable oil, for greasing pan</li>
+</ul>
+<h3>Toppings</h3>
+<ul>
+<li>Takoyaki sauce</li>
+<li>Japanese mayonnaise</li>
+<li>Bonito flakes (katsuobushi)</li>
+<li>Aonori (seaweed flakes)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Batter:</strong> In a bowl, whisk together flour, eggs, dashi, soy sauce, and baking powder until smooth.</li>
+<li><strong>Heat Pan:</strong> Preheat a takoyaki pan and brush with oil.</li>
+<li><strong>Cook Balls:</strong> Pour batter into each mold, filling to the top. Add a piece of octopus, a little ginger, onion, and tempura scraps.</li>
+<li><strong>Turn & Cook:</strong> As batter sets, use skewers to turn the balls, allowing uncooked batter to flow out and form a round shape. Cook until golden brown on all sides.</li>
+<li><strong>Serve:</strong> Place cooked takoyaki on a plate, drizzle with takoyaki sauce and mayonnaise, and sprinkle with bonito flakes and aonori.</li>
+</ol>
+</div>
+', 'starter', 'https://iamafoodblog.b-cdn.net/wp-content/uploads/2024/12/takoyaki-recipe-4790w.jpg', 'non veg'), ('38', 'Sashimi', 'Japanese', '<h1>Sashimi</h1>
+<p>Sashimi is a traditional Japanese delicacy consisting of thinly sliced raw fish or seafood, appreciated for its freshness, texture, and pure flavor.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>Fresh sashimi-grade fish (tuna, salmon, yellowtail, etc.)</li>
+<li>Daikon radish, julienned (optional, for garnish)</li>
+<li>Shiso leaves (optional)</li>
+<li>Soy sauce, for dipping</li>
+<li>Wasabi (optional)</li>
+<li>Pickled ginger, for serving</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Select Fish:</strong> Use only sashimi-grade fish from a trusted source to ensure freshness and safety.</li>
+<li><strong>Prepare Fish:</strong> Using a very sharp knife, slice the fish into uniform, thin slices (about 1/4 inch thick).</li>
+<li><strong>Arrange:</strong> Place slices neatly on a chilled plate. Garnish with julienned daikon and shiso leaves if desired.</li>
+<li><strong>Serve:</strong> Serve immediately with soy sauce, wasabi, and pickled ginger.</li>
+</ol>
+</div>
+', 'main course', 'https://www.japanesecooking101.com/wp-content/uploads/2019/08/DSC00528b.jpg', 'non veg'), ('39', 'Udon Noodles', 'Japanese', '<h1>Udon Noodles</h1>
+<p>Udon is a type of thick Japanese wheat noodle, often served in a flavorful broth with vegetables, tempura, or meat toppings for a hearty and comforting dish.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Broth</h3>
+<ul>
+<li>4 cups dashi (Japanese soup stock)</li>
+<li>3 tbsp soy sauce</li>
+<li>2 tbsp mirin</li>
+<li>1 tsp sugar</li>
+</ul>
+<h3>For the Noodles & Toppings</h3>
+<ul>
+<li>400g fresh udon noodles (or dried, cooked per package)</li>
+<li>2 spring onions, chopped</li>
+<li>Tempura shrimp or vegetables (optional)</li>
+<li>Kamaboko (fish cake slices, optional)</li>
+<li>Spinach or bok choy (optional)</li>
+<li>Nori (seaweed strips, for garnish)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Broth:</strong> In a pot, combine dashi, soy sauce, mirin, and sugar. Bring to a gentle simmer.</li>
+<li><strong>Cook Noodles:</strong> Cook udon noodles according to package instructions. Drain and rinse briefly in hot water to remove excess starch.</li>
+<li><strong>Assemble:</strong> Divide noodles into bowls. Pour hot broth over them.</li>
+<li><strong>Add Toppings:</strong> Garnish with spring onions, tempura, fish cakes, spinach, and nori as desired.</li>
+<li><strong>Serve:</strong> Enjoy hot and comforting udon noodles.</li>
+</ol>
+</div>
+', 'main course', 'https://images.getrecipekit.com/20230510005321-how-to-make-sichuan-spicy-udon-noodles.png?aspect_ratio=16:9&quality=90&', 'non veg'), ('40', 'Miso Soup', 'Japanese', '<h1>Miso Soup</h1>
+<p>Miso soup is a traditional Japanese soup made with a savory miso paste base, dashi broth, tofu, and seaweed, often served as a comforting starter to a Japanese meal.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>4 cups dashi (Japanese soup stock)</li>
+<li>3 tbsp miso paste (white or red)</li>
+<li>100g tofu, cubed</li>
+<li>2 tbsp wakame seaweed (rehydrated)</li>
+<li>2 spring onions, finely chopped</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Heat Broth:</strong> In a saucepan, bring dashi to a gentle simmer.</li>
+<li><strong>Add Tofu & Seaweed:</strong> Add cubed tofu and rehydrated wakame seaweed to the broth. Simmer for 2–3 minutes.</li>
+<li><strong>Mix Miso Paste:</strong> In a small bowl, dissolve miso paste in a ladleful of hot broth, then stir back into the pot. Do not boil after adding miso.</li>
+<li><strong>Garnish:</strong> Add chopped spring onions before serving.</li>
+<li><strong>Serve:</strong> Enjoy hot as a side or starter.</li>
+</ol>
+</div>
+', 'starter', 'https://www.chopstickchronicles.com/wp-content/uploads/2020/10/Miso-Soup-update-22.jpg', 'non veg'), ('41', 'Gyoza', 'Japanese', '<h1>Gyoza</h1>
+<p>Gyoza are Japanese pan-fried dumplings filled with a savory mixture of ground meat and vegetables, served with a tangy dipping sauce.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Filling</h3>
+<ul>
+<li>200g ground pork (or chicken)</li>
+<li>1 cup cabbage, finely shredded</li>
+<li>2 spring onions, finely chopped</li>
+<li>2 cloves garlic, minced</li>
+<li>1 tsp ginger, grated</li>
+<li>1 tbsp soy sauce</li>
+<li>1 tbsp sesame oil</li>
+<li>1/2 tsp salt</li>
+<li>1/4 tsp pepper</li>
+</ul>
+<h3>For Wrapping</h3>
+<ul>
+<li>20 gyoza wrappers (round dumpling skins)</li>
+<li>Water, for sealing</li>
+</ul>
+<h3>For Dipping Sauce</h3>
+<ul>
+<li>2 tbsp soy sauce</li>
+<li>1 tbsp rice vinegar</li>
+<li>Few drops chili oil (optional)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Make Filling:</strong> In a bowl, combine pork, cabbage, spring onions, garlic, ginger, soy sauce, sesame oil, salt, and pepper. Mix well.</li>
+<li><strong>Fill Wrappers:</strong> Place 1 tsp of filling in the center of each wrapper. Wet the edges with water, fold in half, and pleat the edges to seal.</li>
+<li><strong>Cook Gyoza:</strong> Heat oil in a non-stick pan. Place gyoza flat-side down and fry until bottoms are golden brown.</li>
+<li><strong>Steam:</strong> Add 1/4 cup water to the pan, cover, and steam for 3–4 minutes until filling is cooked through.</li>
+<li><strong>Serve:</strong> Serve hot with dipping sauce.</li>
+</ol>
+</div>
+', 'starter', 'https://cardamommagazine.com/wp-content/uploads/2021/04/chicken-gyoza.jpg', 'non veg'), ('42', 'Mochi', 'Japanese', '<h1>Mochi</h1>
+<p>Mochi is a chewy Japanese rice cake made from glutinous rice flour, enjoyed plain or filled with sweet or savory fillings like red bean paste, fruit, or ice cream.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>1 cup mochiko (glutinous rice flour)</li>
+<li>3/4 cup water</li>
+<li>1/4 cup sugar</li>
+<li>Cornstarch or potato starch (for dusting)</li>
+<li>Sweet red bean paste (anko) or fruit (optional, for filling)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Mix Batter:</strong> In a microwave-safe bowl, mix mochiko, water, and sugar until smooth.</li>
+<li><strong>Cook:</strong> Cover loosely with plastic wrap and microwave for 2–3 minutes, stirring halfway, until mixture is thick and sticky.</li>
+<li><strong>Dust Surface:</strong> Generously dust a clean surface with cornstarch or potato starch.</li>
+<li><strong>Shape Mochi:</strong> Transfer dough onto dusted surface. Coat hands with starch and divide dough into small pieces.</li>
+<li><strong>Fill (Optional):</strong> Flatten each piece, place a spoonful of red bean paste or fruit inside, and pinch edges to seal.</li>
+<li><strong>Serve:</strong> Enjoy fresh or store in an airtight container.</li>
+</ol>
+</div>
+', 'dessert', 'https://qeleg.com/cdn/shop/articles/20240411054015-peach-mochi.webp?v=1712814467', 'veg'), ('43', 'Tacos al Pastor', 'Mexican', '<h1>Tacos al Pastor</h1>
+<p>Tacos al Pastor are a Mexican street food classic featuring marinated pork, grilled with pineapple, and served on soft corn tortillas with onion, cilantro, and salsa.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Marinade</h3>
+<ul>
+<li>1 kg pork shoulder, thinly sliced</li>
+<li>3 dried guajillo chilies, seeded and soaked</li>
+<li>2 dried ancho chilies, seeded and soaked</li>
+<li>3 cloves garlic</li>
+<li>1/4 cup white vinegar</li>
+<li>1/4 cup pineapple juice</li>
+<li>2 tbsp achiote paste</li>
+<li>1 tsp cumin</li>
+<li>1 tsp oregano</li>
+<li>1/2 tsp cloves</li>
+<li>Salt and pepper, to taste</li>
+</ul>
+
+
+<h3>For Serving</h3>
+<ul>
+<li>Corn tortillas</li>
+<li>Fresh pineapple, grilled and chopped</li>
+<li>White onion, finely chopped</li>
+<li>Fresh cilantro, chopped</li>
+<li>Salsa of choice</li>
+<li>Lime wedges</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Make Marinade:</strong> Blend soaked chilies, garlic, vinegar, pineapple juice, achiote paste, cumin, oregano, cloves, salt, and pepper into a smooth paste.</li>
+<li><strong>Marinate Pork:</strong> Coat sliced pork with marinade. Cover and refrigerate for at least 4 hours or overnight.</li>
+<li><strong>Cook Pork:</strong> Grill or pan-fry pork slices until cooked and slightly charred.</li>
+<li><strong>Warm Tortillas:</strong> Heat tortillas on a skillet until soft and pliable.</li>
+<li><strong>Assemble Tacos:</strong> Fill tortillas with pork, top with grilled pineapple, onion, cilantro, and salsa.</li>
+<li><strong>Serve:</strong> Enjoy hot with lime wedges.</li>
+</ol>
+</div>
+', 'main course', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI2VOS6edRqZoOBSKyQPX0ifFUNbcxXutXw&s', 'non veg'), ('44', 'Enchiladas', 'Mexican', '<h1>Enchiladas</h1>
+<p>Enchiladas are a Mexican classic featuring corn tortillas filled with meat, cheese, or beans, rolled up and baked with a rich chili sauce and melted cheese.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Filling</h3>
+<ul>
+<li>2 cups shredded cooked chicken (or beef/beans)</li>
+<li>1 cup shredded cheese (cheddar or Mexican blend)</li>
+<li>1/2 cup onion, finely chopped</li>
+</ul>
+<h3>For the Sauce</h3>
+<ul>
+<li>2 tbsp vegetable oil</li>
+<li>2 tbsp flour</li>
+<li>3 tbsp chili powder</li>
+<li>2 cups chicken or vegetable broth</li>
+<li>1 can (8 oz) tomato sauce</li>
+<li>1 tsp cumin</li>
+<li>1 tsp garlic powder</li>
+<li>Salt, to taste</li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li>8 corn tortillas</li>
+<li>Extra shredded cheese, for topping</li>
+<li>Fresh cilantro, chopped (optional garnish)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Make Sauce:</strong> Heat oil in a saucepan, whisk in flour and chili powder to form a roux. Slowly add broth, tomato sauce, cumin, garlic powder, and salt. Simmer until slightly thickened.</li>
+<li><strong>Prepare Filling:</strong> In a bowl, combine shredded chicken, cheese, and onion.</li>
+<li><strong>Assemble Enchiladas:</strong> Preheat oven to 375°F (190°C). Warm tortillas, then fill each with the chicken mixture. Roll and place seam-side down in a baking dish.</li>
+<li><strong>Add Sauce & Cheese:</strong> Pour enchilada sauce over rolled tortillas. Sprinkle with extra cheese.</li>
+<li><strong>Bake:</strong> Bake for 20–25 minutes until cheese is melted and bubbly.</li>
+<li><strong>Serve:</strong> Garnish with cilantro and enjoy hot.</li>
+</ol>
+</div>
+', 'main course', 'https://www.everythingerica.com/wp-content/uploads/2014/07/Enchiladas.jpg.jpg', 'non veg'), ('45', 'Quesadillas', 'Mexican', '<h1>Quesadillas</h1>
+<p>Quesadillas are a quick and delicious Mexican dish made with tortillas filled with melted cheese and optional meats or vegetables, cooked until golden and crispy.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>4 flour tortillas (or corn tortillas)</li>
+<li>2 cups shredded cheese (cheddar, Monterey Jack, or Mexican blend)</li>
+<li>1/2 cup cooked chicken, beef, or vegetables (optional)</li>
+<li>1 tbsp butter or oil</li>
+<li>Sour cream, guacamole, or salsa (for serving)</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Heat Pan:</strong> Place a skillet over medium heat and lightly grease with butter or oil.</li>
+<li><strong>Assemble Quesadilla:</strong> Place a tortilla in the skillet, sprinkle cheese evenly, and add optional fillings. Top with another tortilla.</li>
+<li><strong>Cook:</strong> Cook until bottom is golden and cheese begins to melt. Flip carefully and cook the other side until crispy.</li>
+<li><strong>Slice & Serve:</strong> Cut into wedges and serve with sour cream, guacamole, or salsa.</li>
+</ol>
+</div>
+', 'main course', 'https://cdn.loveandlemons.com/wp-content/uploads/2024/01/quesadilla.jpg', 'non veg'), ('46', 'Chiles Rellenos', 'Mexican', '<h1>Chiles Rellenos</h1>
+<p>Chiles Rellenos are a classic Mexican dish featuring roasted poblano peppers stuffed with cheese or meat, coated in a fluffy egg batter, fried until golden, and served with a rich tomato sauce.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Chiles</h3>
+<ul>
+<li>6 poblano peppers</li>
+<li>2 cups shredded cheese (queso fresco, Monterey Jack, or Oaxaca)</li>
+<li>1/2 cup flour (for dredging)</li>
+<li>Vegetable oil (for frying)</li>
+</ul>
+<h3>For the Batter</h3>
+<ul>
+<li>4 large eggs, separated</li>
+<li>1/4 tsp salt</li>
+</ul>
+<h3>For the Tomato Sauce</h3>
+<ul>
+<li>4 ripe tomatoes</li>
+<li>1/2 onion, chopped</li>
+<li>2 cloves garlic</li>
+<li>1 cup chicken or vegetable broth</li>
+<li>1 tbsp vegetable oil</li>
+<li>Salt and pepper, to taste</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Roast Peppers:</strong> Roast poblano peppers over an open flame or under a broiler until skins are charred. Place in a covered bowl for 10 minutes, then peel skins. Carefully slit and remove seeds.</li>
+<li><strong>Prepare Filling:</strong> Stuff each pepper with cheese (or meat, if using), then lightly coat in flour.</li>
+<li><strong>Make Batter:</strong> Beat egg whites until stiff peaks form. Gently fold in yolks and salt.</li>
+<li><strong>Fry Chiles:</strong> Dip stuffed peppers into egg batter and fry in hot oil until golden on all sides. Drain on paper towels.</li>
+<li><strong>Make Sauce:</strong> Blend tomatoes, onion, and garlic into a smooth puree. Cook in a saucepan with oil, add broth, and simmer for 10 minutes. Season with salt and pepper.</li>
+<li><strong>Serve:</strong> Pour sauce over fried chiles and serve hot with rice or beans.</li>
+</ol>
+</div>
+', 'main course', 'https://www.fredmeyer.com/content/v2/binary/image/imageset/chile_rellenos--3_chile-de-rellanos_cinco-de-mayo-derby_p_22-tkc-0034_a.jpg', 'non veg'), ('47', 'Guacamole', 'Mexican', '<h1>Guacamole</h1>
+<p>Guacamole is a creamy and flavorful Mexican dip made with ripe avocados, lime juice, onion, tomato, cilantro, and jalapeño. Perfect with tortilla chips or as a topping for tacos and more.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>3 ripe avocados</li>
+<li>1 lime, juiced</li>
+<li>1/2 small onion, finely chopped</li>
+<li>1 medium tomato, diced</li>
+<li>2 tbsp fresh cilantro, chopped</li>
+<li>1 jalapeño, seeded and minced (optional)</li>
+<li>Salt, to taste</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Avocados:</strong> Cut avocados in half, remove pits, and scoop flesh into a bowl.</li>
+<li><strong>Mash:</strong> Mash with a fork until smooth but slightly chunky.</li>
+<li><strong>Mix Ingredients:</strong> Add lime juice, onion, tomato, cilantro, and jalapeño. Stir to combine.</li>
+<li><strong>Season:</strong> Add salt to taste.</li>
+<li><strong>Serve:</strong> Enjoy immediately with tortilla chips or as a side.</li>
+</ol>
+</div>
+', 'starter', 'https://www.allrecipes.com/thmb/6RyFPH5N4KKmZhNY0Giob_Jj3wc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14231-guacamole-4x3-f7a3b5752c7f4f3fb934d03a8b548826.jpg', 'non veg'), ('48', 'Tamales', 'Mexican', '<h1>Tamales</h1>
+<p>Tamales are a traditional Mexican dish made of masa (corn dough) filled with meats, cheese, or vegetables, wrapped in corn husks, and steamed until tender and flavorful.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>For the Masa</h3>
+<ul>
+<li>4 cups masa harina</li>
+<li>1 tsp baking powder</li>
+<li>1 tsp salt</li>
+<li>1 cup lard or vegetable shortening</li>
+<li>3–4 cups chicken broth (or vegetable broth)</li>
+</ul>
+<h3>For the Filling</h3>
+<ul>
+<li>2 cups shredded cooked pork, chicken, or beef (or vegetables/cheese)</li>
+<li>1 cup salsa roja or salsa verde</li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li>30 dried corn husks, soaked in warm water until pliable</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare Husks:</strong> Soak corn husks in warm water for 30 minutes until soft.</li>
+<li><strong>Make Masa:</strong> In a large bowl, mix masa harina, baking powder, and salt. Beat in lard until fluffy, then add broth gradually until a soft dough forms.</li>
+<li><strong>Prepare Filling:</strong> Mix shredded meat with salsa.</li>
+<li><strong>Assemble Tamales:</strong> Spread 2 tbsp masa onto the center of a corn husk, add filling, and fold sides and ends to seal.</li>
+<li><strong>Steam:</strong> Place tamales upright in a steamer basket, cover, and steam for 1–1.5 hours, until masa is firm and pulls away from husk easily.</li>
+<li><strong>Serve:</strong> Remove husks before eating and enjoy hot with extra salsa.</li>
+</ol>
+</div>
+', 'main course', 'https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_iw/v1/img/recipes/17/00/23/Mq92FgsOQYuAUcSQ7DNG_MEXICAN_TAMALES_V_f.jpg', 'non veg'), ('49', 'Pozole', 'Mexican', '<h1>Pozole</h1>
+<p>Pozole is a traditional Mexican soup made with hominy and pork (or chicken), simmered with spices and served with fresh garnishes like cabbage, radish, lime, and oregano.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>2 lbs pork shoulder (or chicken)</li>
+<li>1 large can (30 oz) hominy, drained and rinsed</li>
+<li>1 onion, quartered</li>
+<li>4 cloves garlic</li>
+<li>3 dried guajillo chilies, seeded and soaked</li>
+<li>2 dried ancho chilies, seeded and soaked</li>
+<li>1 tsp cumin</li>
+<li>1 tsp oregano</li>
+<li>Salt, to taste</li>
+<li>10 cups water or broth</li>
+</ul>
+<h3>For Garnish</h3>
+<ul>
+<li>Shredded cabbage</li>
+<li>Sliced radishes</li>
+<li>Chopped onion</li>
+<li>Lime wedges</li>
+<li>Dried oregano</li>
+<li>Chili flakes or hot sauce</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Cook Meat:</strong> In a large pot, simmer pork with onion and garlic in water/broth for 1.5–2 hours until tender. Remove meat, shred, and set aside. Strain broth.</li>
+<li><strong>Make Chili Sauce:</strong> Blend soaked guajillo and ancho chilies with 1 cup broth, cumin, and oregano until smooth.</li>
+<li><strong>Combine:</strong> Return shredded pork to pot with broth. Stir in hominy and chili sauce. Simmer for 30–40 minutes.</li>
+<li><strong>Season:</strong> Add salt to taste.</li>
+<li><strong>Serve:</strong> Ladle into bowls and top with cabbage, radish, onion, oregano, and lime.</li>
+</ol>
+</div>
+', 'main course', 'https://hips.hearstapps.com/hmg-prod/images/pozole-index-655b86b9eeb3f.jpg?crop=0.502xw:1.00xh;0.0561xw,0&resize=1200:*', 'non veg'), ('50', 'Nachos', 'Mexican', '<h1>Nachos</h1>
+<p>Nachos are a popular Mexican-inspired snack made with crispy tortilla chips layered with melted cheese and topped with a variety of toppings such as beans, jalapeños, guacamole, and salsa.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>1 large bag tortilla chips</li>
+<li>2 cups shredded cheese (cheddar, Monterey Jack, or Mexican blend)</li>
+<li>1 cup cooked black beans or refried beans</li>
+<li>1/2 cup sliced jalapeños</li>
+<li>1/2 cup diced tomatoes</li>
+<li>1/4 cup chopped onion</li>
+<li>1/4 cup chopped fresh cilantro</li>
+<li>1/2 cup sour cream</li>
+<li>1/2 cup guacamole</li>
+<li>1/2 cup salsa</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Preheat Oven:</strong> Set oven to 375°F (190°C).</li>
+<li><strong>Layer Chips & Cheese:</strong> Spread tortilla chips on a baking sheet. Sprinkle cheese evenly over chips.</li>
+<li><strong>Add Beans & Jalapeños:</strong> Scatter beans and jalapeños over the cheese.</li>
+<li><strong>Bake:</strong> Place in oven for 8–10 minutes, until cheese is fully melted.</li>
+<li><strong>Top:</strong> Remove from oven and add tomatoes, onion, cilantro, sour cream, guacamole, and salsa.</li>
+<li><strong>Serve:</strong> Enjoy hot and fresh as a snack or appetizer.</li>
+</ol>
+</div>
+', 'starter', 'https://www.southernliving.com/thmb/yN5seYMPZCV8zH34bch-eQa97NA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Smoky_Mountain_Nachos_009-4e2643e851e34540b1a27cd4232789fd.jpg', 'non veg'), ('51', 'Burrito', 'Mexican', '<h1>Classic Burrito</h1>
+<p>A hearty, handheld Mexican-style wrap packed with cilantro-lime rice, seasoned beans, your choice of protein, and fresh toppings—rolled snug in a warm flour tortilla.</p>
+<div>
+<h2>Ingredients</h2>
+<h3>Base</h3>
+<ul>
+<li>4 large flour tortillas (10–12 inch)</li>
+<li>1 cup shredded cheese (cheddar/Monterey Jack)</li>
+<li>1 cup pico de gallo or salsa</li>
+<li>1/2 cup sour cream (or Greek yogurt)</li>
+<li>1 cup shredded lettuce (or chopped romaine)</li>
+<li>1 avocado or 1/2 cup guacamole</li>
+</ul>
+<h3>Cilantro-Lime Rice</h3>
+<ul>
+<li>1 cup long-grain rice (uncooked)</li>
+<li>1 3/4 cups water or broth</li>
+<li>1 tbsp lime juice + zest from 1/2 lime</li>
+<li>2 tbsp chopped cilantro</li>
+<li>1/2 tsp salt</li>
+</ul>
+<h3>Seasoned Beans</h3>
+<ul>
+<li>1 can (15 oz) black or pinto beans, drained</li>
+<li>1 tbsp oil</li>
+<li>1/2 tsp ground cumin</li>
+<li>1/2 tsp chili powder</li>
+<li>1/4 tsp garlic powder</li>
+<li>Salt to taste
+</li>
+</ul>
+<h3>Protein (choose one)</h3>
+<ul>
+<li><strong>Chicken:</strong> 400 g thighs/breast + 1 tsp each cumin, chili powder, paprika; 1/2 tsp oregano; salt & pepper; 1 tbsp lime juice.</li>
+<li><strong>Beef:</strong> 400 g ground beef + 1 tsp each cumin & chili powder; 1/2 tsp smoked paprika; salt & pepper.</li>
+<li><strong>Veg:</strong> 2 cups mixed peppers & onions + 1 tbsp oil; 1 tsp cumin; 1 tsp chili powder; pinch salt.</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Cook rice:</strong> Rinse rice. Combine with water/broth and salt; cook until tender. Fluff, then fold in lime juice, zest, and cilantro.</li>
+<li><strong>Season beans:</strong> Warm oil in a pan; add beans, cumin, chili powder, garlic powder, and salt. Mash lightly if you prefer refried-style; keep warm.</li>
+<li><strong>Cook protein:</strong>
+<ul>
+<li><em>Chicken:</em> Toss with spices & lime, sear 5–6 min/side, rest, then slice.</li>
+<li><em>Beef:</em> Brown, drain, stir in spices; cook 2–3 min.</li>
+</div>
+', 'main course', 'https://cdn.britannica.com/13/234013-050-73781543/rice-and-chorizo-burrito.jpg', 'non veg'), ('52', 'Churros', 'Mexican', '<h1>Churros (Crispy Cinnamon-Sugar Sticks)</h1>
+<p>Golden, crispy-on-the-outside and custardy-inside churros rolled in cinnamon sugar, served with silky chocolate dipping sauce. This recipe uses a simple stovetop dough that pipes and fries beautifully.</p>
+<div>
+<h2>Ingredients</h2>
+<div>
+<div>
+<div>Churro Dough</div>
+<ul>
+<li>1 cup (240 ml) water</li>
+<li>2 tbsp (28 g) unsalted butter (or neutral oil)</li>
+<li>1 tbsp sugar</li>
+<li>1/2 tsp fine salt</li>
+<li>1 cup (125 g) all-purpose flour</li>
+<li>1 large egg</li>
+<li>1/2 tsp vanilla extract (optional)</li>
+<li>Neutral oil for frying (about 3–4 cups)</li>
+</ul>
+</div>
+<div>
+<div>Cinnamon Sugar</div>
+<ul>
+<li>1/2 cup (100 g) granulated sugar</li>
+<li>1–2 tsp ground cinnamon</li>
+<li>Pinch of salt</li>
+</ul>
+<div>Chocolate Sauce (Optional)</div>
+<ul>
+<li>100 g dark or semi-sweet chocolate, chopped</li>
+<li>1/2 cup (120 ml) heavy cream or milk</li>
+<li>1 tsp butter (optional, for shine)</li>
+<li>Pinch of salt</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Make cinnamon sugar:</strong> Mix sugar, cinnamon, and a pinch of salt in a shallow dish; set aside.</li>
+<li><strong>Cook the dough:</strong> In a saucepan over medium heat, combine water, butter, sugar, and salt. Bring to a gentle simmer. Add flour all at once and stir vigorously with a wooden spoon until the mixture forms a smooth ball and a thin film coats the pan (1–2 minutes).</li>
+<li><strong>Cool slightly & add egg:</strong> Transfer dough to a bowl. Rest 3–5 minutes to cool slightly, then beat in egg (and vanilla) until glossy and pipeable. It may look separated at first—keep mixing until smooth.</li>
+<li><strong>Heat oil:</strong> In a deep pot, heat oil to <code>175–185°C</code> (350–365°F). Maintain temperature between batches.</li>
+<li><strong>Pipe:</strong> Spoon dough into a piping bag fitted with a large open star tip (e.g., 1M/2D). Pipe 10–15 cm (4–6 in) lengths directly into the hot oil, cutting with scissors.</li>
+<li><strong>Fry:</strong> Fry 2–3 minutes per side until deeply golden and crisp. Avoid crowding. Remove with a spider and drain briefly on a rack or paper towels.</li>
+<li><strong>Coat:</strong> While still warm, roll churros in cinnamon sugar to coat evenly.</li>
+<li><strong>Chocolate sauce:</strong> Warm cream to steaming (not boiling); pour over chopped chocolate with butter and salt. Rest 1 minute, then whisk smooth.</li>
+<li><strong>Serve:</strong> Enjoy immediately—best within 10–15 minutes for peak crispness.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Variations</h3>
+<ul>
+<li><strong>No piping bag?</strong> Use a strong zip-top bag with a star nozzle inserted, or cut a <code>1 cm</code> corner (texture will be smoother but still tasty).</li>
+<li><strong>Extra crisp:</strong> Dry the dough an extra minute in the pan before adding egg; fry at the higher end of the temperature range.</li>
+<li><strong>Fill them:</strong> Pipe a small hole and inject <em>dulce de leche</em>, chocolate, or vanilla pastry cream.</li>
+<li><strong>Baked/Air-fryer:</strong> Pipe onto a lined tray; bake at <code>205°C</code> (400°F) 15–20 min then broil briefly, or air-fry at <code>190°C</code> (375°F) 8–10 min. Brush lightly with melted butter and toss in cinnamon sugar.</li>
+<li><strong>Make ahead:</strong> Unfried piped dough can be frozen on a tray; fry from frozen, adding 1–2 extra minutes.</li>
+</ul>
+<p><strong>Safety:</strong> Use a deep pot and never fill over halfway. Keep kids and pets clear of the hot oil area.</p>
+</div>
+', 'dessert', 'https://www.allrecipes.com/thmb/qq9s8jlKplKUDEo3Gtk15EAJpHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-recipe-24700-churros-VAT-hero-03-4x3-a7f6af1860934b0385f84ab9f13f2613.jpg', 'non veg'), ('53', 'Ratatouille', 'French', '<h1>Ratatouille</h1>
+<p>Ratatouille is a traditional Provençal French dish of stewed vegetables—eggplant, zucchini, bell peppers, onions, and tomatoes—seasoned with garlic and herbs. It can be served rustic-style or beautifully layered for a modern touch.</p>
+<div>
+<h2>Ingredients</h2>
+<div>
+<div>
+<h3>Vegetables</h3>
+<ul>
+<li>1 medium eggplant</li>
+<li>2 zucchinis</li>
+<li>2 yellow squashes (optional)</li>
+<li>1 red bell pepper</li>
+<li>1 yellow bell pepper</li>
+<li>1 onion</li>
+<li>4 ripe tomatoes</li>
+<li>2–3 cloves garlic</li>
+</ul>
+</div>
+<div>
+<h3>Seasoning</h3>
+<ul>
+<li>3 tbsp olive oil</li>
+<li>1 tsp dried Herbes de Provence (or thyme, oregano, rosemary mix)</li>
+<li>Salt and black pepper, to taste</li>
+<li>Fresh basil or parsley, for garnish</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prep vegetables:</strong> Dice onion, peppers, and tomatoes. Slice zucchini, squash, and eggplant into rounds. Mince garlic.</li>
+<li><strong>Cook base:</strong> Heat 2 tbsp olive oil in a skillet. Sauté onion, peppers, and garlic until softened (5–7 min). Add tomatoes and simmer 10 min into a chunky sauce. Season with salt, pepper, and herbs.</li>
+<li><strong>Assemble:</strong> Spread tomato-pepper sauce on bottom of a baking dish. Arrange zucchini, eggplant, and squash slices alternately in overlapping circles or rows.</li>
+<li><strong>Drizzle:</strong> Brush/sprinkle remaining olive oil and a little salt, pepper, and herbs on top.</li>
+<li><strong>Bake:</strong> Cover with parchment and bake at <code>190°C</code> (375°F) for 35–40 minutes until tender but not mushy.</li>
+<li><strong>Serve:</strong> Garnish with fresh basil or parsley. Enjoy with crusty bread, rice, or as a side to grilled meats/fish.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Variations</h3>
+<ul>
+<li>For a rustic version, cube all vegetables and stew them together in a pot with olive oil and herbs.</li>
+<li>Add a splash of red wine or balsamic vinegar to the tomato base for depth.</li>
+<li>Layer thinly sliced vegetables for a <em>confit byaldi</em> (as seen in the movie “Ratatouille”).</li>
+<li>Leftovers are excellent the next day—flavors deepen after resting overnight.</li>
+</ul>
+</div>
+', 'main course', 'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2024-07-ratatouille%2FRatatouille-', 'veg'), ('54', 'Bouillabaisse', 'French', '<h1>Bouillabaisse</h1>
+<p>Bouillabaisse is a traditional Provençal fish stew from Marseille, combining a variety of fish and shellfish with a fragrant saffron-tomato broth, served with rouille and crusty bread.</p>
+<div>
+<h2>Ingredients</h2>
+<div>
+<div>
+<h3>For the Broth</h3>
+<ul>
+<li>2 tbsp olive oil</li>
+<li>1 onion, chopped</li>
+<li>2 leeks, white part only, sliced</li>
+<li>2 fennel bulbs, sliced</li>
+<li>4 garlic cloves, minced</li>
+<li>4 ripe tomatoes, peeled and chopped (or 1 can diced)</li>
+<li>2 tbsp tomato paste</li>
+<li>1.5 liters fish stock (or water)</li>
+<li>1/2 cup dry white wine</li>
+<li>2 strips orange peel</li>
+<li>1 bay leaf</li>
+<li>1/2 tsp saffron threads</li>
+<li>1 tsp thyme</li>
+<li>Salt & black pepper</li>
+</ul>
+</div>
+<div>
+<h3>Seafood</h3>
+<ul>
+<li>500 g firm white fish (monkfish, snapper, cod), cut into chunks</li>
+<li>500 g oily fish (mackerel, sea bass, or similar), cut into chunks</li>
+<li>250 g mussels, cleaned</li>
+<li>250 g clams, cleaned</li>
+<li>250 g shrimp or langoustines</li>
+</ul>
+<h3>To Serve</h3>
+<ul>
+<li>Crusty French bread</li>
+<li>Rouille (garlic-saffron mayonnaise)</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Start broth:</strong> Heat olive oil in a large pot. Sauté onion, leeks, fennel, and garlic until softened (8–10 min).</li>
+<li><strong>Add tomato base:</strong> Stir in tomatoes and tomato paste; cook until reduced slightly.</li>
+<li><strong>Simmer:</strong> Add stock, wine, orange peel, bay leaf, saffron, thyme, salt, and pepper. Bring to a boil, then reduce heat and simmer 30 min. Strain if you prefer a smoother broth.</li>
+<li><strong>Cook seafood:</strong> Add firm white fish first, simmer 5 minutes. Add oily fish, shellfish, and shrimp. Cook until shellfish open and fish is opaque (5–7 min more).</li>
+<li><strong>Serve:</strong> Ladle broth and seafood into bowls. Top with rouille-spread bread slices on the side or floating in the soup.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Notes</h3>
+<ul>
+<li>Authentic versions use at least 3 types of fish, often including rascasse (scorpionfish).</li>
+<li>Rouille is essential: blend garlic, chili, saffron, egg yolk, breadcrumbs, and olive oil into a thick sauce.</li>
+<li>Use the freshest seafood available for best results.</li>
+<li>Serve immediately—bouillabaisse loses character if reheated.</li>
+</ul>
+</div>
+', 'main course', 'https://diethood.com/wp-content/uploads/2022/09/bouillabaise-3-500x500.jpg', 'non veg'), ('55', 'Coq au Vin', 'French', '<h1>Coq au Vin</h1>
+<p>Coq au Vin is a classic French stew of chicken braised in red wine with mushrooms, bacon, onions, and herbs. Rich, rustic, and deeply flavorful, it’s a perfect dish for cozy gatherings.</p>
+<div>
+<h2>Ingredients</h2>
+<div>
+<div>
+<h3>Main</h3>
+<ul>
+<li>1 whole chicken (about 1.5 kg), cut into 8 pieces</li>
+<li>150 g bacon lardons</li>
+<li>2 tbsp olive oil</li>
+<li>2 tbsp butter</li>
+<li>2 tbsp flour</li>
+<li>2 cups red wine (Burgundy or Pinot Noir)</li>
+<li>1 cup chicken stock</li>
+</ul>
+</div>
+<div>
+<h3>Vegetables & Aromatics</h3>
+<ul>
+<li>2 carrots, sliced</li>
+<li>2 onions, chopped</li>
+<li>3 garlic cloves, minced</li>
+<li>200 g pearl onions, peeled</li>
+<li>250 g mushrooms, halved</li>
+<li>2 bay leaves</li>
+<li>2 sprigs thyme</li>
+<li>Salt & pepper</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Brown bacon:</strong> In a heavy pot, cook bacon until crisp. Remove and set aside, leaving fat in the pan.</li>
+<li><strong>Sear chicken:</strong> Season chicken pieces with salt and pepper. Brown them in batches in bacon fat + olive oil. Remove and set aside.</li>
+<li><strong>Vegetables:</strong> Add carrots, onions, and garlic to the pot. Sauté until lightly golden.</li>
+<li><strong>Deglaze:</strong> Sprinkle flour, stir, then slowly add wine and stock, scraping up browned bits.</li>
+<li><strong>Simmer:</strong> Return chicken and bacon. Add bay leaves and thyme. Cover and simmer gently 45–60 minutes, until chicken is tender.</li>
+<li><strong>Mushrooms & onions:</strong> In a separate pan, sauté pearl onions and mushrooms in butter until browned. Stir into stew for last 15 minutes.</li>
+<li><strong>Finish:</strong> Remove bay leaves and thyme. Adjust seasoning. Sauce should be rich and slightly thickened.</li>
+<li><strong>Serve:</strong> Traditionally with crusty bread, mashed potatoes, or buttered noodles.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Variations</h3>
+<ul>
+</div>
+', 'main course', 'https://images.immediate.co.uk/production/volatile/sites/30/2012/01/coq-au-vin-3740fe3.jpg?resize=1366,1242', 'non veg'), ('56', 'Quiche Lorraine', 'French', '<h1>Quiche Lorraine</h1>
+<p>Quiche Lorraine is a classic French tart with a flaky pastry crust filled with creamy custard, smoky bacon, and cheese. Perfect for brunch, lunch, or a light dinner with salad.</p>
+<div>
+<h2>Ingredients</h2>
+<div>
+<div>
+<h3>Pastry</h3>
+<ul>
+<li>1 1/4 cups (150 g) all-purpose flour</li>
+<li>1/2 tsp salt</li>
+<li>8 tbsp (115 g) cold butter, cubed</li>
+<li>3–4 tbsp ice water</li>
+</ul>
+</div>
+<div>
+<h3>Filling</h3>
+<ul>
+<li>6 slices bacon, diced</li>
+<li>1 cup (120 g) grated Gruyère cheese</li>
+<li>3 large eggs</li>
+<li>1 1/4 cups (300 ml) heavy cream (or half cream + half milk)</li>
+<li>1/4 tsp ground nutmeg</li>
+<li>Salt and pepper, to taste</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Make pastry:</strong> Combine flour and salt. Cut in butter until crumbly. Add ice water gradually until dough comes together. Shape into a disk, wrap, and chill 30 minutes.</li>
+<li><strong>Blind bake crust:</strong> Roll dough and fit into a tart pan. Prick base, line with parchment, fill with weights. Bake at <code>190°C</code> (375°F) for 15 min. Remove weights, bake 5 min more.</li>
+<li><strong>Cook bacon:</strong> Fry diced bacon until crisp. Drain excess fat.</li>
+<li><strong>Prepare custard:</strong> Whisk eggs, cream, nutmeg, salt, and pepper.</li>
+<li><strong>Assemble:</strong> Spread bacon and cheese in baked crust. Pour custard over.</li>
+<li><strong>Bake:</strong> Bake at <code>180°C</code> (350°F) for 30–35 minutes, until set and lightly golden.</li>
+<li><strong>Cool & serve:</strong> Rest 10 minutes before slicing. Serve warm or at room temperature.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Variations</h3>
+</div>
+', 'main course', 'https://www.moulinex-me.com/medias/?context=bWFzdGVyfHJvb3R8MTA3NjQ0fGltYWdlL2pwZWd8YUdaaUwyZ3hNaTh4TlRrMk9EWXpNemd4TlRBM01DNXFjR2N8MjE1YjZlYzJjMGRiNDZiNzAwZGNkNzc4YmM1ZGE0ZDE3MzE4ZTVkYmQxZGIyYjE3N2YwNjlhYzQ5Y2I4ZmNmYg', 'non veg'), ('57', 'Croissant', 'French', '<h1>Croissants</h1>
+<p>Croissants are the quintessential French pastry—flaky, buttery, and golden. Making them from scratch requires patience and careful lamination of dough with butter, but the result is truly worth it.</p>
+<div>
+<h2>Ingredients</h2>
+<div>
+<div>
+<h3>Dough</h3>
+<ul>
+<li>4 cups (500 g) all-purpose flour</li>
+<li>1/4 cup (50 g) sugar</li>
+<li>2 tsp salt</li>
+<li>1 tbsp instant yeast</li>
+<li>1 1/4 cups (300 ml) warm milk</li>
+<li>2 tbsp unsalted butter, softened</li>
+</ul>
+</div>
+<div>
+<h3>Butter Layer & Finish</h3>
+<ul>
+<li>1 1/4 cups (280 g) unsalted butter, cold</li>
+<li>1 egg, beaten (for egg wash)</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Make dough:</strong> Mix flour, sugar, salt, yeast, milk, and softened butter. Knead until smooth. Cover and chill 1 hour.</li>
+<li><strong>Prepare butter block:</strong> Shape cold butter into a flat square between parchment. Chill until firm but pliable.</li>
+<li><strong>Lamination:</strong> Roll dough into a rectangle. Place butter block in center, fold dough over. Roll out and fold in thirds (letter fold). Chill 30 min. Repeat rolling and folding 2 more times, chilling between each.</li>
+<li><strong>Shape croissants:</strong> Roll dough into a large rectangle (~1/4 inch thick). Cut into triangles. Roll each from base to tip to form crescent shapes.</li>
+<li><strong>Proof:</strong> Place on baking sheet, cover lightly, and let rise until puffy (1–2 hours).</li>
+<li><strong>Bake:</strong> Brush with egg wash. Bake at <code>200°C</code> (400°F) for 15–20 minutes, until golden and flaky.</li>
+<li><strong>Cool & enjoy:</strong> Let rest briefly before serving warm.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Variations</h3>
+<ul>
+<li>Keep dough and butter cold during lamination for distinct flaky layers.</li>
+<li>Add chocolate batons before rolling to make <em>pain au chocolat</em>.</li>
+<li>For almond croissants, fill with almond cream after baking and toast lightly.</li>
+<li>Best eaten the day they’re baked—reheat gently in oven if needed.</li>
+</div>
+', 'starter', 'https://thefoodiebunch.sfo3.digitaloceanspaces.com/wp-content/uploads/2022/08/12205311/The-Perfect-Croissant-Recipe.png', 'veg'), ('58', 'Escargot', 'French', '<h1>Escargots à la Bourguignonne</h1>
+<p>Escargot is a French delicacy of tender snails baked in garlic-herb butter. Served in shells or special escargot dishes, it’s a luxurious appetizer with rich, garlicky flavors.</p>
+<div>
+<h2>Ingredients</h2>
+<div>
+<div>
+<h3>Main</h3>
+<ul>
+<li>24 canned or prepared snails</li>
+<li>24 snail shells or an escargot baking dish</li>
+<li>1 baguette, sliced (to serve)</li>
+</ul>
+</div>
+<div>
+<h3>Garlic-Herb Butter</h3>
+<ul>
+<li>1 cup (225 g) unsalted butter, softened</li>
+<li>4 garlic cloves, minced</li>
+<li>2 shallots, finely minced</li>
+<li>2 tbsp fresh parsley, chopped</li>
+<li>1 tbsp fresh chives, chopped</li>
+<li>1 tsp lemon juice</li>
+<li>Salt & pepper, to taste</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare butter:</strong> Mix softened butter with garlic, shallots, parsley, chives, lemon juice, salt, and pepper until well combined.</li>
+<li><strong>Fill shells:</strong> Place a little butter in each shell, insert a snail, then top with more butter to seal.</li>
+<li><strong>Bake:</strong> Arrange filled shells (or snails in an escargot dish) in a baking pan. Bake at <code>200°C</code> (400°F) for 10–12 minutes, until butter is bubbling.</li>
+<li><strong>Serve:</strong> Serve hot with slices of fresh baguette for dipping in the garlic-herb butter.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Notes</h3>
+<ul>
+</div>
+', 'starter', 'https://lindseyeatsla.com/wp-content/uploads/2025/04/escargot-recipe.jpg', 'non veg'), ('59', 'French Onion Soup', 'French', '<h1>French Onion Soup</h1>
+<p>French Onion Soup is a beloved classic made with deeply caramelized onions, rich beef broth, and topped with cheesy toasted bread. It’s hearty, comforting, and perfect for cold days.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>5–6 large yellow onions, thinly sliced</li>
+<li>3 tbsp butter</li>
+<li>1 tbsp olive oil</li>
+<li>2 garlic cloves, minced</li>
+<li>1 tsp sugar</li>
+<li>2 tbsp flour</li>
+<li>1 cup dry white wine</li>
+<li>6 cups beef stock</li>
+<li>2 bay leaves</li>
+<li>3 sprigs thyme</li>
+<li>1 baguette, sliced and toasted</li>
+<li>2 cups Gruyère cheese, grated</li>
+<li>Salt & pepper to taste</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Caramelize onions:</strong> In a large pot, melt butter with olive oil. Add onions, sugar, and a pinch of salt. Cook slowly over medium heat (30–40 minutes), stirring often, until deep golden brown.</li>
+<li><strong>Add garlic & flour:</strong> Stir in garlic and cook 1 min. Sprinkle flour, stir well, and cook 2–3 min to remove raw taste.</li>
+<li><strong>Deglaze:</strong> Add white wine, scraping the bottom of the pot. Let it reduce slightly.</li>
+<li><strong>Simmer:</strong> Add beef stock, bay leaves, and thyme. Simmer 30 minutes. Season with salt and pepper.</li>
+<li><strong>Prepare toasts:</strong> Place baguette slices on a baking tray, sprinkle with Gruyère, and broil until melted and bubbly.</li>
+<li><strong>Assemble:</strong> Ladle hot soup into ovenproof bowls, top with cheesy toasts, and broil for 2–3 minutes until golden and bubbling.</li>
+<li><strong>Serve:</strong> Carefully serve hot, with extra toasted bread on the side.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Variations</h3>
+<ul>
+<li>Patience is key—caramelize onions slowly for maximum flavor.</li>
+<li>Vegetarian version: Use vegetable stock instead of beef stock.</li>
+<li>Try mixing Gruyère with Comté or Emmental for a cheese blend.</li>
+<li>Add a splash of brandy or sherry before simmering for extra depth.</li>
+</ul>
+</div>
+', 'starter', 'https://www.thespruceeats.com/thmb/BYc5SJFHrCWFCRpTO5Z2IvMtrZs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-french-onion-soup-3062131-hero-01-2a93bd3c60084db5a8a8e1039c0e0a2f.jpg', 'non veg'), ('60', 'Crème Brûlée', 'French', '<h1>Crème Brûlée</h1>
+<p>Crème Brûlée is a luxurious French dessert made of rich vanilla custard topped with a crisp caramelized sugar crust. It’s elegant, simple, and perfect for entertaining.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>4 large egg yolks</li>
+<li>1/2 cup (100 g) granulated sugar, plus extra for topping</li>
+<li>2 cups (480 ml) heavy cream</li>
+<li>1 vanilla bean (or 1 tsp vanilla extract)</li>
+<li>Pinch of salt</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Heat cream:</strong> In a saucepan, heat cream with vanilla bean (split and scraped) or extract until just steaming. Remove from heat, let steep 10 minutes.</li>
+<li><strong>Whisk yolks & sugar:</strong> In a bowl, whisk egg yolks with sugar and a pinch of salt until pale and creamy.</li>
+<li><strong>Temper eggs:</strong> Slowly whisk warm cream into yolk mixture, a little at a time, to avoid scrambling.</li>
+<li><strong>Bake custards:</strong> Pour into ramekins. Place in a baking dish, add hot water halfway up sides. Bake at <code>150°C</code> (300°F) for 30–40 minutes, until set but slightly jiggly in the center.</li>
+<li><strong>Chill:</strong> Remove, cool to room temperature, then refrigerate at least 2 hours or overnight.</li>
+<li><strong>Caramelize:</strong> Sprinkle tops with sugar. Use a kitchen torch (or broiler) to melt and caramelize until golden and crisp.</li>
+<li><strong>Serve:</strong> Rest 2 minutes for sugar to harden. Serve immediately.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Variations</h3>
+<ul>
+<li>Use high-quality vanilla beans for the best flavor.</li>
+<li>Chill custards thoroughly before caramelizing for a firm texture.</li>
+<li>Flavor variations: infuse cream with coffee, citrus zest, or liqueurs (like Grand Marnier).</li>
+<li>If broiling sugar, watch carefully to avoid burning.</li>
+</ul>
+</div>
+', 'dessert', 'https://www.allrecipes.com/thmb/y-S61IJkYyCUjTMGYqkaoJGwBrY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-228515-simple-creme-brulee-dessert-dmfs-4x3-821623e7a86548eeb89370ac23d5f251.jpg', 'veg'), ('61', 'Tarte Tatin', 'French', '<h1>Tarte Tatin</h1>
+<p>Tarte Tatin is a classic French upside-down caramelized apple tart. Sweet, buttery, and slightly rustic, it’s perfect served warm with a dollop of crème fraîche or vanilla ice cream.</p>
+<div>
+<h2>Ingredients</h2>
+<ul>
+<li>6–7 firm apples (Granny Smith or Honeycrisp)</li>
+<li>1/2 cup (115 g) unsalted butter</li>
+<li>3/4 cup (150 g) granulated sugar</li>
+<li>1 sheet puff pastry (store-bought or homemade)</li>
+<li>1 tsp vanilla extract</li>
+<li>1/2 tsp cinnamon (optional)</li>
+<li>Pinch of salt</li>
+</ul>
+</div>
+<div>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare apples:</strong> Peel, core, and halve the apples.</li>
+<li><strong>Make caramel:</strong> In an ovenproof skillet, melt butter over medium heat. Stir in sugar and cook until golden caramel forms.</li>
+<li><strong>Arrange apples:</strong> Place apple halves cut-side up in the caramel. Cook 10–15 minutes until they begin to soften. Add vanilla and cinnamon if using.</li>
+<li><strong>Add pastry:</strong> Roll puff pastry slightly larger than the skillet. Lay over apples, tucking edges down around them.</li>
+<li><strong>Bake:</strong> Transfer skillet to oven and bake at <code>190°C</code> (375°F) for 25–30 minutes, until pastry is puffed and golden.</li>
+<li><strong>Invert:</strong> Cool 5 minutes, then carefully invert onto a serving plate so apples are on top.</li>
+<li><strong>Serve:</strong> Serve warm with crème fraîche or vanilla ice cream.</li>
+</ol>
+</div>
+<div>
+<h3>Tips & Variations</h3>
+<ul>
+<li>Use firm apples that hold shape when cooked—avoid mealy varieties.</li>
+<li>Try pears, peaches, or even plums as variations.</li>
+<li>If caramel crystallizes, add a splash of water and melt again gently.</li>
+<li>For extra flavor, add a dash of Calvados or brandy before baking.</li>
+</ul>
+</div>
+', 'dessert', 'https://olenkacooks.com/wp-content/uploads/2024/04/tarte-tatin.jpg', 'veg'), ('62', 'Pad Thai', 'Thai', '<h1>Pad Thai</h1>
+<p>Thailand’s famous stir-fried noodle dish — a harmonious balance of sweet, sour, salty, and umami with rice noodles, tamarind, fish sauce, egg, tofu/shrimp, and crunchy peanuts.
+</p>
+<h2>Ingredients (serves 3–4)</h2>
+<h3>Main</h3>
+<ul>
+<li>200–250 g flat rice noodles (dried, 3–5 mm wide) — soak per package until pliable</li>
+<li>200 g firm tofu, cut into small cubes (or 200 g shrimp, peeled)</li>
+<li>2 eggs, lightly beaten</li>
+<li>3–4 cloves garlic, minced</li>
+<li>2 shallots, thinly sliced (or 1 small onion)</li>
+<li>2 spring onions, chopped (greens and whites separated)</li>
+<li>1 cup bean sprouts (for tossing at the end)</li>
+<li>2 tbsp roasted peanuts, roughly crushed</li>
+<li>2 tbsp vegetable oil (or peanut oil) for frying</li>
+</ul>
+<h3>Pad Thai Sauce</h3>
+<ul>
+<li>3 tbsp tamarind paste (or 2 tbsp tamarind concentrate + water)</li>
+<li>3 tbsp palm sugar (or light brown sugar)</li>
+<li>3 tbsp fish sauce (or tamari/soy for vegetarian)</li>
+<li>1–2 tbsp lime juice (to taste)</li>
+</ul>
+<h2>Method</h2>
+<ol>
+<li><strong>Soak noodles:</strong> Soak rice noodles in warm water according to package (usually 20–30 min) until pliable but slightly firm. Drain and set aside.</li>
+<li><strong>Make sauce:</strong> Whisk tamarind, palm sugar, and fish sauce in a small bowl until sugar dissolves. Adjust balance: it should be tangy, slightly sweet, and salty.</li>
+<li><strong>Prep wok:</strong> Heat a large wok or skillet over high heat. Add 1 tbsp oil. Fry tofu until golden (or cook shrimp until pink). Remove and set aside.</li>
+<li><strong>Aromatics:</strong> Add remaining oil, sauté shallots and garlic briefly until fragrant (don not burn).</li>
+<li><strong>Egg:</strong> Push aromatics to one side, add beaten eggs, scramble quickly, then mix with aromatics.</li>
+<li><strong>Noodles & sauce:</strong> Add drained noodles and the prepared sauce. Toss vigorously so noodles absorb sauce and become evenly coated. Add a splash of water or stock if needed to help soften and distribute sauce.</li>
+<li><strong>Combine:</strong> Return tofu/shrimp to the wok. Add bean sprouts and white parts of spring onions. Toss for 30–60 seconds (keep some crunch).</li>
+<li><strong>Finish:</strong> Turn off heat, stir in lime juice to taste and add a drizzle of sesame oil if desired. Sprinkle with crushed peanuts and green parts of spring onions. Serve immediately with extra lime wedges and chili flakes on the side.</li>
+</ol>
+<h2>Serving</h2>
+<p>Plate hot. Offer lime wedges, extra crushed peanuts, and bird’s eye chilies or chili flakes at the table. Pad Thai is best eaten right away while noodles are slightly chewy and toppings are crunchy.</p>
+<h2>Variations</h2>
+<ul>
+<li><strong>Vegetarian/vegan:</strong> Replace fish sauce with tamari or soy, and use tofu; add more vegetables like bell pepper and broccoli.</li>
+<li><strong>Chicken:</strong> Use thin-sliced chicken breast; cook fully before adding noodles.</li>
+<li><strong>Dry-style (street):</strong> Some vendors use more heat and slightly drier finish — cook faster and reduce sauce a touch.</li>
+</ul>
+<h2>Storage & Make-ahead</h2>
+<p>Cooked Pad Thai is best fresh. For leftovers, refrigerate in an airtight container up to 2 days — reheat gently in a pan with a splash of water to loosen noodles. Noodles will soften further when stored.</p>
+<h2>Quick Checklist</h2>
+<ul>
+<li>Rice noodles — soaked & drained</li>
+<li>Tamarind + palm sugar + fish sauce</li>
+<li>Tofu/shrimp + eggs</li>
+<li>Bean sprouts, peanuts, lime</li>
+</ul>
+<h2>Timing</h2>
+<p>Active cook time: 8–12 minutes in the wok. Prep: 15–25 minutes.</p>
+<p>Pro tip: Work on high heat and keep ingredients moving. Have your sauce and toppings ready before you start — stir-fries happen fast.</p>
+<h2>Sauce ratio (starter)</h2>
+<p>tamarind : sugar : fish sauce ≈ 1 : 1 : 1. Adjust to taste — more tamarind for sour, more sugar for balance, more fish sauce for saltiness/umami.</p>
+', 'main course', 'https://inquiringchef.com/wp-content/uploads/2023/02/Authentic-Pad-Thai_square-1908.jpg', 'non veg'), ('63', 'Tom Yum Soup', 'Thai', '<h1>Tom Yum Soup</h1>
+<p>Tom Yum Soup is a classic Thai hot and sour soup, known for its fragrant herbs, spicy chili, and a balance of sour, salty, and umami flavors. Typically made with shrimp, mushrooms, lemongrass, galangal, and kaffir lime leaves.</p>
+<h2>Ingredients (serves 3–4)</h2>
+<ul>
+<li>400 g (14 oz) shrimp, peeled and deveined</li>
+<li>4 cups (1 L) chicken or vegetable stock</li>
+<li>2 stalks lemongrass, cut into 2-inch pieces and smashed</li>
+<li>3–4 kaffir lime leaves, torn</li>
+<li>3 slices galangal</li>
+<li>2–3 Thai chilies, smashed (adjust to taste)</li>
+<li>200 g (7 oz) mushrooms, halved or sliced</li>
+<li>2–3 tbsp fish sauce (or soy sauce for vegetarian)</li>
+<li>1–2 tbsp lime juice (to taste)</li>
+<li>1–2 tsp sugar (optional)</li>
+<li>Fresh cilantro for garnish</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare stock:</strong> Bring chicken or vegetable stock to a boil in a pot.</li>
+<li><strong>Add aromatics:</strong> Add lemongrass, kaffir lime leaves, galangal, and Thai chilies. Simmer 5–10 minutes to infuse flavors.</li>
+<li><strong>Add mushrooms:</strong> Add mushrooms and simmer for 2–3 minutes until slightly tender.</li>
+<li><strong>Add shrimp:</strong> Add shrimp and cook 2–3 minutes until pink and cooked through.</li>
+<li><strong>Season:</strong> Add fish sauce, lime juice, and sugar (if using). Adjust balance of sour, salty, and sweet according to taste.</li>
+<li><strong>Serve:</strong> Remove lemongrass, galangal, and lime leaves. Ladle soup into bowls, garnish with fresh cilantro, and serve hot.</li>
+</ol>
+<h2>Tips & Variations</h2>
+<ul>
+<li>Adjust chili to control spiciness.</li>
+<li>For a creamy version, add 1/2 cup coconut milk at the end.</li>
+<li>Vegetarian version: Replace shrimp with tofu or extra mushrooms and use soy sauce instead of fish sauce.</li>
+<li>Use fresh herbs for authentic fragrance; dried herbs won’t give the same depth of flavor.</li>
+</ul>
+', 'starter', 'https://carveyourcraving.com/wp-content/uploads/2020/12/Spicy-tom-yum-soup.jpg', 'non veg'), ('64', 'Green Curry', 'Thai', '<h1>Thai Green Curry</h1>
+<p>Thai Green Curry is a fragrant and spicy curry made with green curry paste, coconut milk, vegetables, and protein such as chicken, tofu, or shrimp. It is aromatic, creamy, and balanced with sweet, salty, and spicy flavors.</p>
+<h2>Ingredients (serves 3–4)</h2>
+<ul>
+<li>400 g (14 oz) chicken, tofu, or shrimp</li>
+<li>2–3 tbsp green curry paste</li>
+<li>2 cups (480 ml) coconut milk</li>
+<li>1 cup mixed vegetables (bell peppers, zucchini, bamboo shoots, or eggplant)</li>
+<li>2–3 kaffir lime leaves, torn</li>
+<li>1–2 tbsp fish sauce (or soy sauce for vegetarian)</li>
+<li>1–2 tsp sugar</li>
+<li>1 tbsp vegetable oil</li>
+<li>Fresh Thai basil or cilantro for garnish</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Heat oil:</strong> In a pan or wok, heat vegetable oil over medium heat. Add green curry paste and sauté for 1–2 minutes until fragrant.</li>
+<li><strong>Add coconut milk:</strong> Pour in half of the coconut milk, stirring to combine with curry paste. Simmer 2–3 minutes.</li>
+<li><strong>Add protein:</strong> Add chicken, tofu, or shrimp and cook until nearly done (chicken fully cooked, shrimp pink, tofu heated).</li>
+<li><strong>Add vegetables:</strong> Stir in vegetables and remaining coconut milk. Simmer 5–7 minutes until vegetables are tender but crisp.</li>
+<li><strong>Season:</strong> Add fish sauce (or soy sauce) and sugar to taste. Adjust seasoning to balance spicy, salty, and sweet flavors.</li>
+<li><strong>Finish:</strong> Remove from heat, stir in torn kaffir lime leaves, and garnish with fresh Thai basil or cilantro.</li>
+<li><strong>Serve:</strong> Serve hot with steamed jasmine rice.</li>
+</ol>
+<h2>Tips & Variations</h2>
+<ul>
+<li>Adjust curry paste quantity to control spiciness.</li>
+<li>Vegetarian version: Use tofu and vegetable stock instead of meat and fish sauce.</li>
+<li>For extra flavor, add a splash of lime juice or a few slices of fresh chili.</li>
+<li>Other vegetables: peas, carrots, or baby corn can also be used.</li>
+</ul>
+', 'main course', 'https://www.connoisseurusveg.com/wp-content/uploads/2022/05/vegan-green-curry-22-sq.jpg', 'non veg'), ('65', 'Som Tum (Papaya Salad)', 'Thai', '<h1>Som Tum (Papaya Salad)</h1>
+<p>Som Tum is a vibrant Thai salad made from shredded green papaya, fresh vegetables, chilies, and a tangy, sweet, and spicy dressing. It’s crunchy, refreshing, and full of flavor.</p>
+<h2>Ingredients (serves 2–3)</h2>
+<ul>
+<li>2 cups shredded green papaya</li>
+<li>1–2 cloves garlic</li>
+<li>1–2 Thai chilies (adjust to taste)</li>
+<li>10 cherry tomatoes, halved</li>
+<li>1/2 cup green beans, cut into 1-inch pieces</li>
+<li>2 tbsp roasted peanuts</li>
+<li>2 tbsp fish sauce (or soy sauce for vegetarian)</li>
+<li>1–2 tbsp lime juice</li>
+<li>1–2 tsp palm sugar (or brown sugar)</li>
+<li>Optional: dried shrimp or crab for added flavor</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Pound aromatics:</strong> In a mortar and pestle, pound garlic and chilies until roughly crushed.</li>
+<li><strong>Add sugar & sauce:</strong> Add palm sugar, fish sauce, and lime juice. Lightly pound to combine.</li>
+<li><strong>Add vegetables:</strong> Add green beans and cherry tomatoes. Lightly bruise them with the pestle to release flavor.</li>
+<li><strong>Add papaya:</strong> Add shredded papaya and toss gently with the dressing until evenly coated.</li>
+<li><strong>Add peanuts:</strong> Stir in roasted peanuts (and dried shrimp/crab if using).</li>
+<li><strong>Serve:</strong> Transfer to a plate and serve immediately as a refreshing starter or side dish.</li>
+</ol>
+<h2>Tips & Variations</h2>
+<ul>
+<li>Adjust chilies to control spiciness.</li>
+<li>Use a kitchen knife or salad tongs if you don’t have a mortar and pestle; just mix ingredients thoroughly.</li>
+<li>For a vegetarian version, omit fish sauce or use soy sauce.</li>
+<li>Other vegetables: shredded carrots, bell peppers, or cucumber can be added for extra color and crunch.</li>
+</ul>
+', 'starter', 'https://www.seriouseats.com/thmb/yKNZ9ICJC5ZNhzcYHdHENxogpFw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20210928-Som-Tam-Thai-green-papaya-salad-vicky-wasik-24-f0d666fc609f49a0b9f34897bd2c6303.jpg', 'veg'), ('66', 'Massaman Curry', 'Thai', '<h1>Massaman Curry</h1>
+<p>Massaman Curry is a rich and mildly spiced Thai curry with influences from Indian cuisine. Made with coconut milk, tender meat or tofu, potatoes, peanuts, and aromatic spices, it’s sweet, savory, and slightly nutty.</p>
+<h2>Ingredients (serves 3–4)</h2>
+<ul>
+<li>400 g (14 oz) chicken, beef, or tofu</li>
+<li>2–3 tbsp Massaman curry paste</li>
+<li>2 cups (480 ml) coconut milk</li>
+<li>2 medium potatoes, peeled and cubed</li>
+<li>1 onion, sliced</li>
+<li>2–3 tbsp roasted peanuts</li>
+<li>1–2 tbsp fish sauce (or soy sauce for vegetarian)</li>
+<li>1–2 tbsp palm sugar</li>
+<li>1–2 tbsp tamarind paste (optional, for tanginess)</li>
+<li>1 cinnamon stick</li>
+<li>2–3 cardamom pods (optional)</li>
+<li>1 tbsp vegetable oil</li>
+<li>Fresh cilantro or Thai basil for garnish</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Heat oil:</strong> In a pan or wok, heat vegetable oil over medium heat. Add Massaman curry paste and sauté 1–2 minutes until fragrant.</li>
+<li><strong>Add coconut milk:</strong> Pour in half of the coconut milk and stir to combine with curry paste. Simmer for 2–3 minutes.</li>
+<li><strong>Add protein:</strong> Add chicken, beef, or tofu. Cook until partially done.</li>
+<li><strong>Add vegetables & spices:</strong> Add potatoes, onion, cinnamon stick, and cardamom pods. Pour in remaining coconut milk, simmer 20–25 minutes until meat is tender and potatoes are cooked through.</li>
+<li><strong>Season:</strong> Add fish sauce (or soy sauce), palm sugar, and tamarind paste (if using). Taste and adjust seasoning for balance.</li>
+<li><strong>Finish:</strong> Stir in roasted peanuts. Remove cinnamon stick and cardamom pods before serving.</li>
+<li><strong>Serve:</strong> Garnish with fresh cilantro or Thai basil. Serve hot with steamed jasmine rice.</li>
+</ol>
+<h2>Tips & Variations</h2>
+<ul>
+<li>Adjust curry paste to control spiciness.</li>
+<li>Vegetarian version: use tofu and vegetable stock instead of meat and fish sauce.</li>
+<li>Other vegetables: carrots, sweet potatoes, or bell peppers can be added for variation.</li>
+<li>Massaman curry is even better the next day as flavors deepen.</li>
+</ul>
+', 'main course', 'https://www.feastingathome.com/wp-content/uploads/2024/10/massaman-curry-recipe-9.jpg', 'non veg'), ('67', 'Pad See Ew', 'Thai', '<h1>Pad See Ew</h1>
+<p>Pad See Ew is a popular Thai stir-fried noodle dish made with wide rice noodles, soy sauce, garlic, Chinese broccoli, and your choice of protein. It’s savory, slightly sweet, and has a smoky wok flavor.</p>
+<h2>Ingredients (serves 2–3)</h2>
+<ul>
+<li>200 g (7 oz) wide rice noodles, soaked or fresh</li>
+<li>200 g chicken, beef, pork, tofu, or shrimp</li>
+<li>2–3 cloves garlic, minced</li>
+<li>2 cups Chinese broccoli (gai lan), cut into 2-inch pieces</li>
+<li>2 eggs, lightly beaten</li>
+<li>2–3 tbsp light soy sauce</li>
+<li>1–2 tbsp dark soy sauce</li>
+<li>1 tsp sugar</li>
+<li>2 tbsp vegetable oil</li>
+<li>Optional: white pepper to taste</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare noodles:</strong> Soak dried rice noodles in warm water until pliable, or use fresh noodles. Drain and set aside.</li>
+<li><strong>Cook protein:</strong> Heat 1 tbsp oil in a wok or large skillet over high heat. Stir-fry protein until cooked through. Remove and set aside.</li>
+<li><strong>Aromatics:</strong> Add remaining oil and sauté garlic until fragrant (do not burn).</li>
+<li><strong>Egg:</strong> Push garlic to the side and pour in beaten eggs. Scramble briefly until just set.</li>
+<li><strong>Noodles & sauce:</strong> Add noodles, light soy sauce, dark soy sauce, and sugar. Stir-fry, ensuring noodles are coated evenly. Adjust seasoning as needed.</li>
+<li><strong>Add vegetables & protein:</strong> Add Chinese broccoli and cooked protein. Toss and stir-fry 2–3 minutes until broccoli is tender-crisp and everything is combined.</li>
+<li><strong>Finish:</strong> Optional sprinkle of white pepper. Serve hot immediately.</li>
+</ol>
+<h2>Tips & Variations</h2>
+<ul>
+<li>Use high heat and a well-seasoned wok for best smoky flavor.</li>
+<li>Adjust soy sauce levels for desired saltiness and color.</li>
+<li>Other vegetables like carrots, bell peppers, or cabbage can be added.</li>
+<li>For a vegetarian version, use tofu and soy sauce instead of meat and fish sauce.</li>
+</ul>
+', 'main course', 'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2024-05-pad-see-ew%2Fpad-see-ew-357', 'non veg'), ('68', 'Thai Basil Chicken', 'Thai', '<h1>Thai Basil Chicken (Pad Krapow Gai)</h1>
+<p>Thai Basil Chicken is a quick and flavorful stir-fry featuring minced chicken, garlic, chilies, and fragrant Thai basil. It’s savory, spicy, and perfect with steamed rice or a fried egg on top.</p>
+<h2>Ingredients (serves 2–3)</h2>
+<ul>
+<li>400 g (14 oz) minced chicken</li>
+<li>4–5 cloves garlic, minced</li>
+<li>2–3 Thai chilies, chopped (adjust to taste)</li>
+<li>1 small onion, sliced (optional)</li>
+<li>1–2 tbsp vegetable oil</li>
+<li>2 tbsp light soy sauce</li>
+<li>1 tbsp fish sauce</li>
+<li>1 tsp sugar</li>
+<li>1 cup fresh Thai basil leaves</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare aromatics:</strong> Heat oil in a wok or large skillet over high heat. Add garlic and chilies, stir-fry until fragrant (about 30 seconds).</li>
+<li><strong>Cook chicken:</strong> Add minced chicken, breaking it up with a spatula. Stir-fry until fully cooked and lightly browned.</li>
+<li><strong>Season:</strong> Add light soy sauce, fish sauce, and sugar. Stir well to coat chicken evenly with the sauce.</li>
+<li><strong>Add onion:</strong> If using, add sliced onion and stir-fry 1–2 minutes until slightly softened.</li>
+<li><strong>Add basil:</strong> Turn off heat, add Thai basil leaves, and toss until wilted and fragrant.</li>
+<li><strong>Serve:</strong> Serve immediately with steamed jasmine rice. Optionally, top with a fried egg for an authentic touch.</li>
+</ol>
+<h2>Tips & Variations</h2>
+<ul>
+<li>Adjust chilies to control spiciness.</li>
+<li>For a vegetarian version, use tofu and soy sauce instead of chicken and fish sauce.</li>
+<li>Other proteins like pork, beef, or shrimp can be substituted.</li>
+<li>Use fresh Thai basil for authentic flavor; sweet basil won’t give the same aroma.</li>
+</ul>
+', 'main course', 'https://omnivorescookbook.com/wp-content/uploads/2024/08/200702_Thai-Basil-Chicken_550.jpg', 'non veg'), ('69', 'Mango Sticky Rice', 'Thai', '<h1>Thai Mango Sticky Rice (Khao Niew Mamuang)</h1>
+<p>Mango Sticky Rice is a beloved Thai dessert made with sweet sticky rice, creamy coconut sauce, and ripe mangoes. It’s rich, fragrant, and perfectly balanced between sweet and salty flavors.</p>
+<h2>Ingredients (serves 3–4)</h2>
+<ul>
+<li>1 cup glutinous (sticky) rice</li>
+<li>1 1/2 cups coconut milk</li>
+<li>1/2 cup sugar</li>
+<li>1/2 tsp salt</li>
+<li>2 ripe mangoes, peeled and sliced</li>
+<li>1 tbsp toasted sesame seeds or mung beans (for garnish)</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Prepare sticky rice:</strong> Soak sticky rice in water for at least 4 hours (or overnight). Drain, then steam for 20–25 minutes until tender and sticky.</li>
+<li><strong>Make coconut sauce:</strong> In a saucepan, heat coconut milk with sugar and salt over low heat until dissolved. Do not boil.</li>
+<li><strong>Combine:</strong> Reserve 1/4 cup of the coconut sauce for serving. Pour the rest over the hot sticky rice. Mix well, cover, and let sit for 15 minutes to absorb flavors.</li>
+<li><strong>Serve:</strong> Place sticky rice on a plate with sliced mango alongside. Drizzle with reserved coconut sauce.</li>
+<li><strong>Garnish:</strong> Sprinkle toasted sesame seeds or mung beans on top before serving.</li>
+</ol>
+<h2>Tips & Variations</h2>
+<ul>
+<li>Use ripe, sweet mangoes like Nam Dok Mai or Ataulfo for best results.</li>
+<li>Do not boil the coconut milk; it should just be warmed to keep it smooth.</li>
+<li>For extra fragrance, add a pandan leaf to the coconut sauce while heating.</li>
+<li>This dessert is best served fresh, slightly warm or at room temperature.</li>
+</ul>
+', 'dessert', 'https://takestwoeggs.com/wp-content/uploads/2021/07/Thai-Mango-Sticky-Rice-Takestwoeggs-Process-Final-sq.jpg', 'veg'), ('70', 'Panang Curry', 'Thai', '<h1>Panang Curry</h1>
+<p>Panang Curry is a rich and creamy Thai curry with a hint of sweetness and nuttiness. Made with Panang curry paste, coconut milk, and your choice of protein, it is slightly less spicy than red curry and often thickened with ground peanuts.</p>
+<h2>Ingredients (serves 3–4)</h2>
+<ul>
+<li>400 g (14 oz) chicken, beef, pork, shrimp, or tofu</li>
+<li>2–3 tbsp Panang curry paste</li>
+<li>2 cups (480 ml) coconut milk</li>
+<li>2–3 kaffir lime leaves, torn</li>
+<li>1–2 tbsp fish sauce (or soy sauce for vegetarian)</li>
+<li>1–2 tsp palm sugar (or brown sugar)</li>
+<li>2 tbsp ground peanuts (optional, for nutty flavor)</li>
+<li>1 tbsp vegetable oil</li>
+<li>Fresh Thai basil or cilantro for garnish</li>
+</ul>
+<h2>Instructions</h2>
+<ol>
+<li><strong>Heat oil:</strong> In a pan or wok, heat vegetable oil over medium heat. Add Panang curry paste and sauté for 1–2 minutes until fragrant.</li>
+<li><strong>Add coconut milk:</strong> Pour in half of the coconut milk, stirring to combine with curry paste. Simmer 2–3 minutes.</li>
+<li><strong>Add protein:</strong> Add your choice of chicken, beef, pork, shrimp, or tofu. Cook until nearly done.</li>
+<li><strong>Add seasonings:</strong> Stir in fish sauce, palm sugar, and ground peanuts (if using). Mix well.</li>
+<li><strong>Add remaining coconut milk:</strong> Pour in the rest of the coconut milk. Simmer gently for 5–10 minutes until meat is tender and sauce thickens.</li>
+<li><strong>Finish:</strong> Add torn kaffir lime leaves and stir well.</li>
+<li><strong>Serve:</strong> Garnish with Thai basil or cilantro. Serve hot with steamed jasmine rice.</li>
+</ol>
+<h2>Tips & Variations</h2>
+<ul>
+<li>Panang curry is usually less soupy than other Thai curries; keep sauce slightly thick.</li>
+<li>Vegetarian version: Use tofu and soy sauce instead of meat and fish sauce.</li>
+<li>Other vegetables such as bell peppers, carrots, or zucchini can be added.</li>
+<li>For extra nuttiness, sprinkle with crushed roasted peanuts before serving.</li>
+</ul>
+', 'main course', 'https://hot-thai-kitchen.com/wp-content/uploads/2013/10/panang-pork-sq.jpg', 'non veg'), ('72', 'Satay with Peanut Sauce', 'Thai', '<h1>Satay with Peanut Sauce</h1>
 <p>Satay is a Southeast Asian favorite: marinated, skewered, and grilled meat served with a rich, savory-sweet peanut sauce. This version uses chicken, but you can swap in tofu, beef, or prawns.</p>
 <h2>Ingredients (serves 4)</h2>
 <h3>For the Satay</h3>
@@ -54,5 +2561,4 @@ INSERT INTO "public"."recipes" ("name", "cuisine", "type", "recipe", "category",
 <li><strong>Beef/prawn:</strong> Thin-sliced beef cooks quickly; prawns need only 1–2 minutes per side.</li>
 <li><strong>Make-ahead:</strong> Peanut sauce keeps 1 week refrigerated. Rewarm with a splash of water.</li>
 </ul>
-','starter', 'https://www.splenda.com/wp-content/themes/bistrotheme/assets/recipe-images/beef-satay-with-peanut-sauce.jpg'
-);
+', 'starter', 'https://www.splenda.com/wp-content/themes/bistrotheme/assets/recipe-images/beef-satay-with-peanut-sauce.jpg', 'non veg');
