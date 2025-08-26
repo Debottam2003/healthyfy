@@ -8,12 +8,12 @@ import Footer from "./Components/Footer";
 createRoot(document.getElementById('root')).render(
   <>
     {/* <h1>Healthyfy</h1> */}
-    {/* <Test /> */}
-     <Navber />
+    <Test />
+     {/* <Navber />
     <div>
     <Top></Top>
     <App />
     </div>
-    <Footer></Footer>
+    <Footer></Footer> */}
   </>
 )
