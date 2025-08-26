@@ -9,7 +9,10 @@ const generateHandler = async (req, res) => {
 
         const dishname = "chicken";
         const contents =
-            ` generate an vibrent colorful image of ${dishname} and Give me a detailed step-by-step recipe for ${dishname} in html all text should be in html format and donot add (##, **, \`\` these characters in the text reponse) strict format should be:  
+            ` generate a vibrant colorful image of ${dishname}, Before that give me a detailed step-by-step recipe for 
+            ${dishname} in HTML, all text should be in html format and donot add (##, **, \`\`, \\n - these characters in the text reponse). 
+            do not add any thing like : I will generate an HTML recipe for Panta Bhat following the exact format you provided, and then I will create a vibrant and colorful image of Panta Bhat. these type of any lines.
+  strict format should be like:  
   <body>
   <h1>Paneer Butter Masala</h1>
   <p>A rich and creamy Indian curry made with paneer (Indian cheese), tomatoes, butter, and a blend of aromatic spices.</p>
@@ -45,7 +48,7 @@ const generateHandler = async (req, res) => {
    <li>Serve hot with naan, roti, or rice.</li>
   </ol>
  </body>
- strict donot add: I will generate an HTML recipe for Panta Bhat following the exact format you provided, and then I will create a vibrant and colorful image of Panta Bhat. these type of any lines`;
+ `;
 
         // Set responseModalities to include "Image" so the model can generate  an image
         try {
@@ -62,7 +65,7 @@ const generateHandler = async (req, res) => {
             for (const part of response.candidates[0].content.parts) {
                 // Based on the part type, either show the text or save the image
                 if (part.text) {
-                    recipeText = part.text.replace(/\*/g, '').replace(/#+\s/g, '').replace(/`/g, '');
+                    recipeText = part.text.replace(/\*/g, '').replace(/#+\s/g, '').replace(/`/g, '').replace(/\n/g,'');
                     // .replace(/i will generate[\s\S]*$/gi, '');
                     // fs.writeFileSync("./recipe.txt", recipeText, "utf-8");
                     console.log(recipeText);
