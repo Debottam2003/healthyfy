@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Top from "./Top.jsx";
 
 function RecipeCard() {
   const [data, setData] = useState([]);
@@ -26,6 +27,8 @@ function RecipeCard() {
   };
 
   return (
+    <>
+    <Top></Top>
     <div
       className="recipe-cards"
       style={{
@@ -136,6 +139,7 @@ function RecipeCard() {
         );
       })}
     </div>
+    </>
   );
 }
 

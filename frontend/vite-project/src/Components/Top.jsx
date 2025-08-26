@@ -7,7 +7,7 @@ const colors = [
 ];
 
 return (
-    <div style={{position: "relative", left: "105px", marginLeft: "25px"}}>
+    <div style={{position: "relative" }}>
         <div style={{ display: 'flex', gap: '24px', overflowX: 'auto', padding: '16px 0', marginLeft: "15px" }}>
             {[
                 { name: 'Italian', img: 'https://media.istockphoto.com/id/632439546/photo/pasta-plate.jpg?s=612x612&w=0&k=20&c=zZPaNg_mf7cTVIeJPFVRtsjYClNYkGMcUc5ZBrARwZU=' },

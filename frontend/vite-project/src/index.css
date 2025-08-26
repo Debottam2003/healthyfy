@@ -7,6 +7,7 @@ body {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
@@ -14,7 +15,7 @@ body {
 }
 
 .recipes-area {
-    position: relative;
+    position: absolute;
     left: 105px;
     display: flex;
     justify-content: center;
@@ -33,10 +34,11 @@ body {
     transform: scale(1.1);
 }
 .nav{
-    position:fixed;
+    position: fixed;
     left: 0px;
     top: 0px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     height: 100vh;
     width: 7vw;

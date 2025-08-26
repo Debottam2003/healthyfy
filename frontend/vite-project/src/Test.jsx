@@ -8,9 +8,9 @@ function Test() {
   return (
     <div>
       {/* <Profile></Profile> */}
-        {/* <Login />
-        <Register></Register> */}
-        <Generate></Generate>
+        <Login />
+        {/* <Register></Register> */}
+        {/* <Generate></Generate> */}
     </div>
   )
 }

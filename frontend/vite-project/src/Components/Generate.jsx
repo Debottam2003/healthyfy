@@ -4,7 +4,7 @@ import { GiRobotGolem } from "react-icons/gi";
 
 const styles = {
   chatContainer: {
-    width: "100vw",
+    width: "95vw",
     height: "100vh",
     margin: 0,
     border: "none",

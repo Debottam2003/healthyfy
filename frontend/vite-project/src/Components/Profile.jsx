@@ -14,7 +14,7 @@ function Profile() {
 
   const styles = {
     page: {
-      width: "100vw",
+      width: "95vw",
       minHeight: "100vh",
       background: "#fafafa",
       fontFamily: "Segoe UI, sans-serif",
@@ -22,7 +22,8 @@ function Profile() {
       flexDirection: "column",
       color: "#222",
       margin: 0,
-      padding: 0,
+      padding: "2rem",
+      margin: "2rem",
       boxSizing: "border-box",
     },
     header: {

@@ -1,90 +1,112 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-const darkThemeStyles = {
-  background: "#181818",
-  color: "#f1f1f1",
-  minHeight: "100vh",
+const greenAccent = "#43a047";
+const greenAccentLight = "#81c784";
+
+const LinkStyle = {
+  textDecoration: "none",
+  color: greenAccent,
+  fontWeight: "bold",
+};
+
+const whiteThemeStyles = {
+  background: "#fff",
+  color: "#222",
+  maxHeight: "100vh",
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
+  width: "100vw",
+  fontFamily: "Inter, Arial, sans-serif",
+  gap: "60px",
+  padding: "2rem",
+  boxSizing: "border-box",
+  overFlow: "hidden",
 };
 
 const formStyles = {
-  background: "#232323",
+  background: "#f9f9f9",
   padding: "2rem",
-  borderRadius: "8px",
-  boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+  borderRadius: "16px",
+  boxShadow: "0 4px 24px rgba(67,160,71,0.08)",
   display: "flex",
   flexDirection: "column",
-  gap: "1rem",
-  minWidth: "275px",
+  gap: "1.25rem",
+  minWidth: "300px",
+  maxWidth: "350px",
+  width: "100%",
   border: "none",
 };
 
 const inputStyles = {
-  padding: "0.75rem",
-  borderRadius: "4px",
-  border: "1px solid #444",
-  background: "#181818",
-  color: "#f1f1f1",
+  padding: "0.85rem",
+  borderRadius: "6px",
+  border: `1.5px solid ${greenAccentLight}`,
+  background: "#fff",
+  color: "#222",
+  fontSize: "1rem",
+  outline: "none",
+  transition: "border 0.2s",
 };
 
 const buttonStyles = {
-  padding: "0.75rem",
-  borderRadius: "4px",
+  padding: "0.85rem",
+  borderRadius: "6px",
   border: "none",
-  background: "linear-gradient(90deg, #b01f14 0%, #f9c938 100%)",
+  background: `linear-gradient(90deg, ${greenAccent} 0%, ${greenAccentLight} 100%)`,
   color: "#fff",
   fontWeight: "bold",
   cursor: "pointer",
-  fontFamily: "Arial",
-  fontSize: "1rem",
+  fontFamily: "inherit",
+  fontSize: "1.1rem",
+  letterSpacing: "0.5px",
+  transition: "background 0.2s",
+  marginTop: "0.5rem",
+};
+
+const sideTextStyles = {
+  fontSize: "3rem",
+  color: greenAccent,
+  fontWeight: "bold",
+  lineHeight: 1.2,
+  marginBottom: "1rem",
+  textAlign: "left",
 };
 
 function Register() {
   let { register, handleSubmit, reset } = useForm();
 
   async function submitForm(data) {
-    console.log(data);
     try {
-      console.log("Form Data:", data);
       let response = await axios.post(
         "http://localhost:3333/healthyfy/register",
         data
       );
-      console.log("Response:", response.data);
-
+      if (response.statusText === "OK") {
+        alert("user registered");
+      }
       // reset(); // Uncomment if you want to clear form after login
     } catch (error) {
-      console.error("Login failed:", error.message);
+      alert("error");
+      // handle error
     }
-    // reset(); // Uncomment if you want to clear the form after submission
   }
 
   return (
-    <div
-      className="auth-backgroud"
-      style={{
-        display: "flex",
-        gap: "200px",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        backgroundColor: "#181818",
-        color: "#f1f1f1",
-        minHeight: "100vh",
-        fontFamily: "cursive",
-      }}
-    >
-      <div style={{ fontSize: "1.5rem" }}>
-        <h1>Sign up in</h1>
-        <h1> to generate</h1>
-        <h1>Recipes</h1>
+    <div className="auth-background" style={whiteThemeStyles}>
+      <div style={sideTextStyles} className="register-side-text">
+        <div>Sign up to</div>
+        <div>generate</div>
+        <div>Healthy Recipes</div>
       </div>
-      <div className="auth-form" style={darkThemeStyles}>
+      <div
+        className="auth-form"
+        style={{ width: "100%", display: "flex", justifyContent: "center" }}
+      >
         <form onSubmit={handleSubmit(submitForm)} style={formStyles}>
           <h2
             style={{
@@ -93,6 +115,7 @@ function Register() {
               fontSize: "1.5rem",
               textAlign: "center",
               letterSpacing: "1px",
+              color: greenAccent,
             }}
           >
             Welcome to <br /> Healthyfy
@@ -130,7 +153,7 @@ function Register() {
           </button>
           <p
             style={{
-              color: "#aaa",
+              color: "#555",
               marginTop: "1.5rem",
               fontSize: "1rem",
               textAlign: "center",
@@ -139,16 +162,45 @@ function Register() {
             Already have an account?{" "}
             <span
               style={{
-                color: "#f9c938",
+                color: greenAccent,
                 cursor: "pointer",
                 textDecoration: "underline",
               }}
             >
-              Login
+              <Link style={LinkStyle} to="/login">
+                Login
+              </Link>
             </span>
           </p>
         </form>
       </div>
+      {/* Responsive styles */}
+      <style>
+        {`
+        @media (max-width: 900px) {
+          .auth-background {
+            flex-direction: column !important;
+            gap: 24px !important;
+            padding: 1rem !important;
+          }
+          .register-side-text {
+            font-size: 1.3rem !important;
+            text-align: center !important;
+          }
+        }
+        @media (max-width: 600px) {
+          .auth-form {
+            max-width: 100vw !important;
+            padding: 0 !important;
+          }
+          form {
+            min-width: 0 !important;
+            max-width: 100vw !important;
+            padding: 1rem !important;
+          }
+        }
+        `}
+      </style>
     </div>
   );
 }
