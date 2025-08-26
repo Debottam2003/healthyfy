@@ -23,7 +23,6 @@ function Profile() {
       color: "#222",
       margin: 0,
       padding: "2rem",
-      margin: "2rem",
       boxSizing: "border-box",
     },
     header: {
