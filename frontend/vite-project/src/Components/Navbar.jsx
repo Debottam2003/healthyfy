@@ -7,11 +7,11 @@ import { FaUserCircle } from "react-icons/fa";
 function Navber() {
   return (
       <div className="nav">
-        <h1>H</h1>
-        <FaHome size={30} style={{ cursor: "pointer" }} />
-        <FaSearch size={30} style={{ cursor: "pointer" }} />
-        <FaMagic size={30} style={{ cursor: "pointer" }} />
-        <FaUserCircle size={30} style={{ cursor: "pointer" }} />
+        <h1>𝓗</h1>
+        <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}><FaHome size={30} style={{ cursor: "pointer" }} /><span>Home</span></div>
+        <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}><FaSearch size={30} style={{ cursor: "pointer" }} /><span>Search</span></div>
+        <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}><FaMagic size={30} style={{ cursor: "pointer" }} /><span>Generate</span></div>
+        <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}><FaUserCircle size={30} style={{ cursor: "pointer" }} /><span>Profile</span></div>
       </div>
   );
 }
