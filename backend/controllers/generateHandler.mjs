@@ -1,6 +1,8 @@
-import ai from "../ai.mjs";
+import genai  from "../ai.mjs";
 import * as fs from "node:fs";
 import errorHandler from "../error.mjs";
+
+let {ai, Modality} = genai;
 
 const generateHandler = async (req, res) => {
     async function main() {
@@ -54,7 +56,7 @@ const generateHandler = async (req, res) => {
                     responseModalities: [Modality.TEXT, Modality.IMAGE],
                 },
             });
-            console.log(response.candidates[0].content.parts);
+            // console.log(response.candidates[0].content.parts);
             let recipeText = "";
             let buffer;
             for (const part of response.candidates[0].content.parts) {
@@ -62,22 +64,22 @@ const generateHandler = async (req, res) => {
                 if (part.text) {
                     recipeText = part.text.replace(/\*/g, '').replace(/#+\s/g, '').replace(/`/g, '');
                     // .replace(/i will generate[\s\S]*$/gi, '');
-                    fs.writeFileSync("./recipe.txt", recipeText, "utf-8");
+                    // fs.writeFileSync("./recipe.txt", recipeText, "utf-8");
                     console.log(recipeText);
                 } else if (part.inlineData) {
                     const imageData = part.inlineData.data;
                     buffer = Buffer.from(imageData, "base64");
                     // console.log(buffer.toString("base64"));
-                    fs.writeFileSync(`../public/images/img${Date.now()}.png`, buffer);
+                    fs.writeFileSync(`./public/images/img${Date.now()}.png`, buffer);
                     console.log("Image saved");
                 }
             }
-            res.json({ recipe: recipeText, image: buffer });
+            res.status(200).json({ recipe: recipeText, image: buffer });
         } catch (error) {
             console.error("Error generating content:", error);
             errorHandler(req, res);
-        }
-        main();
+        }      
     }
+    main();
 }
 export default generateHandler;
