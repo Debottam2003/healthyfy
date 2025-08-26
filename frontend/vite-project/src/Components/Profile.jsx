@@ -2,14 +2,14 @@ import React from "react";
 
 function Profile() {
   const likedRecipes = [
-    { id: 1, name: "Paneer Tikka", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
-    { id: 2, name: "Masala Dosa", img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" },
-    { id: 3, name: "Butter Chicken", img: "https://images.unsplash.com/photo-1600628422019-6c3d8e8e8e3b?auto=format&fit=crop&w=400&q=80" },
-    { id: 4, name: "Chole Bhature", img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80" },
-    { id: 5, name: "Idli Sambhar", img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" },
-    { id: 6, name: "Rajma Chawal", img: "https://images.unsplash.com/photo-1523987355523-c7b5b0723c6a?auto=format&fit=crop&w=400&q=80" },
-    { id: 7, name: "Biryani", img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" },
-    { id: 8, name: "Dal Makhani", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" },
+    { id: 1, name: "Paneer Tikka", img: "https://www.ruchiskitchen.com/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3-500x375.jpg" },
+    { id: 2, name: "Masala Dosa", img: "https://www.shutterstock.com/image-photo/paper-masala-dosa-south-indian-600nw-1008144772.jpg" },
+    { id: 3, name: "Butter Chicken", img: "https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&resize=440,400" },
+    { id: 4, name: "Chole Bhature", img: "https://cdn.zeptonow.com/production///tr:w-600,ar-100-100,pr-true,f-auto,q-80/web/recipes/chola-bhatura.png" },
+    { id: 5, name: "Pani Puri", img: "https://static01.nyt.com/images/2024/01/17/multimedia/ND-Pani-Puri-mflg/ND-Pani-Puri-mflg-mediumSquareAt3X.jpg" },
+    { id: 6, name: "Marghertita Pizza", img: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg" },
+    { id: 7, name: "Chicken Biryani", img: "https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg" },
+    { id: 8, name: "Dal Makhani", img: "https://www.cookwithmanali.com/wp-content/uploads/2019/04/Restaurant-Style-Dal-Makhani.jpg" },
   ];
 
   const styles = {
@@ -57,7 +57,7 @@ function Profile() {
       marginBottom: 16,
     },
     logoutBtn: {
-      background: "#111",
+      background: "#0f701cff",
       color: "#fff",
       border: "none",
       borderRadius: 24,
@@ -65,7 +65,7 @@ function Profile() {
       fontSize: 16,
       fontWeight: 600,
       cursor: "pointer",
-      boxShadow: "0 3px 10px rgba(0,0,0,0.15)",
+      boxShadow: "0 3px 10px rgba(8, 153, 22, 0.15)",
       transition: "all 0.2s",
     },
     gridWrapper: {
