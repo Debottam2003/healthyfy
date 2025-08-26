@@ -7,6 +7,7 @@ import generateHandler from '../controllers/generateHandler.mjs';
 import verifier from '../middleware/verifier.mjs';
 import profileHandler from '../controllers/profileHandler.mjs';
 import recipeHandler from '../controllers/recipeHandler.mjs';
+import sortHandler from '../controllers/sortHandler.mjs';
 
 const router = Router();
 
@@ -17,6 +18,7 @@ router.route("/logout").get(verifier, logoutHandler);
 router.route("/generate").post(verifier, generateHandler);
 router.route("/profile/:uid").get(profileHandler);
 router.route("/recipe/:rid").get(recipeHandler);
+router.route("/cuisine/:cuisine").get(sortHandler);
 
 // fallback route
 router.use((req, res) => {
