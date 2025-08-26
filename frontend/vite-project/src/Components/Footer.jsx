@@ -9,7 +9,7 @@ function Header() {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '20px',
-        background: '#222',
+        background: 'rgb(18, 130, 64)',
         color: '#fff',
         gap: '20px',
         width: '100%',
@@ -20,7 +20,7 @@ function Header() {
         <FaYoutube style={{ cursor: 'pointer', fontSize: '2rem' }} />
         <br />
         <div>
-          <pre>debottam@gmail.com   samratkarmakarnaihati@gmail.com   gagan@gmail.com</pre>
+          <h3><pre><span> debottam@gmail.com  </span><span> samratkarmakarnaihati@gmail.com </span><span> gagan@gmail.com </span></pre></h3>
         </div>
       </footer>
     </div>
