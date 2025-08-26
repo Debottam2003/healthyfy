@@ -11,8 +11,8 @@ const registerHandler = async (req, res) => {
             return res.status(400).send("All fields are required");
         }
         if (user) {
-            await pool.query("insert into husers ( name , email , password , nationality ) values($1 , $2 , $3  , $4 ) returning uid", [user.name, user.email, user.password, user.nationality]);
-            let token = jwt.sign({ email }, secret, { expiresIn: '1h' });
+            let { rows } = await pool.query("insert into husers ( name , email , password , nationality ) values($1 , $2 , $3  , $4 ) returning uid", [user.name, user.email, user.password, user.nationality]);
+            let token = jwt.sign({ uid: rows[0].uid }, secret, { expiresIn: '1h' });
             res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'None' });
             res.status(200).json({ "message": "Registered Successfully" });
         } else {

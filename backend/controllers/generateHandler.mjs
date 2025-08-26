@@ -1,16 +1,20 @@
-import genai  from "../ai.mjs";
+import genai from "../ai.mjs";
 import * as fs from "node:fs";
 import errorHandler from "../error.mjs";
+import { createClient } from '@supabase/supabase-js';
+import pool from '../db.mjs';
 
-let {ai, Modality} = genai;
+const supabase = createClient("https://klkpybbgsjpkgwurrxkw.storage.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtsa3B5YmJnc2pwa2d3dXJyeGt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYyODc2MTEsImV4cCI6MjA2MTg2MzYxMX0.FMg9uwyAs18IyHVaU-eLzrWX4CNbZRWWcVahWJLNFfQ");
+
+let { ai, Modality } = genai;
 
 const generateHandler = async (req, res) => {
+    console.log(req.user);
+    let { uid } = req.user;
     async function main() {
-
-        const dishname = "chicken";
         const contents =
-            ` generate a vibrant colorful image of ${dishname}, Before that give me a detailed step-by-step recipe for 
-            ${dishname} in HTML, all text should be in html format and donot add (##, **, \`\`, \\n - these characters in the text reponse). 
+            ` generate a vibrant colorful image of ${req.body.prompt}, Before that give me a detailed step-by-step recipe for 
+            ${req.body.prompt} in HTML, all text should be in html format and donot add (##, **, \`\`, \\n - these characters in the text reponse). 
             do not add any thing like : I will generate an HTML recipe for Panta Bhat following the exact format you provided, and then I will create a vibrant and colorful image of Panta Bhat. these type of any lines.
   strict format should be like:  
   <body>
@@ -62,26 +66,41 @@ const generateHandler = async (req, res) => {
             // console.log(response.candidates[0].content.parts);
             let recipeText = "";
             let buffer;
+            let imageURL;
             for (const part of response.candidates[0].content.parts) {
                 // Based on the part type, either show the text or save the image
                 if (part.text) {
-                    recipeText = part.text.replace(/\*/g, '').replace(/#+\s/g, '').replace(/`/g, '').replace(/\n/g,'');
+                    recipeText = part.text.replace(/\*/g, '').replace(/#+\s/g, '').replace(/`/g, '').replace(/\n/g, '');
                     // .replace(/i will generate[\s\S]*$/gi, '');
                     // fs.writeFileSync("./recipe.txt", recipeText, "utf-8");
-                    console.log(recipeText);
+                    // console.log(recipeText);
                 } else if (part.inlineData) {
                     const imageData = part.inlineData.data;
                     buffer = Buffer.from(imageData, "base64");
                     // console.log(buffer.toString("base64"));
-                    fs.writeFileSync(`./public/images/img${Date.now()}.png`, buffer);
+                    let name = `img${Date.now()}.png`;
+                    // fs.writeFileSync(`./public/images/${name}`, buffer);
+                    const { data, error } = await supabase.storage
+                        .from('images')
+                        .upload(`${name}`, buffer, {
+                            cacheControl: '3600',
+                            upsert: false,
+                            contentType: "png"
+                        });
+                    imageURL = supabase.storage
+                        .from('images')
+                        .getPublicUrl(name);
+                    console.log(imageURL);
+                    if (error) throw error;
                     console.log("Image saved");
                 }
             }
-            res.status(200).json({ recipe: recipeText, image: buffer });
+            await pool.query("insert into generations(uid, name, content, imageurl) values($1, $2, $3, $4)", [uid, req.body.prompt.slice(0, 10), recipeText, imageURL.data.publicUrl]);
+            res.status(200).json({ recipe: recipeText, imageURL: imageURL.data.publicUrl });
         } catch (error) {
             console.error("Error generating content:", error);
             errorHandler(req, res);
-        }      
+        }
     }
     main();
 }

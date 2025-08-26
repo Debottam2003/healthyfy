@@ -9,12 +9,12 @@ const loginHandler = async (req, res) => {
         if (!email || !password) {
             return res.status(400).send("Both Email and password are required");
         } else {
-            let { rows } = await pool.query("select email, password from husers where email = $1", [email]);
+            let { rows } = await pool.query("select uid, email, password from husers where email = $1", [email]);
             if (rows.length === 0) {
                 return res.status(400).send("Wrong email or password");
             }
             else if (password === rows[0].password) {
-                let token = jwt.sign({ email }, secret, { expiresIn: '1h' });
+                let token = jwt.sign({ uid: rows[0].uid }, secret, { expiresIn: '1h' });
                 res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'None' });
                 return res.status(200).json({ message: "Welcome to Healthyfy again." });
             } else {
