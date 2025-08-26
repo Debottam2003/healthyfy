@@ -3,7 +3,7 @@ import errorHandler from '../error.mjs';
 
 const profileHandler = async (req, res) => {
     try {
-        const { uid } = req.params;
+        const { uid } = req.user;
         const query = 'SELECT name, email, nationality FROM husers WHERE uid = $1';
         let { rows } = await pool.query(query, [uid]);
         if (rows.length === 0) {

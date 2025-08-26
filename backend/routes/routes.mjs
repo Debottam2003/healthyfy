@@ -16,7 +16,7 @@ router.route("/login").post(loginHandler);
 router.route("/register").post(registerHandler);
 router.route("/logout").get(verifier, logoutHandler);
 router.route("/generate").post(verifier, generateHandler);
-router.route("/profile/:uid").get(profileHandler);
+router.route("/profile").get(verifier, profileHandler);
 router.route("/recipe/:rid").get(recipeHandler);
 router.route("/cuisine/:cuisine").get(sortHandler);
 
