@@ -7,6 +7,7 @@ import Register from "./Components/Register.jsx";
 import Login from "./Components/login.jsx";
 import Profile from "./Components/Profile.jsx";
 import Generate from "./Components/Generate.jsx";
+import IndiviualRecipe from "./Components/IndiviualRecipe.jsx";
 import MultipleInteractionCard from "./Components/RecipeCard";
 
 let router = createBrowserRouter([
@@ -26,6 +27,10 @@ let router = createBrowserRouter([
         path: "generate",
         element: <Generate />,
       },
+      {
+        path: "recipe/:rid",
+        element: <IndiviualRecipe />,
+      }
     ],
   },
   { path: "/login", element: <Login /> },
