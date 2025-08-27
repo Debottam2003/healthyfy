@@ -16,11 +16,17 @@ function Profile() {
   let navigate = useNavigate();
   async function LogOutHandler() {
     try {
-      let response = await axios.get("http://localhost:3333/healthyfy/logout", {
-        withCredentials: true,
-      });
-      if (response.status === 200) {
-        navigate("/login");
+      let sure = confirm("Are you sure?");
+      if (sure) {
+        let response = await axios.get(
+          "http://localhost:3333/healthyfy/logout",
+          {
+            withCredentials: true,
+          }
+        );
+        if (response.status === 200) {
+          navigate("/login");
+        }
       }
     } catch (err) {
       console.log(err.message);
