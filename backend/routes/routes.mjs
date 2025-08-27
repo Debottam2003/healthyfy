@@ -8,6 +8,8 @@ import verifier from '../middleware/verifier.mjs';
 import profileHandler from '../controllers/profileHandler.mjs';
 import recipeHandler from '../controllers/recipeHandler.mjs';
 import sortHandler from '../controllers/sortHandler.mjs';
+import LikeHandler from '../controllers/likeHandler.mjs';
+import DislikeHandler from '../controllers/dislikeHandler.mjs';
 
 const router = Router();
 
@@ -19,6 +21,8 @@ router.route("/generate").post(verifier, generateHandler);
 router.route("/profile").get(verifier, profileHandler);
 router.route("/recipe/:rid").get(recipeHandler);
 router.route("/cuisine/:cuisine").get(sortHandler);
+router.route("/likes").post(LikeHandler);
+router.route("/dislikes").post(DislikeHandler);
 
 // fallback route
 router.use((req, res) => {
