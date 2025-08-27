@@ -84,10 +84,11 @@ function Register() {
     try {
       let response = await axios.post(
         "http://localhost:3333/healthyfy/register",
-        data
+        data, { withCredentials: true }
       );
-      if (response.statusText === "OK") {
-        alert("user registered");
+      if(response.status === 200 || response.statusText === "OK") {
+         alert("Login Successful");
+         navigate("/profile");
       }
       // reset(); // Uncomment if you want to clear form after login
     } catch (error) {

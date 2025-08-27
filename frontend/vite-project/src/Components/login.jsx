@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LinkStyle = {
   textDecoration: "none",
@@ -70,15 +71,20 @@ const infoStyles = {
 
 function Login() {
   let { register, handleSubmit, reset } = useForm();
+  let navigate = useNavigate();
 
   async function submitForm(data) {
     try {
       let response = await axios.post(
         "http://localhost:3333/healthyfy/login",
-        data
+        data, { withCredentials: true }
       );
-      alert("Login Successful");
+      // alert("Login Successful");
       // reset();
+      if(response.status === 200 || response.statusText === "OK") {
+         alert("Login Successful");
+         navigate("/profile");
+      }
     } catch (error) {
       alert("Login Unsuccessful");
     }

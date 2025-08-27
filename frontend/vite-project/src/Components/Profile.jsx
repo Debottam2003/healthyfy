@@ -1,25 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 function Profile() {
-  const [username,setUsername] = useState("GUEST");
-  const [nationality,setNationality] = useState("INTERNATIONAL");
-
-  async function getProfileData() {
-    try{
-
-      let response = await fetch("http://localhost:3333/healthyfy/profile");
-      console.log(response);
-      let data = response.data;
-      console.log(data.name,data.nationality);
-      setUsername( data.name ); 
-      setNationality( data.nationality );
-
-    } catch (error) {
-      console.log(error);
+  const [username, setUsername] = useState("GUEST");
+  const [nationality, setNationality] = useState("INTERNATIONAL");
+  let navigate = useNavigate();
+  useEffect(() => {
+    async function getProfileData() {
+      try {
+        let response = await axios.get(
+          "http://localhost:3333/healthyfy/profile",
+          {
+            withCredentials: true,
+          }
+        );
+        // console.log(response.status);
+        // console.log(response.statusText);
+        let data = response.data;
+        // console.log(data.name, data.nationality);
+        setUsername(data.name.toUpperCase());
+        setNationality(data.nationality.toUpperCase());
+      } catch (error) {
+        console.log(error.status === 401);
+        navigate("/login");
+        
+      }
     }
-  }
 
-getProfileData();
+    getProfileData();
+  }, []);
 
   // const likedRecipes = [
   //   {

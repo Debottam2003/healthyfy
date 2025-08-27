@@ -5,8 +5,10 @@ const verifier = async (req, res, next) => {
     try{
         let token = req.cookies.token;
         if(!token) {
+            console.log("no token");
             return res.status(401).json({ message: "Unauthorized" });
         } else {
+            console.log(token);
             token = jwt.verify(token, secret);
             req.user = token;
             next();

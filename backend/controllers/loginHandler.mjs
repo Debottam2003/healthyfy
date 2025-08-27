@@ -15,7 +15,7 @@ const loginHandler = async (req, res) => {
             }
             else if (password === rows[0].password) {
                 let token = jwt.sign({ uid: rows[0].uid }, secret, { expiresIn: '1h' });
-                res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'None' });
+                res.cookie('token', token, { httpOnly: true });
                 return res.status(200).json({ message: "Welcome to Healthyfy again." });
             } else {
                 return res.status(400).send("Wrong email or password");
@@ -27,3 +27,11 @@ const loginHandler = async (req, res) => {
 }
 
 export default loginHandler;
+
+// credentials: "include"
+
+// send the cookie with request and if the server sets accept that too
+
+// ✅ “If the backend sets a cookie (with Set-Cookie), store it in the browser.”
+
+// ✅ “When making future requests to that domain, automatically send that cookie back.”
