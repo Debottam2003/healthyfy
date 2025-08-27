@@ -10,6 +10,7 @@ import recipeHandler from '../controllers/recipeHandler.mjs';
 import sortHandler from '../controllers/sortHandler.mjs';
 import LikeHandler from '../controllers/likeHandler.mjs';
 import DislikeHandler from '../controllers/dislikeHandler.mjs';
+import LikedRecipe from '../controllers/userLikes.mjs';
 
 const router = Router();
 
@@ -23,6 +24,7 @@ router.route("/recipe/:rid").get(recipeHandler);
 router.route("/cuisine/:cuisine").get(sortHandler);
 router.route("/likes").post(LikeHandler);
 router.route("/dislikes").post(DislikeHandler);
+router.route("/userLikes").get(verifier,LikedRecipe);
 
 // fallback route
 router.use((req, res) => {
