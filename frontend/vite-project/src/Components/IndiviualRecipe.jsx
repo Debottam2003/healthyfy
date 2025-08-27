@@ -21,9 +21,9 @@ function IndiviualRecipe() {
     getRecipe();
   }, []);
   return (
-    <div style={{padding: "2rem"}} >
+    <div style={{padding: "2rem", justifyContent: "center", display: "flex", flexDirection: "column"}} >
       {/* <h1>{recipeName}</h1> */}
-      <img src={recipeImage} alt="Picture" style={{width: "400px", height: "250px"}} />
+      <img src={recipeImage} alt="Picture" style={{width: "500px", height: "350px"}} />
       <div className="recipe-body" ref={recipeRef}></div>
     </div>
   );
