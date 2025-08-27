@@ -2,14 +2,46 @@ import React from "react";
 
 function Profile() {
   const likedRecipes = [
-    { id: 1, name: "Paneer Tikka", img: "https://www.ruchiskitchen.com/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3-500x375.jpg" },
-    { id: 2, name: "Masala Dosa", img: "https://www.shutterstock.com/image-photo/paper-masala-dosa-south-indian-600nw-1008144772.jpg" },
-    { id: 3, name: "Butter Chicken", img: "https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&resize=440,400" },
-    { id: 4, name: "Chole Bhature", img: "https://cdn.zeptonow.com/production///tr:w-600,ar-100-100,pr-true,f-auto,q-80/web/recipes/chola-bhatura.png" },
-    { id: 5, name: "Pani Puri", img: "https://static01.nyt.com/images/2024/01/17/multimedia/ND-Pani-Puri-mflg/ND-Pani-Puri-mflg-mediumSquareAt3X.jpg" },
-    { id: 6, name: "Marghertita Pizza", img: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg" },
-    { id: 7, name: "Chicken Biryani", img: "https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg" },
-    { id: 8, name: "Dal Makhani", img: "https://www.cookwithmanali.com/wp-content/uploads/2019/04/Restaurant-Style-Dal-Makhani.jpg" },
+    {
+      id: 1,
+      name: "Paneer Tikka",
+      img: "https://www.ruchiskitchen.com/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3-500x375.jpg",
+    },
+    {
+      id: 2,
+      name: "Masala Dosa",
+      img: "https://www.shutterstock.com/image-photo/paper-masala-dosa-south-indian-600nw-1008144772.jpg",
+    },
+    {
+      id: 3,
+      name: "Butter Chicken",
+      img: "https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&resize=440,400",
+    },
+    {
+      id: 4,
+      name: "Chole Bhature",
+      img: "https://cdn.zeptonow.com/production///tr:w-600,ar-100-100,pr-true,f-auto,q-80/web/recipes/chola-bhatura.png",
+    },
+    {
+      id: 5,
+      name: "Pani Puri",
+      img: "https://static01.nyt.com/images/2024/01/17/multimedia/ND-Pani-Puri-mflg/ND-Pani-Puri-mflg-mediumSquareAt3X.jpg",
+    },
+    {
+      id: 6,
+      name: "Marghertita Pizza",
+      img: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+    },
+    {
+      id: 7,
+      name: "Chicken Biryani",
+      img: "https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg",
+    },
+    {
+      id: 8,
+      name: "Dal Makhani",
+      img: "https://www.cookwithmanali.com/wp-content/uploads/2019/04/Restaurant-Style-Dal-Makhani.jpg",
+    },
   ];
 
   const styles = {
@@ -134,7 +166,9 @@ function Profile() {
         <div style={styles.country}>INDIAN</div>
         <button
           style={styles.logoutBtn}
-          onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.transform = "scale(1.05)")
+          }
           onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
         >
           Log Out
