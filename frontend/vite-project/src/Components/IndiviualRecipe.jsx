@@ -21,10 +21,10 @@ function IndiviualRecipe() {
     getRecipe();
   }, []);
   return (
-    <div style={{padding: "2rem", justifyContent: "center", display: "flex", flexDirection: "column"}} >
+    <div style={{padding: "2rem", justifyContent: "center", display: "flex", flexDirection: "row", gap: "20px"}} >
       {/* <h1>{recipeName}</h1> */}
-      <img src={recipeImage} alt="Picture" style={{width: "500px", height: "350px"}} />
       <div className="recipe-body" ref={recipeRef}></div>
+      <img src={recipeImage} alt="Picture" style={{width: "500px", height: "350px"}} />
     </div>
   );
 }

@@ -26,6 +26,8 @@ const whiteThemeStyles = {
   padding: "2rem",
   boxSizing: "border-box",
   overFlow: "hidden",
+  backgroundImage: "url('/images/background.png')",
+  backgroundSize: "cover"
 };
 
 const formStyles = {
@@ -70,7 +72,7 @@ const buttonStyles = {
 
 const sideTextStyles = {
   fontSize: "3rem",
-  color: greenAccent,
+  color: "white",
   fontWeight: "bold",
   lineHeight: 1.2,
   marginBottom: "1rem",
@@ -87,7 +89,7 @@ function Register() {
         data, { withCredentials: true }
       );
       if(response.status === 200 || response.statusText === "OK") {
-         alert("Login Successful");
+         // alert("Login Successful");
          navigate("/profile");
       }
       // reset(); // Uncomment if you want to clear form after login

@@ -13,7 +13,8 @@ const LinkStyle = {
 const whiteThemeStyles = {
   background: "#fff",
   color: "#222",
-  maxHeight: "100vh",
+  height: "100vh",
+  overFlow: "hidden",
   width: "100vw",
   display: "flex",
   flexDirection: "column",
@@ -21,7 +22,9 @@ const whiteThemeStyles = {
   justifyContent: "center",
   fontFamily: "system-ui, sans-serif",
   boxSizing: "border-box",
-  overFlow: "hidden"
+  overFlow: "hidden",
+  backgroundImage: "url('/images/background.png')",
+  backgroundSize: "cover"
 };
 
 const formStyles = {
@@ -62,9 +65,9 @@ const buttonStyles = {
 };
 
 const infoStyles = {
-  fontSize: "1.3rem",
+  fontSize: "2rem",
   textAlign: "center",
-  color: "#219653",
+  color: "#ffffffff",
   fontWeight: "bold",
   margin: "2rem 0 0 0",
 };
@@ -82,7 +85,7 @@ function Login() {
       // alert("Login Successful");
       // reset();
       if(response.status === 200 || response.statusText === "OK") {
-         alert("Login Successful");
+         // alert("Login Successful"); 
          navigate("/profile");
       }
     } catch (error) {

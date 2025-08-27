@@ -14,7 +14,7 @@ const loginHandler = async (req, res) => {
                 return res.status(400).send("Wrong email or password");
             }
             else if (password === rows[0].password) {
-                let token = jwt.sign({ uid: rows[0].uid }, secret, { expiresIn: '1h' });
+                let token = jwt.sign({ uid: rows[0].uid }, secret, { expiresIn: '10m' });
                 res.cookie('token', token, { httpOnly: true });
                 return res.status(200).json({ message: "Welcome to Healthyfy again." });
             } else {
