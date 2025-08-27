@@ -22,9 +22,8 @@ const whiteThemeStyles = {
   justifyContent: "center",
   fontFamily: "system-ui, sans-serif",
   boxSizing: "border-box",
-  overFlow: "hidden",
   backgroundImage: "url('/images/background.png')",
-  backgroundSize: "cover"
+  backgroundSize: "cover",
 };
 
 const formStyles = {
@@ -80,16 +79,23 @@ function Login() {
     try {
       let response = await axios.post(
         "http://localhost:3333/healthyfy/login",
-        data, { withCredentials: true }
+        data,
+        { withCredentials: true }
       );
       // alert("Login Successful");
       // reset();
-      if(response.status === 200 || response.statusText === "OK") {
-         // alert("Login Successful"); 
-         navigate("/profile");
+      if (response.status === 200 || response.statusText === "OK") {
+        // alert("Login Successful");
+        navigate("/profile");
       }
     } catch (error) {
-      alert("Login Unsuccessful");
+      if (error.response) {
+        alert(error.response.data.message);
+        console.log(error.response.statusText + " " + error.response.status);
+      } else {
+        console.log(error.message);
+        alert(error.message);
+      }
     }
   }
 
@@ -112,7 +118,13 @@ function Login() {
           padding: "2rem 1rem",
         }}
       >
-        <div style={{ flex: "1 1 350px", display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            flex: "1 1 350px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <form style={formStyles} onSubmit={handleSubmit(submitForm)}>
             <h2
               style={{

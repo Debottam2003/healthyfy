@@ -13,7 +13,7 @@ function RecipeCard() {
         const response = await axios.get("http://localhost:3333/healthyfy/");
         setData(response.data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching data:", error.message);
         setData([]);
       }
     }

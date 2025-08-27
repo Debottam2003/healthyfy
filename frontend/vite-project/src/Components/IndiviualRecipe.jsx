@@ -4,27 +4,50 @@ import axios from "axios";
 
 function IndiviualRecipe() {
   const { rid } = useParams();
-//   let [recipeName, setName] = useState("DishName");
-  let [recipeImage, setImage] = useState(`c:/Users/DEBOTTAM/AppData/Local/Temp/world-food-day-2020.png.webp`);
+  //   let [recipeName, setName] = useState("DishName");
+  let [recipeImage, setImage] = useState(
+    `c:/Users/DEBOTTAM/AppData/Local/Temp/world-food-day-2020.png.webp`
+  );
   let recipeRef = useRef();
   useEffect(() => {
     async function getRecipe() {
-      let response = await axios.get(
-        `http://localhost:3333/healthyfy/recipe/${rid}`
-      );
-      console.log(response.statusText === "OK");
-      let { name, imageurl, recipe } = response.data;
-    //   setName(name);
-      setImage(imageurl);
-      recipeRef.current.innerHTML = recipe; 
+      try {
+        let response = await axios.get(
+          `http://localhost:3333/healthyfy/recipe/${rid}`
+        );
+        console.log(response.statusText === "OK");
+        let { name, imageurl, recipe } = response.data;
+        //   setName(name);
+        setImage(imageurl);
+        recipeRef.current.innerHTML = recipe;
+      } catch (err) {
+        if (err.response) {
+          console.log(err.response.statusText);
+          console.log(err.response.data.message);
+        } else {
+          console.log(err.message);
+        }
+      }
     }
     getRecipe();
   }, []);
   return (
-    <div style={{padding: "2rem", justifyContent: "center", display: "flex", flexDirection: "row", gap: "20px"}} >
+    <div
+      style={{
+        padding: "2rem",
+        justifyContent: "center",
+        display: "flex",
+        flexDirection: "row",
+        gap: "20px",
+      }}
+    >
       {/* <h1>{recipeName}</h1> */}
       <div className="recipe-body" ref={recipeRef}></div>
-      <img src={recipeImage} alt="Picture" style={{width: "500px", height: "350px"}} />
+      <img
+        src={recipeImage}
+        alt="Picture"
+        style={{ width: "500px", height: "350px" }}
+      />
     </div>
   );
 }

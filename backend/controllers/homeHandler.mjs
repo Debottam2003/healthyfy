@@ -3,7 +3,7 @@ import errorHandler from '../error.mjs';
 const homeHandler = async (req, res) => {
     try {
         console.log("homeHandler called");
-        let { rows } = await pool.query('select * from recipes limit 72');
+        let { rows } = await pool.query('select * from recipes');
         res.status(200).json(rows);
     } catch (error) {
         console.log(error.message);

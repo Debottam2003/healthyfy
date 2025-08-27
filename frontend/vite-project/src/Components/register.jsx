@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const greenAccent = "#43a047";
 const greenAccentLight = "#81c784";
@@ -27,7 +27,7 @@ const whiteThemeStyles = {
   boxSizing: "border-box",
   overFlow: "hidden",
   backgroundImage: "url('/images/background.png')",
-  backgroundSize: "cover"
+  backgroundSize: "cover",
 };
 
 const formStyles = {
@@ -81,20 +81,28 @@ const sideTextStyles = {
 
 function Register() {
   let { register, handleSubmit, reset } = useForm();
+  let navigate = useNavigate();
 
   async function submitForm(data) {
     try {
       let response = await axios.post(
         "http://localhost:3333/healthyfy/register",
-        data, { withCredentials: true }
+        data,
+        { withCredentials: true }
       );
-      if(response.status === 200 || response.statusText === "OK") {
-         // alert("Login Successful");
-         navigate("/profile");
+      if (response.status === 200 || response.statusText === "OK") {
+        alert(response.data.message);
+        navigate("/profile");
       }
       // reset(); // Uncomment if you want to clear form after login
     } catch (error) {
-      alert("error");
+      if (error.response) {
+        alert(error.response.data.message);
+        console.log(error.response.statusText + " " + error.response.status);
+      } else {
+        console.log(error.message);
+        alert(error.message);
+      }
       // handle error
     }
   }
