@@ -11,6 +11,7 @@ import sortHandler from '../controllers/sortHandler.mjs';
 import LikeHandler from '../controllers/likeHandler.mjs';
 import DislikeHandler from '../controllers/dislikeHandler.mjs';
 import LikedRecipe from '../controllers/userLikes.mjs';
+import userGenerations from '../controllers/userGenerations.mjs';
 
 const router = Router();
 
@@ -25,6 +26,7 @@ router.route("/cuisine/:cuisine").get(sortHandler);
 router.route("/likes").post(LikeHandler);
 router.route("/dislikes").post(DislikeHandler);
 router.route("/userLikes").get(verifier,LikedRecipe);
+router.route("/userGenerations").get(verifier,userGenerations);
 
 // fallback route
 router.use((req, res) => {

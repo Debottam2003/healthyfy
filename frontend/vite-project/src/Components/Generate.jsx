@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { GiRobotGolem } from "react-icons/gi";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const styles = {
   chatContainer: {
@@ -139,6 +141,25 @@ const styles = {
   },
 };
 
+let userGenerate = {
+  width: "200px",
+  minHeight: 100,
+  maxHeight: 100,
+  margin: "0 auto 32px auto",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: 8,
+  overflowX: "hidden",
+  overflowY: "auto",
+  background: "#f6f8fa",
+  border: "1px solid #eaecef",
+  borderRadius: 14,
+  padding: "18px 20px",
+  boxShadow: "0 2px 8px rgba(34,139,34,0.06)",
+};
+
 const dishCards = [
   {
     title: "Quinoa Avocado Salad",
@@ -157,82 +178,155 @@ const dishCards = [
   },
 ];
 
-function Message({ sender, text }) {
+function Generate() {
+  let { register, handleSubmit, reset } = useForm();
+  let [userGenerated, setUserGenerated] = useState(
+    Array(1).fill({ rid: 10, name: "Veg Pasta" })
+  );
+  async function SubmitPrompt(data) {
+    reset();
+    alert(data.prompt);
+  }
   return (
     <div
-      style={{
-        ...styles.message,
-        ...(sender === "user" ? styles.messageUser : {}),
-      }}
-      className={`copilot-message ${sender}`}
+      style={styles.chatContainer}
+      className="copilot-chat-container healthyfy-generate-root"
     >
-      <div style={styles.avatar} className="copilot-avatar">
-        {sender === "bot" ? (
-          <span role="img" aria-label="Healthyfy Bot">
-            🥗
-          </span>
-        ) : (
-          <span role="img" aria-label="User">
-            🧑
-          </span>
-        )}
-      </div>
-      <div
-        style={{
-          ...styles.bubble,
-          ...(sender === "bot" ? styles.bubbleBot : {}),
-        }}
-        className="copilot-bubble"
-      >
-        {text}
-      </div>
-    </div>
-  );
-}
-
-function Generate() {
-  return (
-    <div style={styles.chatContainer} className="copilot-chat-container">
-      <div style={styles.header} className="copilot-header">
+      <div style={styles.header} className="copilot-header healthyfy-header">
         <GiRobotGolem size={28} />
         Healthyfy Bot
       </div>
-      <div style={styles.messages} className="copilot-messages">
-        <div style={styles.dishCardsRow}>
+      <div
+        style={styles.messages}
+        className="copilot-messages healthyfy-messages"
+      >
+        <div style={styles.dishCardsRow} className="healthyfy-dish-cards-row">
           {dishCards.map((dish, idx) => (
-            <div key={idx} style={styles.dishCard} className="dish-card">
+            <div
+              key={idx}
+              style={styles.dishCard}
+              className="dish-card healthyfy-dish-card"
+            >
               <img
                 src={dish.img}
                 alt={dish.title}
                 style={styles.dishImage}
+                className="healthyfy-dish-image"
                 loading="lazy"
               />
-              <div style={styles.dishTitle}>{dish.title}</div>
-              <div style={styles.dishDesc}>{dish.desc}</div>
+              <div style={styles.dishTitle} className="healthyfy-dish-title">
+                {dish.title}
+              </div>
+              <div style={styles.dishDesc} className="healthyfy-dish-desc">
+                {dish.desc}
+              </div>
             </div>
           ))}
         </div>
-        {/* Render messages here */}
       </div>
-      <div style={styles.inputRow} className="copilot-input-row">
+      <div style={userGenerate} className="healthyfy-user-generate">
+        {userGenerated.map((recipe, i) => (
+          <Link
+            key={i}
+            style={{ textDecoration: "none" }}
+            to={`/generatedrecipe/${recipe.rid}`}
+          >
+            <div className="healthyfy-user-recipe">{recipe.name}</div>
+          </Link>
+        ))}
+      </div>
+      <form
+        onSubmit={handleSubmit(SubmitPrompt)}
+        style={styles.inputRow}
+        className="copilot-input-row healthyfy-input-row"
+      >
         <input
           type="text"
+          {...register("prompt")}
           style={styles.input}
-          className="copilot-input"
+          className="copilot-input healthyfy-input"
           placeholder="Ask Healthyfy Bot about recipes…"
         />
-        <button style={styles.sendBtn} className="copilot-send-btn">
-          <span
-            role="img"
-            aria-label="Send"
-            onClick={() => {
-              alert("botam tipe dile ?");
-            }}
-          >
+        <button
+          style={styles.sendBtn}
+          className="copilot-send-btn healthyfy-send-btn"
+        >
+          <span role="img" aria-label="Send">
             <AiOutlineArrowRight />
           </span>
         </button>
-      </div>
+      </form>
+      <style>{`
+        .healthyfy-generate-root {
+          background: linear-gradient(120deg, #f6f8fa 0%, #e9f5ec 100%);
+        }
+        .healthyfy-header {
+          background: linear-gradient(90deg, #e9f5ec 60%, #f6f8fa 100%);
+          border-bottom: 2px solid #b7e4c7;
+          box-shadow: 0 2px 8px rgba(34,139,34,0.04);
+        }
+        .healthyfy-dish-cards-row {
+          gap: 32px;
+        }
+        .healthyfy-dish-card {
+          transition: transform 0.18s, box-shadow 0.18s;
+        }
+        .healthyfy-dish-card:hover {
+          transform: translateY(-6px) scale(1.04);
+          box-shadow: 0 6px 24px rgba(34,139,34,0.13);
+          border-color: #1a7f37;
+        }
+        .healthyfy-dish-title {
+          font-family: 'Segoe UI Semibold', 'Roboto', Arial, sans-serif;
+          letter-spacing: 0.5px;
+        }
+        .healthyfy-dish-desc {
+          color: #3a3a3a;
+        }
+        .healthyfy-user-generate {
+          box-shadow: 0 2px 12px rgba(34,139,34,0.09);
+          background: linear-gradient(120deg, #e9f5ec 0%, #f6f8fa 100%);
+        }
+        .healthyfy-user-recipe {
+          font-size: 1.07rem;
+          color: #1a7f37;
+          font-weight: 500;
+          margin-bottom: 6px;
+          letter-spacing: 0.2px;
+        }
+        .healthyfy-input-row {
+          background: #f6f8fa;
+          border-top: 2px solid #b7e4c7;
+        }
+        .healthyfy-input {
+          background: #e9f5ec;
+          border: 1.5px solid #b7e4c7;
+          transition: border 0.18s;
+        }
+        .healthyfy-input:focus {
+          border: 1.5px solid #1a7f37;
+          background: #fff;
+        }
+        .healthyfy-send-btn {
+          background: linear-gradient(90deg, #1a7f37 60%, #43c67a 100%);
+          box-shadow: 0 2px 8px rgba(34,139,34,0.09);
+          font-weight: 600;
+        }
+        .healthyfy-send-btn:hover {
+          background: linear-gradient(90deg, #43c67a 60%, #1a7f37 100%);
+        }
+        @media (max-width: 700px) {
+          .healthyfy-dish-cards-row {
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+          }
+          .healthyfy-dish-card {
+            width: 90vw !important;
+            min-width: 0;
+          }
+        }
+      `}</style>
     </div>
   );
 }
