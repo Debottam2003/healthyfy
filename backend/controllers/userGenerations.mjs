@@ -1,12 +1,15 @@
 import pool from "../db.mjs";
 import errorHandler from "../error.mjs";
 
-const userGenerations = (req, res) => {
+const userGenerations = async (req, res) => {
     try {
+        let { uid } = req.user;
+        let { gid } = req.params;
+        let { rows } = await pool.query("select * from generations where generationid = $1 and uid = $2", [gid, uid]);
         // Placeholder logic for user generations handler
-        res.status(200).json({ message: "userGenerations handler is working." });
+        res.status(200).json(rows[0]);
     } catch (error) {
-        res.status(500).json({ error: "Internal server error." });
+        errorHandler(req, res);
     }
 };
 export default userGenerations;

@@ -16,7 +16,7 @@ function IndiviualRecipe() {
           `http://localhost:3333/healthyfy/recipe/${rid}`
         );
         console.log(response.statusText === "OK");
-        let { name, imageurl, recipe } = response.data;
+        let { imageurl, recipe } = response.data;
         //   setName(name);
         setImage(imageurl);
         recipeRef.current.innerHTML = recipe;

@@ -1,13 +1,60 @@
-import React from 'react'
-// import { useEffect, useState, useRef } from "react";
+import React from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 
 function GeneratedRecipe() {
   const { gid } = useParams();
+  //   let [recipeName, setName] = useState("DishName");
+  let [recipeImage, setImage] = useState(
+    `c:/Users/DEBOTTAM/AppData/Local/Temp/world-food-day-2020.png.webp`
+  );
+  let recipeRef = useRef();
+  useEffect(() => {
+    async function getRecipe() {
+      try {
+        let response = await axios.get(
+          `http://localhost:3333/healthyfy/userGenerations/${gid}`,
+          {
+            withCredentials: true,
+          }
+        );
+        // console.log(response.statusText === "OK");
+        console.log(response.data);
+        let { imageurl, content: recipe } = response.data;
+        //   setName(name);
+        setImage(imageurl);
+        recipeRef.current.innerHTML = recipe;
+      } catch (err) {
+        if (err.response.data.message) {
+          console.log(err.response.statusText);
+          console.log(err.response.data.message);
+        } else {
+          console.log(err.message);
+        }
+      }
+    }
+    getRecipe();
+  }, []);
   return (
-    <div>GeneratedRecipe</div>
-  )
+    <div
+      style={{
+        padding: "2rem",
+        justifyContent: "center",
+        display: "flex",
+        flexDirection: "row",
+        gap: "20px",
+      }}
+    >
+      {/* <h1>{recipeName}</h1> */}
+      <div className="recipe-body" ref={recipeRef}></div>
+      <img
+        src={recipeImage}
+        alt="Picture"
+        style={{ width: "500px", height: "350px" }}
+      />
+    </div>
+  );
 }
 
-export default GeneratedRecipe
+export default GeneratedRecipe;

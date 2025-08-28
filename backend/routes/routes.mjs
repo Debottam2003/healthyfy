@@ -26,7 +26,7 @@ router.route("/cuisine/:cuisine").get(sortHandler);
 router.route("/likes").post(LikeHandler);
 router.route("/dislikes").post(DislikeHandler);
 router.route("/userLikes").get(verifier,LikedRecipe);
-router.route("/userGenerations").get(verifier,userGenerations);
+router.route("/userGenerations/:gid").get(verifier,userGenerations);
 
 // fallback route
 router.use((req, res) => {
