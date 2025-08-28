@@ -9,6 +9,7 @@ import Profile from "./Components/Profile.jsx";
 import Generate from "./Components/Generate.jsx";
 import IndiviualRecipe from "./Components/IndiviualRecipe.jsx";
 import MultipleInteractionCard from "./Components/RecipeCard";
+import GeneratedRecipe from "./Components/GeneratedRecipe.jsx";
 
 let router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ let router = createBrowserRouter([
       {
         path: "recipe/:rid",
         element: <IndiviualRecipe />,
-      }
+      },
+      {
+        path: "generatedrecipe/:gid",
+        element: <GeneratedRecipe />,
+      },
     ],
   },
   { path: "/login", element: <Login /> },
