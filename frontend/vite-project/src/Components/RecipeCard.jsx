@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Top from "./Top.jsx";
 import { Link } from "react-router-dom";
+import ScroollToTop from "./ScroollToTop.jsx";
 
 function RecipeCard() {
   const [data, setData] = useState([]);
@@ -107,7 +108,7 @@ function RecipeCard() {
                     color: "rgba(0, 0, 0, 1)",
                   }}
                 >
-                  <span>❤️ 100</span>
+                  <span>❤️{recipe.likes_count}</span>
                   <span>{recipe.type === "veg" ? "🟢 Veg" : "🔴 Non Veg"}</span>
                 </div>
 
@@ -138,6 +139,7 @@ function RecipeCard() {
             </div>
           );
         })}
+        <ScroollToTop/>
       </div>
     </>
   );
