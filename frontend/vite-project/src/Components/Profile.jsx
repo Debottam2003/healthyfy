@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Profile() {
   const [username, setUsername] = useState("GUEST");
@@ -215,7 +215,8 @@ function Profile() {
       <div style={styles.gridWrapper}>
         <div style={styles.grid}>
           {likedRecipes.map((recipe) => (
-            <div
+            <Link style={{textDecoration:"none"}} to={`/recipe/${recipe.rid}`}>
+              <div
               key={recipe.rid}
               style={styles.card}
               onMouseEnter={(e) => {
@@ -226,10 +227,11 @@ function Profile() {
                 e.currentTarget.style.transform = "translateY(0)";
                 e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.08)";
               }}
-            >
+              >
               <img src={recipe.imageurl} alt={recipe.name} style={styles.img} />
               <div style={styles.cardTitle}>{recipe.name}</div>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
