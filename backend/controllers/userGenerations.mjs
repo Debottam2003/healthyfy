@@ -1,3 +1,6 @@
+import pool from "../db.mjs";
+import errorHandler from "../error.mjs";
+
 const userGenerations = (req, res) => {
     try {
         // Placeholder logic for user generations handler
