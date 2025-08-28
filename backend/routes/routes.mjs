@@ -13,6 +13,7 @@ import DislikeHandler from '../controllers/dislikeHandler.mjs';
 import LikedRecipe from '../controllers/userLikes.mjs';
 import userGenerations from '../controllers/userGenerations.mjs';
 import allGenerations from '../controllers/allGenerations.mjs';
+import deleteGeneratedRecipe from '../controllers/deleteGeneratedRecipe.mjs';
 
 const router = Router();
 
@@ -29,6 +30,7 @@ router.route("/dislikes").post(DislikeHandler);
 router.route("/userLikes").get(verifier, LikedRecipe);
 router.route("/userGenerations/:gid").get(verifier, userGenerations);
 router.route("/allgenerations").get(verifier, allGenerations);
+router.route("/deleteGeneratedRecipe").get(verifier, deleteGeneratedRecipe);
 
 // fallback route
 router.use((req, res) => {
