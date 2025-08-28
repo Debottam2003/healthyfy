@@ -3,6 +3,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { GiRobotGolem } from "react-icons/gi";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { FaTrash } from "react-icons/fa";
 import axios from "axios";
 
 const styles = {
@@ -73,6 +74,10 @@ const styles = {
     marginBottom: 6,
     color: "#1a7f37",
     textAlign: "center",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: "5px",
   },
   dishDesc: {
     fontSize: "0.97rem",
@@ -256,6 +261,7 @@ function Generate() {
                 />
                 <div style={styles.dishTitle} className="healthyfy-dish-title">
                   {dish.name}
+                  <button style={{border: "none", background: "transparent"}} ><FaTrash style={{ color: "brown", fontSize: "1.2rem" }} /></button>
                 </div>
               </div>
             </Link>

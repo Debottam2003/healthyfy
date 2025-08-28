@@ -1,11 +1,11 @@
-import React,{useState, useEffect} from 'react'
-import { AiOutlineArrowUp } from 'react-icons/ai';
+import React, { useState, useEffect } from "react";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 const ScroollToTop = () => {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 500) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -58,6 +58,6 @@ const ScroollToTop = () => {
       </button>
     )
   );
-}
+};
 
 export default ScroollToTop;
