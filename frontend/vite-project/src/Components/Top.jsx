@@ -16,8 +16,7 @@ return (
                 { name: 'Mexican', img: 'https://t3.ftcdn.net/jpg/01/08/74/94/360_F_108749462_n5gFesQla84wyfXTDUEG8zNochvWQXx4.jpg' },
                 { name: 'Japanese', img: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=200&q=80' },
                 { name: 'Thai', img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=200&q=80' },
-                { name: 'French', img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=200&q=80' },
-                { name: 'American', img: 'https://www.ibnbattutamall.com/uploads/blogs/123.jpg' },
+                { name: 'French', img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=200&q=80' }
             ].map((cuisine, idx) => (
                 <div
                     key={cuisine.name}
