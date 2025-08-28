@@ -7,7 +7,6 @@ import ScroollToTop from "./ScroollToTop.jsx";
 function RecipeCard() {
   const [data, setData] = useState([]);
   const [liked, setLiked] = useState({}); // track likes per recipe
-
   useEffect(() => {
     async function fetchData() {
       try {
