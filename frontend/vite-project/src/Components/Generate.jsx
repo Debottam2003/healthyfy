@@ -181,7 +181,7 @@ const dishCards = [
 function Generate() {
   let { register, handleSubmit, reset } = useForm();
   let [userGenerated, setUserGenerated] = useState(
-    Array(1).fill({ rid: 10, name: "Veg Pasta" })
+    Array(10).fill({ rid: 10, name: "Veg Pasta" })
   );
   async function SubmitPrompt(data) {
     reset();
