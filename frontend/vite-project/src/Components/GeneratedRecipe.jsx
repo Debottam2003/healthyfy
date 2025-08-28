@@ -20,7 +20,7 @@ function GeneratedRecipe() {
           }
         );
         // console.log(response.statusText === "OK");
-        console.log(response.data);
+        // console.log(response.data);
         let { imageurl, content: recipe } = response.data;
         //   setName(name);
         setImage(imageurl);

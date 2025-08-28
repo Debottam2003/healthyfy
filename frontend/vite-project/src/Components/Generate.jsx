@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { GiRobotGolem } from "react-icons/gi";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const styles = {
   chatContainer: {
@@ -42,6 +43,7 @@ const styles = {
     justifyContent: "center",
     margin: "32px 0",
     flexWrap: "wrap",
+    overflow: "hidden",
   },
   dishCard: {
     background: "#f6f8fa",
@@ -80,7 +82,6 @@ const styles = {
   },
   message: {
     display: "flex",
-    alignItems: "flex-end",
     marginBottom: 18,
   },
   messageUser: {
@@ -141,51 +142,85 @@ const styles = {
   },
 };
 
-let userGenerate = {
+const userGenerate = {
   width: "200px",
-  minHeight: 100,
-  maxHeight: 100,
+  minHeight: "200px",
+  maxHeight: "200px",
   margin: "0 auto 32px auto",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  gap: 8,
+  gap: "8px",
   overflowX: "hidden",
   overflowY: "auto",
   background: "#f6f8fa",
   border: "1px solid #eaecef",
-  borderRadius: 14,
+  borderRadius: "14px",
   padding: "18px 20px",
   boxShadow: "0 2px 8px rgba(34,139,34,0.06)",
 };
-
-const dishCards = [
-  {
-    title: "Quinoa Avocado Salad",
-    desc: "A protein-packed salad with fresh veggies and creamy avocado.",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    title: "Margherita Pizza",
-    desc: "Classic Italian pizza with fresh mozzarella, tomatoes, and basil.",
-    img: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
-  },
-  {
-    title: "Chicken Biriyani",
-    desc: "Aromatic rice dish with tender chicken and spices.",
-    img: "https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg",
-  },
-];
+const dishCards = [];
+// const dishCards = [
+//   {
+//     title: "Quinoa Avocado Salad",
+//     desc: "A protein-packed salad with fresh veggies and creamy avocado.",
+//     img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
+//   },
+//   {
+//     title: "Margherita Pizza",
+//     desc: "Classic Italian pizza with fresh mozzarella, tomatoes, and basil.",
+//     img: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+//   },
+//   {
+//     title: "Chicken Biriyani",
+//     desc: "Aromatic rice dish with tender chicken and spices.",
+//     img: "https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg",
+//   },
+// ];
 
 function Generate() {
   let { register, handleSubmit, reset } = useForm();
   let [userGenerated, setUserGenerated] = useState(
-    Array(10).fill({ rid: 10, name: "Veg Pasta" })
+    Array(2).fill({ rid: 10, name: "Veg Pasta" })
   );
+  useEffect(() => {
+    async function fecthGeneratedRecipes() {
+      try {
+        let response = await axios.get(
+          "http://localhost:3333/healthyfy/allgenerations",
+          {
+            withCredentials: true,
+          }
+        );
+        // console.log(response.data);
+        setUserGenerated(response.data);
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+    fecthGeneratedRecipes();
+  }, []);
   async function SubmitPrompt(data) {
-    reset();
-    alert(data.prompt);
+    try {
+      console.log(data.prompt);
+      let response = await axios.post(
+        "http://localhost:3333/healthyfy/generate",
+        data,
+        {
+          withCredentials: true,
+        }
+      );
+      setUserGenerated((prevdata) => {
+        return [...prevdata, response.data];
+      });
+      reset();
+    } catch (err) {
+      alert(err.message);
+      console.log(err.message);
+    }
+    // reset();
+    // alert(data.prompt);
   }
   return (
     <div
@@ -197,43 +232,35 @@ function Generate() {
         Healthyfy Bot
       </div>
       <div
-        style={styles.messages}
+        style={{ ...styles.messages }}
         className="copilot-messages healthyfy-messages"
       >
         <div style={styles.dishCardsRow} className="healthyfy-dish-cards-row">
-          {dishCards.map((dish, idx) => (
-            <div
+          {userGenerated.map((dish, idx) => (
+            <Link
               key={idx}
-              style={styles.dishCard}
-              className="dish-card healthyfy-dish-card"
+              style={{ textDecoration: "none" }}
+              to={`/generatedrecipe/${dish.generationid}`}
             >
-              <img
-                src={dish.img}
-                alt={dish.title}
-                style={styles.dishImage}
-                className="healthyfy-dish-image"
-                loading="lazy"
-              />
-              <div style={styles.dishTitle} className="healthyfy-dish-title">
-                {dish.title}
+              <div
+                key={idx}
+                style={styles.dishCard}
+                className="dish-card healthyfy-dish-card"
+              >
+                <img
+                  src={dish.imageurl}
+                  alt={dish.name}
+                  style={styles.dishImage}
+                  className="healthyfy-dish-image"
+                  loading="lazy"
+                />
+                <div style={styles.dishTitle} className="healthyfy-dish-title">
+                  {dish.name}
+                </div>
               </div>
-              <div style={styles.dishDesc} className="healthyfy-dish-desc">
-                {dish.desc}
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
-      </div>
-      <div style={userGenerate} className="healthyfy-user-generate">
-        {userGenerated.map((recipe, i) => (
-          <Link
-            key={i}
-            style={{ textDecoration: "none" }}
-            to={`/generatedrecipe/${recipe.rid}`}
-          >
-            <div className="healthyfy-user-recipe">{recipe.name}</div>
-          </Link>
-        ))}
       </div>
       <form
         onSubmit={handleSubmit(SubmitPrompt)}

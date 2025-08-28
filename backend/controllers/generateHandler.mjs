@@ -73,7 +73,7 @@ const generateHandler = async (req, res) => {
                     recipeText = part.text.replace(/\*/g, '').replace(/#+\s/g, '').replace(/`/g, '').replace(/\n/g, '');
                     // .replace(/i will generate[\s\S]*$/gi, '');
                     // fs.writeFileSync("./recipe.txt", recipeText, "utf-8");
-                    // console.log(recipeText);
+                    console.log(recipeText);
                 } else if (part.inlineData) {
                     const imageData = part.inlineData.data;
                     buffer = Buffer.from(imageData, "base64");
@@ -95,10 +95,10 @@ const generateHandler = async (req, res) => {
                     console.log("Image saved");
                 }
             }
-            await pool.query("insert into generations(uid, name, content, imageurl) values($1, $2, $3, $4)", [uid, req.body.prompt.slice(0, 10), recipeText, imageURL.data.publicUrl]);
-            res.status(200).json({ recipe: recipeText, imageURL: imageURL.data.publicUrl });
+            let { rows } = await pool.query("insert into generations(uid, name, content, imageurl) values($1, $2, $3, $4) returning generationid", [uid, req.body.prompt.slice(0, 20), recipeText, imageURL.data.publicUrl]);
+            res.status(200).json({ name: req.body.prompt.slice(0, 20), uid: uid, generationid: rows[0].generationid, imageurl: imageURL.data.publicUrl });
         } catch (error) {
-            console.error("Error generating content:", error);
+            console.error("Error generating content:", error.message);
             errorHandler(req, res);
         }
     }
