@@ -10,6 +10,7 @@ import Generate from "./Components/Generate.jsx";
 import IndiviualRecipe from "./Components/IndiviualRecipe.jsx";
 import MultipleInteractionCard from "./Components/RecipeCard";
 import GeneratedRecipe from "./Components/GeneratedRecipe.jsx";
+import Search from "./Components/Search.jsx";
 
 let router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ let router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile />,
+      },
+      {
+        path: "search",
+        element: <Search />,
       },
       {
         path: "generate",

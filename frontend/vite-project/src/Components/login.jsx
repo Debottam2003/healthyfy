@@ -90,7 +90,7 @@ function Login() {
         toast.success("Logged in Successfully.");
         setTimeout(() => {
           navigate("/profile");
-        }, 2000);
+        }, 1500);
       }
     } catch (error) {
       if (error.response.data.message) {

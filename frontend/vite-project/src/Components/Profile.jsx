@@ -29,7 +29,7 @@ function Profile() {
           toast.success("Logged out successully.");
           setTimeout(() => {
             navigate("/login");
-          }, 2000);
+          }, 1500);
         }
       }
     } catch (err) {
