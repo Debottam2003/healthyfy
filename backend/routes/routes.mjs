@@ -15,6 +15,7 @@ import userGenerations from '../controllers/userGenerations.mjs';
 import allGenerations from '../controllers/allGenerations.mjs';
 import deleteGeneratedRecipe from '../controllers/deleteGeneratedRecipe.mjs';
 import veg_nonvegHandler from '../controllers/veg_nonvegHandler.mjs';
+import cuisineHandler from '../controllers/cuisineHandler.mjs';
 
 const router = Router();
 
@@ -25,7 +26,8 @@ router.route("/logout").get(verifier, logoutHandler);
 router.route("/generate").post(verifier, generateHandler);
 router.route("/profile").get(verifier, profileHandler);
 router.route("/recipe/:rid").get(recipeHandler);
-router.route("/cuisine/:cuisine").get(sortHandler);
+router.route("/cuisine").get(cuisineHandler);
+router.route("/sortcuisine").post(sortHandler);
 router.route("/likes").post(LikeHandler);
 router.route("/dislikes").post(DislikeHandler);
 router.route("/userLikes").get(verifier, LikedRecipe);

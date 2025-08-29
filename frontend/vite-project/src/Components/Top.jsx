@@ -42,6 +42,24 @@ function Top({ stateChange }) {
       console.log(err.response.data?.message);
     }
   }
+
+  async function sortCuisine(e, cuisine) {
+    try {
+      let response = await axios.post(
+        "http://localhost:3333/healthyfy/sortcuisine",
+        {
+          cuisine,
+        },
+        { withCredentials: true }
+      );
+      if (response.status === 200 || response.statusText === "OK") {
+        stateChange(response.data);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   return (
     <div style={{ position: "relative" }}>
       <div
@@ -113,6 +131,9 @@ function Top({ stateChange }) {
         ].map((cuisine, idx) => (
           <div
             key={cuisine.name}
+            onClick={(e) => {
+              sortCuisine(e, cuisine.name);
+            }}
             style={{
               textAlign: "center",
               minWidth: 120,
