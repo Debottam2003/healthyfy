@@ -20,11 +20,39 @@ function RecipeCard() {
     fetchData();
   }, []);
 
-  const toggleLike = (rid) => {
+  const toggleLike = async (rid) => {
     setLiked((prev) => ({
       ...prev,
       [rid]: !prev[rid],
     }));
+    if (liked.rid === false) {
+      try {
+        let response = await axios.post(`http://healthyfy/likes/${rid}`, {
+          withCredentials: true,
+        });
+
+      } catch (err) {
+        if (err.response) {
+          console.log(err.response.statusText);
+          console.log(err.response.data.message);
+        } else {
+          console.log(err.message);
+        }
+      }
+    } else {
+      try {
+        let response = await axios.post(`http://healthyfy/dislikes/${rid}`, {
+          withCredentials: true,
+        });
+      } catch (err) {
+        if (err.response) {
+          console.log(err.response.statusText);
+          console.log(err.response.data.message);
+        } else {
+          console.log(err.message);
+        }
+      }
+    }
   };
 
   return (
