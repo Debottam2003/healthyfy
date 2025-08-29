@@ -11,7 +11,7 @@ const team = [
     name: "Shubhranil Karmakar",
     role: "Full Stack Developer",
     bio: "Enjoys building scalable systems and delivering robust solutions across the stack.",
-    image: "https://via.placeholder.com/150",
+    image: "/images/shub.png",
   },
   {
     name: "Debottam Kar",
