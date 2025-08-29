@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { GiRobotGolem } from "react-icons/gi";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { generatePath, Link, useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
@@ -166,30 +166,32 @@ const userGenerate = {
   padding: "18px 20px",
   boxShadow: "0 2px 8px rgba(34,139,34,0.06)",
 };
-// const dishCards = [];
+
+const dishCards = [];
 // const dishCards = [
 //   {
-//     title: "Quinoa Avocado Salad",
-//     desc: "A protein-packed salad with fresh veggies and creamy avocado.",
-//     img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
+//     generationid: 1,
+//     name: "Quinoa Avocado Salad",
+//     imageurl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
 //   },
 //   {
-//     title: "Margherita Pizza",
-//     desc: "Classic Italian pizza with fresh mozzarella, tomatoes, and basil.",
-//     img: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+//     generationid: 2,
+//     name: "Margherita Pizza",
+//     imageurl: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
 //   },
 //   {
-//     title: "Chicken Biriyani",
-//     desc: "Aromatic rice dish with tender chicken and spices.",
-//     img: "https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg",
+//     generationid: 3,
+//     name: "Chicken Biriyani",
+//     imageurl: "https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg",
 //   },
 // ];
 
 function Generate() {
   let { register, handleSubmit, reset } = useForm();
-  let [userGenerated, setUserGenerated] = useState(
-    Array(2).fill({ rid: 10, name: "Veg Pasta" })
-  );
+  // let [userGenerated, setUserGenerated] = useState(
+  //   Array(2).fill({ rid: 10, name: "Veg Pasta" })
+  // );
+  let [userGenerated, setUserGenerated] = useState(dishCards);
   let navigate = useNavigate();
   useEffect(() => {
     async function authHanlder() {
@@ -216,7 +218,9 @@ function Generate() {
           }
         );
         // console.log(response.data);
-        setUserGenerated(response.data);
+        if (response.data.length > 0) {
+          setUserGenerated(response.data);
+        }
       } catch (error) {
         console.log(error.message);
       }
@@ -296,8 +300,17 @@ function Generate() {
         style={{ ...styles.messages }}
         className="copilot-messages healthyfy-messages"
       >
+        {userGenerated.length === 0 ? (
+          <h1 style={{ color: "green", textAlign: "center" }}>
+            Generate Custom Recipes Now...
+          </h1>
+        ) : (
+          <h1 style={{ color: "green", textAlign: "center" }}>
+            My Generated Recipes
+          </h1>
+        )}
         <div style={styles.dishCardsRow} className="healthyfy-dish-cards-row">
-          {userGenerated.map((dish, idx) => (
+          {userGenerated?.map((dish, idx) => (
             <Link
               key={idx}
               style={{ textDecoration: "none" }}
