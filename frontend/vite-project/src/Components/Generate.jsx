@@ -249,7 +249,7 @@ function Generate() {
       });
       setTimeout(() => {
         navigate(`/generatedrecipe/${response.data.generationid}`);
-      }, 100);
+      }, 1500);
       reset();
     } catch (err) {
       // alert(err.message);
