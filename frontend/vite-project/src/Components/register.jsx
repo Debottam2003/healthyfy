@@ -96,7 +96,7 @@ function Register() {
         toast.success("Registered Successfully.");
         setTimeout(() => {
           navigate("/profile");
-        }, 1500);
+        }, 2000);
       }
       // reset(); // Uncomment if you want to clear form after login
     } catch (error) {
