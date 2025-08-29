@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { GiRobotGolem } from "react-icons/gi";
 import { useForm } from "react-hook-form";
-import { generatePath, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";

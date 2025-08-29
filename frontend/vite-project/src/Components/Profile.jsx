@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 function Profile() {
   const [username, setUsername] = useState("GUEST");
@@ -24,13 +25,16 @@ function Profile() {
             withCredentials: true,
           }
         );
-        if (response.status === 200) {
-          navigate("/login");
+        if (response.status === 200 || response.statusText === "OK") {
+          toast.success("Logged out successully.");
+          setTimeout(() => {
+            navigate("/login");
+          }, 2000);
         }
       }
     } catch (err) {
       console.log(err.message);
-      if (err.response) {
+      if (err.response.data.message) {
         console.log(err.response.data.message);
       }
     }
@@ -46,10 +50,12 @@ function Profile() {
         );
         // console.log(response.status);
         // console.log(response.statusText);
-        let data = response.data;
-        // console.log(data.name, data.nationality);
-        setUsername(data.name.toUpperCase());
-        setNationality(data.nationality.toUpperCase());
+        if (response.status === 200 || response.statusText === "OK") {
+          let data = response.data;
+          // console.log(data.name, data.nationality);
+          setUsername(data.name.toUpperCase());
+          setNationality(data.nationality.toUpperCase());
+        }
       } catch (error) {
         console.log(error.status === 401);
         navigate("/login");
@@ -210,30 +216,41 @@ function Profile() {
           Log Out
         </button>
       </div>
-          <h2 style={{textAlign:"center",color:"green"}}>My Favorites</h2>
+      <h2 style={{ textAlign: "center", color: "green" }}>My Favorites</h2>
       {/* Full Screen Grid */}
       <div style={styles.gridWrapper}>
         <div style={styles.grid}>
           {likedRecipes.map((recipe) => (
-            <Link key={recipe.rid} style={{textDecoration:"none"}} to={`/recipe/${recipe.rid}`}>
+            <Link
+              key={recipe.rid}
+              style={{ textDecoration: "none" }}
+              to={`/recipe/${recipe.rid}`}
+            >
               <div
-              style={styles.card}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-4px)";
-                e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.08)";
-              }}
+                style={styles.card}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.boxShadow =
+                    "0 8px 20px rgba(0,0,0,0.15)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow =
+                    "0 4px 10px rgba(0,0,0,0.08)";
+                }}
               >
-              <img src={recipe.imageurl} alt={recipe.name} style={styles.img} />
-              <div style={styles.cardTitle}>{recipe.name}</div>
+                <img
+                  src={recipe.imageurl}
+                  alt={recipe.name}
+                  style={styles.img}
+                />
+                <div style={styles.cardTitle}>{recipe.name}</div>
               </div>
             </Link>
           ))}
         </div>
       </div>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 }

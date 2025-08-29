@@ -1,145 +1,149 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    /* overflow-x: hidden; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 
 .recipes-area {
-    position: absolute;
-    left: 105px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-flow: row wrap;
-    gap: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    width: 90%;
-    margin-left: 15px;
+  position: absolute;
+  left: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: row wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 90%;
+  margin-left: 15px;
 }
-#loveIMG:hover{
-    transition-duration:0.8s;
-    transform: scale(1.1);
+#loveIMG:hover {
+  transition-duration: 0.8s;
+  transform: scale(1.1);
 }
-.nav{
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    height: 100vh;
-    width: 7vw;
-    justify-content: space-evenly;
-    background-color: white;
-    align-items: center;
-    color: rgb(18, 130, 64);
-    border-right: 1px solid rgb(18, 130, 64);
-    z-index: 10;
+.nav {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  height: 100vh;
+  width: 7vw;
+  justify-content: space-evenly;
+  background-color: white;
+  align-items: center;
+  color: rgb(18, 130, 64);
+  border-right: 1px solid rgb(18, 130, 64);
+  z-index: 10;
 }
 .nav h1 {
-    color: rgb(18, 130, 64);
+  color: rgb(18, 130, 64);
 }
-.auth-form > form{
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.auth-form > form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .P {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-    background-color:#fff;
-    box-shadow: 0px 0px 1px black;
-    /* border: 2px dashed rgb(109, 225, 107); */
-    border-radius: 20px;
-    position: absolute;
-    top:40px;
-    right: 15%;
-    height: 90vh;
-    width: 70vw;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px black;
+  /* border: 2px dashed rgb(109, 225, 107); */
+  border-radius: 20px;
+  position: absolute;
+  top: 40px;
+  right: 15%;
+  height: 90vh;
+  width: 70vw;
+  overflow: hidden;
 }
-.Pimg  {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    overflow: hidden;
-    height: 10rem;
-    width: 10rem;
-    border: 5px dashed rgb(18, 130, 64);
-    border-radius: 30%;
-    text-align: center;
+.Pimg {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 10rem;
+  width: 10rem;
+  border: 5px dashed rgb(18, 130, 64);
+  border-radius: 30%;
+  text-align: center;
 }
-.h{
-    align-content: center;
-    height: 50%;
-    width: 100%;
-    box-shadow: 0px 0px 1px black;
+.h {
+  align-content: center;
+  height: 50%;
+  width: 100%;
+  box-shadow: 0px 0px 1px black;
 }
 .likes-container {
-    display: flex;
-    gap: 1rem;
-    box-shadow: 0px 0px 1px black;
-    width: 100%;
-    height: 30%;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0px 0px 1px black;
+  width: 100%;
+  height: 30%;
 }
 .likes-container h3 {
-    margin-left: 1rem;
-    align-self: center;
-    text-align: start;
+  margin-left: 1rem;
+  align-self: center;
+  text-align: start;
 }
-.liked{
-    box-shadow: 0px 0px 25px rgb(158, 150, 150) inset;
-    align-self: center;
-    /* background-color: black; */
-    height:100%;
-    width: 90%;
+.liked {
+  box-shadow: 0px 0px 25px rgb(158, 150, 150) inset;
+  align-self: center;
+  /* background-color: black; */
+  height: 100%;
+  width: 90%;
 }
-.logout{
-        height: 50%;
-        width: 40%;
-        background-color: white;
-        border: "none";
-        border-radius: "8px";
-        font-weight: "bold";
-        font-size: "1rem";
-        cursor: "pointer";
-        color: rgb(18, 130, 64);
-        border: none;
-        border-radius: 10px;
-        font-size: larger;
-        font-weight: 600;
+.logout {
+  height: 50%;
+  width: 40%;
+  background-color: white;
+  border: "none";
+  border-radius: "8px";
+  font-weight: "bold";
+  font-size: "1rem";
+  cursor: "pointer";
+  color: rgb(18, 130, 64);
+  border: none;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 600;
 }
-.logout-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10rem;
-    width: 100%;
-    background-image: linear-gradient(90deg, rgb(18, 130, 64) 0%, rgb(74, 194, 37) 100%);
+.logout-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgb(18, 130, 64) 0%,
+    rgb(74, 194, 37) 100%
+  );
 }

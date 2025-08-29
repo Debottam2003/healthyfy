@@ -8,12 +8,10 @@ function App() {
   return (
     <div style={{ display: "flex" }}>
       <Navber></Navber>
-      {
-          /* <div className="recipes-area">
+      {/* <div className="recipes-area">
           <MultipleInteractionCard /> 
-           </div> */
-      }
-      <div style={{position: "relative", marginLeft: "105px"}} >
+           </div> */}
+      <div style={{ position: "relative", marginLeft: "105px" }}>
         <Outlet />
         <Footer></Footer>
       </div>

@@ -8,8 +8,8 @@ export default function useCustom() {
   return { data, statechange };
 }
 
-// The reason your two React components don’t "share" the same data is because each 
-// time you call your custom hook (useCustom) inside a component, 
+// The reason your two React components don’t "share" the same data is because each
+// time you call your custom hook (useCustom) inside a component,
 // React creates a completely new independent state.
 
 // So:

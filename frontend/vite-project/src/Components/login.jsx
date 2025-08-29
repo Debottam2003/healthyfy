@@ -1,8 +1,8 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 const LinkStyle = {
   textDecoration: "none",
@@ -86,15 +86,21 @@ function Login() {
       // reset();
       if (response.status === 200 || response.statusText === "OK") {
         // alert("Login Successful");
-        navigate("/profile");
+        reset();
+        toast.success("Logged in Successfully.");
+        setTimeout(() => {
+          navigate("/profile");
+        }, 2000);
       }
     } catch (error) {
-      if (error.response) {
-        alert(error.response.data.message);
+      if (error.response.data.message) {
+        // alert(error.response.data.message);
+        toast.error(error.response.data.message);
         console.log(error.response.statusText + " " + error.response.status);
       } else {
         console.log(error.message);
-        alert(error.message);
+        toast.error(error.message);
+        // alert(error.message);
       }
     }
   }
@@ -223,6 +229,7 @@ function Login() {
           }
         `}
       </style>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 }
