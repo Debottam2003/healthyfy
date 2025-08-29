@@ -2,15 +2,15 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Register from "./components/Register.jsx";
-import Login from "./components/login.jsx";
-import Profile from "./components/Profile.jsx";
-import Generate from "./components/Generate.jsx";
-import IndiviualRecipe from "./components/IndiviualRecipe.jsx";
-import MultipleInteractionCard from "./components/RecipeCard.jsx";
-import GeneratedRecipe from "./components/GeneratedRecipe.jsx";
-import Search from "./components/Search.jsx";
-import About from "./components/About.jsx";
+import Register from "./Register.jsx";
+import Login from "./login.jsx";
+import Profile from "./Profile.jsx";
+import Generate from "./Generate.jsx";
+import IndiviualRecipe from "./IndiviualRecipe.jsx";
+import MultipleInteractionCard from "./RecipeCard.jsx";
+import GeneratedRecipe from "./GeneratedRecipe.jsx";
+import Search from "./Search.jsx";
+import About from "./About.jsx";
 
 let router = createBrowserRouter([
   {
