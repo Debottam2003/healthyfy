@@ -5,15 +5,13 @@ import axios from "axios";
 function IndiviualRecipe() {
   const { rid } = useParams();
   //   let [recipeName, setName] = useState("DishName");
-  let [recipeImage, setImage] = useState(
-    `c:/Users/DEBOTTAM/AppData/Local/Temp/world-food-day-2020.png.webp`
-  );
+  let [recipeImage, setImage] = useState("");
   let recipeRef = useRef();
   useEffect(() => {
     async function getRecipe() {
       try {
         let response = await axios.get(
-          `http://localhost:3333/healthyfy/recipe/${rid}`
+          `https://healthyfy-1.onrender.com/healthyfy/recipe/${rid}`
         );
         console.log(response.statusText === "OK");
         let { imageurl, recipe } = response.data;

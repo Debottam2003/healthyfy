@@ -11,11 +11,11 @@ function RecipeCard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:3333/healthyfy/");
+        const response = await axios.get("https://healthyfy-1.onrender.com/healthyfy/");
         setData(response.data);
         try {
           let userLikes = await axios.get(
-            "http://localhost:3333/healthyfy/userLikes",
+            "https://healthyfy-1.onrender.com/healthyfy/userLikes",
             {
               withCredentials: true,
             }
@@ -40,7 +40,7 @@ function RecipeCard() {
     if (!liked[rid]) {
       try {
         let response = await axios.post(
-          `http://localhost:3333/healthyfy/likes/`,
+          `https://healthyfy-1.onrender.com/healthyfy/likes/`,
           { rid },
           {
             withCredentials: true,
@@ -79,7 +79,7 @@ function RecipeCard() {
     } else {
       try {
         let response = await axios.post(
-          `http://localhost:3333/healthyfy/dislikes/`,
+          `https://healthyfy-1.onrender.com/healthyfy/dislikes/`,
           { rid },
           {
             withCredentials: true,

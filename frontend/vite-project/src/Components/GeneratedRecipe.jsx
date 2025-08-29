@@ -13,7 +13,7 @@ function GeneratedRecipe() {
     async function getRecipe() {
       try {
         let response = await axios.get(
-          `http://localhost:3333/healthyfy/userGenerations/${gid}`,
+          `https://healthyfy-1.onrender.com/healthyfy/userGenerations/${gid}`,
           {
             withCredentials: true,
           }

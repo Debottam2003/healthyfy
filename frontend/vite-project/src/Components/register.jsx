@@ -86,7 +86,7 @@ function Register() {
   async function submitForm(data) {
     try {
       let response = await axios.post(
-        "http://localhost:3333/healthyfy/register",
+        "https://healthyfy-1.onrender.com/healthyfy/register",
         data,
         { withCredentials: true }
       );

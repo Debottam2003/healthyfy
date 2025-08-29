@@ -28,7 +28,7 @@ function Top({ stateChange }) {
     // ]);
     try {
       let response = await axios.post(
-        "http://localhost:3333/healthyfy/veg_nonveg",
+        "https://healthyfy-1.onrender.com/healthyfy/veg_nonveg",
         {
           veg: currentState,
         }
@@ -45,7 +45,7 @@ function Top({ stateChange }) {
   async function sortCuisine(e, cuisine) {
     try {
       let response = await axios.post(
-        "http://localhost:3333/healthyfy/sortcuisine",
+        "https://healthyfy-1.onrender.com/healthyfy/sortcuisine",
         {
           cuisine,
         },

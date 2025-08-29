@@ -20,7 +20,7 @@ function Profile() {
       let sure = confirm("Are you sure?");
       if (sure) {
         let response = await axios.get(
-          "http://localhost:3333/healthyfy/logout",
+          "https://healthyfy-1.onrender.com/healthyfy/logout",
           {
             withCredentials: true,
           }
@@ -43,7 +43,7 @@ function Profile() {
     async function getProfileData() {
       try {
         let response = await axios.get(
-          "http://localhost:3333/healthyfy/profile",
+          "https://healthyfy-1.onrender.com/healthyfy/profile",
           {
             withCredentials: true,
           }
@@ -65,7 +65,7 @@ function Profile() {
     async function likedRecipe() {
       try {
         let response = await axios.get(
-          "http://localhost:3333/healthyfy/userLikes",
+          "https://healthyfy-1.onrender.com/healthyfy/userLikes",
           {
             withCredentials: true,
           }

@@ -196,7 +196,7 @@ function Generate() {
   useEffect(() => {
     async function authHanlder() {
       try {
-        let response = await axios.get("http://localhost:3333/healthyfy/auth", {
+        let response = await axios.get("https://healthyfy-1.onrender.com/healthyfy/auth", {
           withCredentials: true,
         });
         console.log(response.data.message);
@@ -212,7 +212,7 @@ function Generate() {
     async function fecthGeneratedRecipes() {
       try {
         let response = await axios.get(
-          "http://localhost:3333/healthyfy/allgenerations",
+          "https://healthyfy-1.onrender.com/healthyfy/allgenerations",
           {
             withCredentials: true,
           }
@@ -232,7 +232,7 @@ function Generate() {
     try {
       console.log(data.prompt);
       const promise = axios.post(
-        "http://localhost:3333/healthyfy/generate",
+        "https://healthyfy-1.onrender.com/healthyfy/generate",
         data,
         { withCredentials: true }
       );
@@ -267,7 +267,7 @@ function Generate() {
     // alert("delete button clicked for " + gid);
     try {
       let response = await axios.post(
-        "http://localhost:3333/healthyfy/deleteGeneratedRecipe",
+        "https://healthyfy-1.onrender.com/healthyfy/deleteGeneratedRecipe",
         { gid },
         {
           withCredentials: true,
