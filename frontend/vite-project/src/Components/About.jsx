@@ -5,7 +5,7 @@ const team = [
     name: "Gaganandra Mondal",
     role: "Full Stack Developer",
     bio: "Passionate about creating seamless web applications from frontend to backend.",
-    image: "https://via.placeholder.com/150",
+    image: "/images/gagan.png",
   },
   {
     name: "Shubhranil Karmakar",
