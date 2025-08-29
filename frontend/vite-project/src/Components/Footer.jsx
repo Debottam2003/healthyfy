@@ -1,5 +1,5 @@
-import { FaEnvelope, FaPhone, FaGithub } from "react-icons/fa";
-import { Link, Route } from "react-router-dom";
+import { FaEnvelope, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <footer

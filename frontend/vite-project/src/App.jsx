@@ -1,6 +1,4 @@
-import MultipleInteractionCard from "./Components/RecipeCard";
 import Navber from "./Components/Navber";
-import Top from "./Components/Top.jsx";
 import Footer from "./Components/Footer";
 import { Outlet } from "react-router-dom";
 
