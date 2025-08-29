@@ -29,7 +29,7 @@ function RecipeCard() {
 
   return (
     <>
-      <Top></Top>
+      <Top stateChange={setData}></Top>
       <div
         className="recipe-cards"
         style={{
@@ -38,7 +38,7 @@ function RecipeCard() {
           padding: "20px",
         }}
       >
-        {data.map((recipe) => {
+        {data?.map((recipe) => {
           // OPTIONAL: Uncomment if you want random heights instead
           // const randomHeight = Math.floor(Math.random() * 150) + 250;
 
@@ -111,34 +111,37 @@ function RecipeCard() {
                   <span>{recipe.type === "veg" ? "🟢 Veg" : "🔴 Non Veg"}</span>
                 </div>
 
-                <Link style={{textDecoration: "none", color: "white"}} to={`/recipe/${recipe.rid}`}>
-                <button
-                  id={recipe.rid}
-                  style={{
-                    marginTop: "16px",
-                    width: "100%",
-                    padding: "10px 0",
-                    background:
-                      recipe.type === "non veg"
-                        ? "linear-gradient(90deg, rgb(176, 31, 20) 0%, rgb(249, 201, 56) 100%)"
-                        : "linear-gradient(90deg, rgb(18, 130, 64) 0%, rgb(74, 194, 37) 100%)",
-                    color: "rgba(233, 233, 233, 1)",
-                    border: "none",
-                    borderRadius: "8px",
-                    fontWeight: "bold",
-                    fontSize: "1rem",
-                    cursor: "pointer",
-                    transition: "background 0.2s",
-                  }}
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to={`/recipe/${recipe.rid}`}
                 >
-                 View Recipe 
-                </button>
+                  <button
+                    id={recipe.rid}
+                    style={{
+                      marginTop: "16px",
+                      width: "100%",
+                      padding: "10px 0",
+                      background:
+                        recipe.type === "non veg"
+                          ? "linear-gradient(90deg, rgb(176, 31, 20) 0%, rgb(249, 201, 56) 100%)"
+                          : "linear-gradient(90deg, rgb(18, 130, 64) 0%, rgb(74, 194, 37) 100%)",
+                      color: "rgba(233, 233, 233, 1)",
+                      border: "none",
+                      borderRadius: "8px",
+                      fontWeight: "bold",
+                      fontSize: "1rem",
+                      cursor: "pointer",
+                      transition: "background 0.2s",
+                    }}
+                  >
+                    View Recipe
+                  </button>
                 </Link>
               </div>
             </div>
           );
         })}
-        <ScroollToTop/>
+        <ScroollToTop />
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios";
 
-function Top() {
+function Top({ stateChange }) {
   const colors = [
     "#FFB6B9",
     "#FFDAC1",
@@ -14,8 +15,32 @@ function Top() {
     "#B8E0D2",
   ];
   const [isVeg, setIsVeg] = useState(false);
-  function toggle() {
+  async function toggle() {
+    let currentState = !isVeg;
     setIsVeg(!isVeg);
+    // stateChange([
+    //   {
+    //     rid: 101,
+    //     name: "Dummy Data",
+    //     imageurl: "https://sherohomefood.in/wp-content/uploads/2021/05/SHF_home-slide-1.jpg",
+    //     likes_count: 5,
+    //     type: "veg"
+    //   },
+    // ]);
+    try {
+      let response = await axios.post(
+        "http://localhost:3333/healthyfy/veg_nonveg",
+        {
+          veg: currentState,
+        }
+      );
+      if (response.statusText === "OK" || response.status === 200) {
+        stateChange(response.data);
+      }
+    } catch (err) {
+      console.log(err.message);
+      console.log(err.response.data?.message);
+    }
   }
   return (
     <div style={{ position: "relative" }}>
