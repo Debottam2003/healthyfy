@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const styles = {
   chatContainer: {
@@ -210,20 +211,27 @@ function Generate() {
   async function SubmitPrompt(data) {
     try {
       console.log(data.prompt);
-      let response = await axios.post(
+      const promise = axios.post(
         "http://localhost:3333/healthyfy/generate",
         data,
-        {
-          withCredentials: true,
-        }
+        { withCredentials: true }
       );
+
+      toast.promise(promise, {
+        loading: "Generating recipe...",
+        success: "Recipe generated successfully 🎉",
+        error: "Failed to generate recipe ❌",
+      });
+
+      let response = await promise;
       setUserGenerated((prevdata) => {
         return [...prevdata, response.data];
       });
       reset();
     } catch (err) {
-      alert(err.message);
+      // alert(err.message);
       console.log(err.message);
+      // toast.error("Error Generatig the recipe.");
     }
     // reset();
     // alert(data.prompt);
@@ -402,6 +410,7 @@ function Generate() {
           }
         }
       `}</style>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 }
