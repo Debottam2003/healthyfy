@@ -210,7 +210,7 @@ function Profile() {
           Log Out
         </button>
       </div>
-
+          <h2 style={{textAlign:"center",color:"green"}}>My Favorites</h2>
       {/* Full Screen Grid */}
       <div style={styles.gridWrapper}>
         <div style={styles.grid}>
