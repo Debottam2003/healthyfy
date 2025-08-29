@@ -165,7 +165,7 @@ const userGenerate = {
   padding: "18px 20px",
   boxShadow: "0 2px 8px rgba(34,139,34,0.06)",
 };
-const dishCards = [];
+// const dishCards = [];
 // const dishCards = [
 //   {
 //     title: "Quinoa Avocado Salad",
@@ -206,6 +206,7 @@ function Generate() {
     }
     fecthGeneratedRecipes();
   }, []);
+
   async function SubmitPrompt(data) {
     try {
       console.log(data.prompt);
@@ -227,6 +228,37 @@ function Generate() {
     // reset();
     // alert(data.prompt);
   }
+
+  async function deleteHandler(e, gid) {
+    e.preventDefault(); // stops the link navigation
+    e.stopPropagation();
+    // console.log(e.currentTarget.value);
+    // alert("delete button clicked for " + gid);
+    try {
+      let response = await axios.post(
+        "http://localhost:3333/healthyfy/deleteGeneratedRecipe",
+        { gid },
+        {
+          withCredentials: true,
+        }
+      );
+      if (response.status === 200 || response.statusText === "OK") {
+        let sure = confirm("Are you sure?");
+        if (sure) {
+          alert("deletion done");
+          let newData = userGenerated.filter((dish) => {
+            if (dish.generationid !== gid) {
+              return dish;
+            }
+          });
+          setUserGenerated(newData);
+        }
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
+
   return (
     <div
       style={styles.chatContainer}
@@ -261,7 +293,17 @@ function Generate() {
                 />
                 <div style={styles.dishTitle} className="healthyfy-dish-title">
                   {dish.name}
-                  <button style={{border: "none", background: "transparent"}} ><FaTrash style={{ color: "brown", fontSize: "1.2rem" }} /></button>
+                  <button
+                    value={dish.generationid}
+                    onClick={(e) => deleteHandler(e, dish.generationid)}
+                    style={{
+                      border: "none",
+                      background: "transparent",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <FaTrash style={{ color: "brown", fontSize: "1.2rem" }} />
+                  </button>
                 </div>
               </div>
             </Link>

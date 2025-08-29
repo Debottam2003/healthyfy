@@ -31,7 +31,7 @@ router.route("/dislikes").post(DislikeHandler);
 router.route("/userLikes").get(verifier, LikedRecipe);
 router.route("/userGenerations/:gid").get(verifier, userGenerations);
 router.route("/allgenerations").get(verifier, allGenerations);
-router.route("/deleteGeneratedRecipe").get(verifier, deleteGeneratedRecipe);
+router.route("/deleteGeneratedRecipe").post(verifier, deleteGeneratedRecipe);
 router.route("/veg_nonveg").post(veg_nonvegHandler);
 
 // fallback route
