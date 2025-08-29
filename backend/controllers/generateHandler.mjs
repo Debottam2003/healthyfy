@@ -3,8 +3,11 @@ import * as fs from "node:fs";
 import errorHandler from "../error.mjs";
 import { createClient } from '@supabase/supabase-js';
 import pool from '../db.mjs';
+import dotenv from "dotenv";
 
-const supabase = createClient("https://klkpybbgsjpkgwurrxkw.storage.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtsa3B5YmJnc2pwa2d3dXJyeGt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYyODc2MTEsImV4cCI6MjA2MTg2MzYxMX0.FMg9uwyAs18IyHVaU-eLzrWX4CNbZRWWcVahWJLNFfQ");
+dotenv.config();
+
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 let { ai, Modality } = genai;
 

@@ -1,5 +1,6 @@
 import pool from '../db.mjs';
 import errorHandler from '../error.mjs';
+
 const homeHandler = async (req, res) => {
     try {
         console.log("homeHandler called");

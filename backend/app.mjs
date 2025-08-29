@@ -3,13 +3,15 @@ import cors from 'cors';
 import pool from './db.mjs';
 import router from './routes/routes.mjs';
 import cookieParser from 'cookie-parser';
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 app.use(cors({
     origin: "http://localhost:5173",
     credentials: true
 }));
-const PORT = 3333;
+const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cookieParser());
 

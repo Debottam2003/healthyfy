@@ -1,6 +1,7 @@
 import errorHandler from "../error.mjs";
 import pool from '../db.mjs';
 import jwt from 'jsonwebtoken';
+
 let secret = "this is the secret key for healthyfy app";
 
 const loginHandler = async (req, res) => {

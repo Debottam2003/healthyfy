@@ -1,4 +1,6 @@
 import { GoogleGenAI, Modality } from "@google/genai";
+import dotenv from "dotenv";
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyD9NuFiSk4WoaVQ7Oal1rM2i80xH-KTmNk" });
+dotenv.config();
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 export default { ai, Modality};
