@@ -1,5 +1,5 @@
-import Navber from "./Components/Navber";
-import Footer from "./Components/Footer";
+import Navber from "./components/Navber";
+import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
 
 function App() {
