@@ -215,9 +215,8 @@ function Profile() {
       <div style={styles.gridWrapper}>
         <div style={styles.grid}>
           {likedRecipes.map((recipe) => (
-            <Link style={{textDecoration:"none"}} to={`/recipe/${recipe.rid}`}>
+            <Link key={recipe.rid} style={{textDecoration:"none"}} to={`/recipe/${recipe.rid}`}>
               <div
-              key={recipe.rid}
               style={styles.card}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-4px)";
