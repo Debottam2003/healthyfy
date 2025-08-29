@@ -12,6 +12,21 @@ function RecipeCard() {
       try {
         const response = await axios.get("http://localhost:3333/healthyfy/");
         setData(response.data);
+        try {
+          let userLikes = await axios.get(
+            "http://localhost:3333/healthyfy/userLikes",
+            {
+              withCredentials: true,
+            }
+          );
+          let alreadylikes = {};
+          userLikes.data?.forEach((l) => {
+            alreadylikes[l.rid] = true;
+          });
+          setLiked(alreadylikes);
+        } catch (err) {
+          console.log(err.message);
+        }
       } catch (error) {
         console.error("Error fetching data:", error.message);
         setData([]);
@@ -21,29 +36,72 @@ function RecipeCard() {
   }, []);
 
   const toggleLike = async (rid) => {
-    setLiked((prev) => ({
-      ...prev,
-      [rid]: !prev[rid],
-    }));
-    if (liked.rid === false) {
+    if (!liked[rid]) {
       try {
-        let response = await axios.post(`http://healthyfy/likes/${rid}`, {
-          withCredentials: true,
+        let response = await axios.post(
+          `http://localhost:3333/healthyfy/likes/`,
+          { rid },
+          {
+            withCredentials: true,
+          }
+        );
+        console.log("liked");
+        setLiked((prev) => ({
+          ...prev,
+          [rid]: !prev[rid],
+        }));
+        let recipedata = data.filter((r) => {
+          if (r.rid === rid) {
+            console.log(r.likes_count);
+            r.likes_count = Number(r.likes_count) + 1;
+            return r;
+          } else {
+            return r;
+          }
         });
-
+        setData(recipedata);
       } catch (err) {
-        if (err.response) {
-          console.log(err.response.statusText);
+        if (err.response.data.message) {
+          let {
+            status,
+            data: { message },
+          } = err.response;
+          if (status === 401 && message === "Unauthorized") {
+            alert("login first");
+          }
+          // console.log(err.response.statusText);
           console.log(err.response.data.message);
+          if (status === 400 && message === "recipe is already liked") {
+            alert("recipe is already liked");
+          }
         } else {
           console.log(err.message);
         }
       }
     } else {
       try {
-        let response = await axios.post(`http://healthyfy/dislikes/${rid}`, {
-          withCredentials: true,
+        let response = await axios.post(
+          `http://localhost:3333/healthyfy/dislikes/`,
+          { rid },
+          {
+            withCredentials: true,
+          }
+        );
+        console.log("disliked");
+        setLiked((prev) => ({
+          ...prev,
+          [rid]: !prev[rid],
+        }));
+        let recipedata = data.filter((r) => {
+          if (r.rid === rid) {
+            console.log(r.likes_count);
+            r.likes_count = Number(r.likes_count) - 1;
+            return r;
+          } else {
+            return r;
+          }
         });
+        setData(recipedata);
       } catch (err) {
         if (err.response) {
           console.log(err.response.statusText);
@@ -136,7 +194,7 @@ function RecipeCard() {
                   }}
                 >
                   <span>❤️{recipe.likes_count}</span>
-                  <span>{recipe.type === "veg" ? "🟢 Veg" : "🔴 Non Veg"}</span>
+                  <span>{recipe.type === "veg" ? "Veg" : "Non Veg"}</span>
                 </div>
 
                 <Link

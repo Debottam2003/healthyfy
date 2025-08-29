@@ -2,9 +2,9 @@ import jwt from "jsonwebtoken";
 let secret = "this is the secret key for healthyfy app";
 const verifier = async (req, res, next) => {
     console.log("This is the verifier middleware");
-    try{
+    try {
         let token = req.cookies.token;
-        if(!token) {
+        if (!token) {
             console.log("no token");
             return res.status(401).json({ message: "Unauthorized" });
         } else {
@@ -13,7 +13,7 @@ const verifier = async (req, res, next) => {
             req.user = token;
             next();
         }
-    } catch(err) {
+    } catch (err) {
         return res.status(401).json({ message: "Unauthorized" });
     }
 }
