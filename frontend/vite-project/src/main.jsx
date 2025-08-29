@@ -11,6 +11,7 @@ import IndiviualRecipe from "./Components/IndiviualRecipe.jsx";
 import MultipleInteractionCard from "./Components/RecipeCard";
 import GeneratedRecipe from "./Components/GeneratedRecipe.jsx";
 import Search from "./Components/Search.jsx";
+import About from "./Components/About.jsx";
 
 let router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ let router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <MultipleInteractionCard></MultipleInteractionCard>,
+        element: <MultipleInteractionCard />,
       },
       {
         path: "profile",
@@ -41,6 +42,7 @@ let router = createBrowserRouter([
         path: "generatedrecipe/:gid",
         element: <GeneratedRecipe />,
       },
+      { path: "/about", element: <About /> },
     ],
   },
   { path: "/login", element: <Login /> },
