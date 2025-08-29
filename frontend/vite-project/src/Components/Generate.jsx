@@ -249,7 +249,7 @@ function Generate() {
       });
       setTimeout(() => {
         navigate(`/generatedrecipe/${response.data.generationid}`);
-      }, 1500);
+      }, 1000);
       reset();
     } catch (err) {
       // alert(err.message);
@@ -332,7 +332,7 @@ function Generate() {
                   loading="lazy"
                 />
                 <div style={styles.dishTitle} className="healthyfy-dish-title">
-                  {dish.name}
+                  {dish.name.toUpperCase()}
                   <button
                     value={dish.generationid}
                     onClick={(e) => deleteHandler(e, dish.generationid)}

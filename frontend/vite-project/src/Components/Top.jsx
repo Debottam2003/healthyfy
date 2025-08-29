@@ -7,7 +7,6 @@ function Top({ stateChange }) {
     "#FFDAC1",
     "#E2F0CB",
     "#B5EAD7",
-    "#B6E2D3",
     "#F6DFEB",
     "#C7CEEA",
     "#F9F9C5",

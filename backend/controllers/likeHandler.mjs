@@ -8,7 +8,7 @@ const LikeHandler = async (req, res) => {
         if (!uid || !rid) {
             return res.status(400).json({ message: "Both uid and rid are required" });
         } else {
-            console.log(uid, rid);
+            // console.log(uid, rid);
             let result = await pool.query("select * from likes where uid = $1 AND rid = $2", [uid, rid]);
             if (result.rows.length > 0) {
                 return res.status(400).json({ message: "recipe is already liked" });

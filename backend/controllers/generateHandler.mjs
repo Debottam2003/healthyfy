@@ -76,7 +76,7 @@ const generateHandler = async (req, res) => {
                     recipeText = part.text.replace(/\*/g, '').replace(/#+\s/g, '').replace(/`/g, '').replace(/\n/g, '');
                     // .replace(/i will generate[\s\S]*$/gi, '');
                     // fs.writeFileSync("./recipe.txt", recipeText, "utf-8");
-                    console.log(recipeText);
+                    // console.log(recipeText);
                 } else if (part.inlineData) {
                     const imageData = part.inlineData.data;
                     buffer = Buffer.from(imageData, "base64");
@@ -93,9 +93,9 @@ const generateHandler = async (req, res) => {
                     imageURL = supabase.storage
                         .from('images')
                         .getPublicUrl(name);
-                    console.log(imageURL);
+                    // console.log(imageURL);
                     if (error) throw error;
-                    console.log("Image saved");
+                    // console.log("Image saved");
                 }
             }
             if (!uid || !req.body.prompt || !recipeText || !imageURL.data.publicUrl) {

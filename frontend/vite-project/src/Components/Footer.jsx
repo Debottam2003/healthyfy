@@ -109,7 +109,7 @@ function Header() {
               gap: "8px",
             }}
           >
-            <FaEnvelope /> debottamkar2003@gmail.com{" "}
+            <FaEnvelope /> debottamkar2003@gmail.com
             <FaGithub
               style={{ fontSize: "1.8rem", cursor: "pointer" }}
               onMouseOver={(e) => (e.currentTarget.style.color = "#000000ff")}
@@ -118,7 +118,7 @@ function Header() {
             <Link
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
-              to={"https://github.com/Debottam2003"}
+              to="https://github.com/Debottam2003"
             >
               Debottam
             </Link>
@@ -131,7 +131,7 @@ function Header() {
               gap: "8px",
             }}
           >
-            <FaEnvelope /> samratkarmakarnaihati@gmail.com{" "}
+            <FaEnvelope /> samratkarmakarnaihati@gmail.com
             <FaGithub
               style={{ fontSize: "1.8rem", cursor: "pointer" }}
               onMouseOver={(e) => (e.currentTarget.style.color = "#000000ff")}
@@ -140,7 +140,7 @@ function Header() {
             <Link
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
-              to={"https://github.com/Shubh-2025"}
+              to="https://github.com/Shubh-2025"
             >
               Shubhranil
             </Link>
@@ -153,7 +153,7 @@ function Header() {
               gap: "8px",
             }}
           >
-            <FaEnvelope /> gagan@gmail.com{" "}
+            <FaEnvelope /> mondalgaganandra@gmail.com
             <FaGithub
               style={{ fontSize: "1.8rem", cursor: "pointer" }}
               onMouseOver={(e) => (e.currentTarget.style.color = "#000000ff")}
@@ -162,7 +162,7 @@ function Header() {
             <Link
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
-              to={"https://github.com/Gaganandra-Mondal"}
+              to="https://github.com/Gaganandra-Mondal"
             >
               Gagan
             </Link>
@@ -193,7 +193,7 @@ function Header() {
             <Link
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
-              to={"https://github.com/Debottam2003/healthyfy"}
+              to="https://github.com/Debottam2003/healthyfy"
             >
               Healthyfy Github
             </Link>

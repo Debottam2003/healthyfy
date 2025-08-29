@@ -1,5 +1,5 @@
 import { FaHome } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
 import { FaMagic } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -31,8 +31,8 @@ function Navber() {
           alignItems: "center",
         }}
       >
-        <Link style={LinkStyle} to="/search">
-          <FaSearch size={30} style={{ cursor: "pointer" }} />
+        <Link style={LinkStyle} to="/generate">
+          <FaMagic size={30} style={{ cursor: "pointer" }} />
         </Link>
       </div>
       <div
@@ -42,8 +42,8 @@ function Navber() {
           alignItems: "center",
         }}
       >
-        <Link style={LinkStyle} to="/generate">
-          <FaMagic size={30} style={{ cursor: "pointer" }} />
+        <Link style={LinkStyle} to="/about">
+          <FaInfoCircle size={30} style={{ cursor: "pointer" }} />
         </Link>
       </div>
       <div

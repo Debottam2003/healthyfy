@@ -3,6 +3,7 @@ import axios from "axios";
 import Top from "./Top.jsx";
 import { Link } from "react-router-dom";
 import ScroollToTop from "./ScroollToTop.jsx";
+import toast, { Toaster } from "react-hot-toast";
 
 function RecipeCard() {
   const [data, setData] = useState([]);
@@ -45,20 +46,15 @@ function RecipeCard() {
             withCredentials: true,
           }
         );
-        console.log("liked");
+        // console.log("liked");
+        toast.success("Liked the Recipe.");
         setLiked((prev) => ({
           ...prev,
           [rid]: !prev[rid],
         }));
-        let recipedata = data.filter((r) => {
-          if (r.rid === rid) {
-            console.log(r.likes_count);
-            r.likes_count = Number(r.likes_count) + 1;
-            return r;
-          } else {
-            return r;
-          }
-        });
+        let recipedata = data.map((r) =>
+          r.rid === rid ? { ...r, likes_count: Number(r.likes_count) + 1 } : r
+        );
         setData(recipedata);
       } catch (err) {
         if (err.response.data.message) {
@@ -67,12 +63,14 @@ function RecipeCard() {
             data: { message },
           } = err.response;
           if (status === 401 && message === "Unauthorized") {
-            alert("login first");
+            // alert("login first");
+            toast.error("Login First");
           }
           // console.log(err.response.statusText);
           console.log(err.response.data.message);
           if (status === 400 && message === "recipe is already liked") {
-            alert("recipe is already liked");
+            // alert("recipe is already liked");
+            toast.error("recipe is already liked");
           }
         } else {
           console.log(err.message);
@@ -87,20 +85,15 @@ function RecipeCard() {
             withCredentials: true,
           }
         );
-        console.log("disliked");
+        // console.log("disliked");
+        toast.error("Like removed.");
         setLiked((prev) => ({
           ...prev,
           [rid]: !prev[rid],
         }));
-        let recipedata = data.filter((r) => {
-          if (r.rid === rid) {
-            console.log(r.likes_count);
-            r.likes_count = Number(r.likes_count) - 1;
-            return r;
-          } else {
-            return r;
-          }
-        });
+        let recipedata = data.map((r) =>
+          r.rid === rid ? { ...r, likes_count: Number(r.likes_count) - 1 } : r
+        );
         setData(recipedata);
       } catch (err) {
         if (err.response) {
@@ -228,6 +221,7 @@ function RecipeCard() {
           );
         })}
         <ScroollToTop />
+        <Toaster position="top-right" reverseOrder={false} />
       </div>
     </>
   );
