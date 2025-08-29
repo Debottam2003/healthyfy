@@ -24,10 +24,10 @@ function Header() {
         {/* Brand Section */}
         <div>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "10px" }}>
-            MyWebsite
+            Healthyfy
           </h2>
           <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.8)" }}>
-            Building modern experiences with style and simplicity.
+            Bring the entire world cuisine in your small kitchen.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ function Header() {
 
           {/* Emails */}
           <p style={{ fontSize: "0.9rem", display: "flex", alignItems: "center", gap: "8px" }}>
-            <FaEnvelope /> debottam@gmail.com
+            <FaEnvelope /> debottamkar2003@gmail.com
           </p>
           <p style={{ fontSize: "0.9rem", display: "flex", alignItems: "center", gap: "8px" }}>
             <FaEnvelope /> samratkarmakarnaihati@gmail.com

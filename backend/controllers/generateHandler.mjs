@@ -95,8 +95,13 @@ const generateHandler = async (req, res) => {
                     console.log("Image saved");
                 }
             }
-            let { rows } = await pool.query("insert into generations(uid, name, content, imageurl) values($1, $2, $3, $4) returning generationid", [uid, req.body.prompt.slice(0, 20), recipeText, imageURL.data.publicUrl]);
-            res.status(200).json({ name: req.body.prompt.slice(0, 20), uid: uid, generationid: rows[0].generationid, imageurl: imageURL.data.publicUrl });
+            if (!uid || !req.body.prompt || !recipeText || !imageURL.data.publicUrl) {
+                return res.status(400).json({ message: "Error generating the recipe." });
+            }
+            else {
+                let { rows } = await pool.query("insert into generations(uid, name, content, imageurl) values($1, $2, $3, $4) returning generationid", [uid, req.body.prompt.slice(0, 20), recipeText, imageURL.data.publicUrl]);
+                res.status(200).json({ name: req.body.prompt.slice(0, 20), uid: uid, generationid: rows[0].generationid, imageurl: imageURL.data.publicUrl });
+            }
         } catch (error) {
             console.error("Error generating content:", error.message);
             errorHandler(req, res);

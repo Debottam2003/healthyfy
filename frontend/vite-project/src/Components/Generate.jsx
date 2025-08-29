@@ -247,6 +247,9 @@ function Generate() {
       setUserGenerated((prevdata) => {
         return [...prevdata, response.data];
       });
+      setTimeout(() => {
+        navigate(`/generatedrecipe/${response.data.generationid}`);
+      }, 100);
       reset();
     } catch (err) {
       // alert(err.message);
