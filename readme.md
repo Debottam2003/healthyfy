@@ -49,7 +49,7 @@ NPM Package -> @google/genai** for recipes and Recipe-Images generations.
 <img src="https://jwt.io/img/pic_logo.svg" width="40" alt="JWT" />   
 
 - **DevOps:** GitHub Actions (CI/CD).  
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" style="filter: invert(1);" />   
+<img src="https://cdn.simpleicons.org/github/FFFFFF" width="40" alt="GitHub" /> 
 
 
 ---
@@ -128,15 +128,15 @@ Deployed on **Render** with environment variables configured.
 # 📬 Contact Us
 
 **Name** – **Debottam Kar**.   
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="20" alt="GitHub" style="filter: invert(1);" /> https://github.com/Debottam2003   
+<img src="https://cdn.simpleicons.org/github/FFFFFF" width="40" alt="GitHub" /> https://github.com/Debottam2003   
 <img src="https://cdn.simpleicons.org/gmail/EA4335" width="20" alt="Gmail" />
 debottamkar2003@gmail.com
 
 **Name** – **Shubhranil Karmakar**.   
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="20" alt="GitHub" style="filter: invert(1);" /> https://github.com/Shubh-2025     
+<img src="https://cdn.simpleicons.org/github/FFFFFF" width="40" alt="GitHub" /> https://github.com/Shubh-2025     
 <img src="https://cdn.simpleicons.org/gmail/EA4335" width="20" alt="Gmail" />
 samratkarmakarnaihati@gmail.com
 
 **Name** – **Gaganendra Mondal**.   
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="20" alt="GitHub" style="filter: invert(1);" /> https://github.com/Gaganandra-Mondal   
+<img src="https://cdn.simpleicons.org/github/FFFFFF" width="40" alt="GitHub" /> https://github.com/Gaganandra-Mondal   
 <img src="https://cdn.simpleicons.org/gmail/EA4335" width="20" alt="Gmail" /> mondalgaganandra@gamil.com
