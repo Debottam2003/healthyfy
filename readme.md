@@ -2,7 +2,7 @@
 
 # 🍳 AI-Integrated Recipe Website     
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)]()  
-[![Hosting](https://img.shields.io/badge/contributions-closed-orange.svg)]() 
+[![Hosting](https://img.shields.io/badge/contributions-open-green.svg)]() 
 
 A **smart recipe platform** that leverages **AI to generate personalized recipes, suggest meal plans, and provide 7 Nationality, [Indian,Chinese,Italian,Mexican,Japnese,Thai,French] favourite Cuisines based on your Taste**. Built for food enthusiasts, home cooks, and anyone who wants intelligent recipe suggestions with a modern user experience.
 
