@@ -11,16 +11,14 @@ A **smart recipe platform** that leverages **AI to generate personalized recipes
 ## 📑 Table of Contents
 - [**Features**](#features)  
 - [**Tech Stack**](#tech-stack)  
-- [Architecture](#architecture)    
+- [**Architecture**](#architecture)    
 - [**Recipes**](#recipes)      
-- [Usage](#usage)
-- [**AI Integration**](#ai-integration)  
-- [Screenshots](#screenshots)    
-- [Challanges](#Challanges)  
+- [**Usage**](#usage)
+- [**AI Integration**](#ai-integration)     
+- [**Challanges**](#Challanges)  
 - [**Deployment**](#deployment)  
-- [**Contribution**](#contributing)  
-- [License](#license)  
-- [Contact](#contact)  
+- [**Contribution**](#contributing)   
+- [**Contact**](#contact)  
 
 ---
 
@@ -35,10 +33,10 @@ A **smart recipe platform** that leverages **AI to generate personalized recipes
 
 ## 🛠 Tech Stack
 - **Frontend:** React.js (with CSS-3 for styling).  
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" />  **+** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" />  **+** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" />   
 
 - **Backend:** Node.js, Express.js.  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" />  **+** <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" />  **+** <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />   
 
 - **Database:** PostgreSQL [**Supabase Online DB**].  
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" alt="PostgreSQL" />  
@@ -46,14 +44,13 @@ A **smart recipe platform** that leverages **AI to generate personalized recipes
 - **AI Integration:**  
 **Model -> Gemini-2.0-Flash-Preview-Image-Generation [Imagen 4.0]  
 NPM Package -> @google/genai** for recipes and Recipe-Images generations.  
-<img src="https://cdn.simpleicons.org/googlegemini/ffffff" width="40" alt="Google Gemini" />
+<img src="https://cdn.simpleicons.org/googlegemini/ffffff" width="40" alt="Google Gemini" />   
 - **Authentication:** JWT (JSON Web Token).  
-<img src="https://jwt.io/img/pic_logo.svg" width="40" alt="JWT" />
+<img src="https://jwt.io/img/pic_logo.svg" width="40" alt="JWT" />   
 
 - **DevOps:** GitHub Actions (CI/CD).  
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" style="filter: invert(1);" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" alt="GitHub" style="filter: invert(1);" />   
 
- 
 
 ---
 
@@ -72,7 +69,7 @@ NPM Package -> @google/genai** for recipes and Recipe-Images generations.
 +----------+----------+   
            |   
            v   
- Database (MongoDB/MySQL)   
+ Database (PostgreSQL)   
 
 
  ---
@@ -83,9 +80,9 @@ NPM Package -> @google/genai** for recipes and Recipe-Images generations.
 
 ---
 
-##🔖 Usage
+## 🔖 Usage in Own System
 
-Explain how users can use the application.
+Explain how users can use the application in their system.
 
 ## Clone the repository
 git clone https://github.com/Debottam2003/healthyfy
@@ -115,7 +112,7 @@ Securing API keys and environment variables.
 
 ## 🚀 Deployment
 
-# Frontend: Follow the URL - Frontend : https://healthyfy-lzod.vercel.app/   
+# Frontend: Follow the URL - https://healthyfy-lzod.vercel.app/   
 
 Deployed on **Vercel** using npm run build.   
 
