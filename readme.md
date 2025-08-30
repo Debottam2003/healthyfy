@@ -16,8 +16,7 @@ A **smart recipe platform** that leverages **AI to generate personalized recipes
 - [**Usage**](#usage)
 - [**AI Integration**](#ai-integration)     
 - [**Challanges**](#Challanges)  
-- [**Deployment**](#deployment)  
-- [**Contribution**](#contributing)   
+- [**Deployment**](#deployment)   
 - [**Contact**](#contact)  
 
 ---
