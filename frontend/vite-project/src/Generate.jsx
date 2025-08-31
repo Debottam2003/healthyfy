@@ -7,192 +7,11 @@ import { FaTrash } from "react-icons/fa";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
-const styles = {
-  chatContainer: {
-    width: "95vw",
-    height: "100vh",
-    margin: 0,
-    border: "none",
-    borderRadius: 0,
-    background: "#fff",
-    color: "#222",
-    boxShadow: "none",
-    display: "flex",
-    flexDirection: "column",
-    fontFamily: "'Segoe UI', 'Roboto', Arial, sans-serif",
-    minHeight: "100vh",
-  },
-  header: {
-    padding: 24,
-    fontSize: "1.5rem",
-    fontWeight: 700,
-    background: "#f6f8fa",
-    borderBottom: "1px solid #eaecef",
-    display: "flex",
-    alignItems: "center",
-    gap: 10,
-    color: "#1a7f37", // green touch
-  },
-  messages: {
-    flex: 1,
-    padding: "32px 24px",
-    overflowY: "auto",
-    background: "#fff",
-  },
-  dishCardsRow: {
-    display: "flex",
-    gap: 24,
-    justifyContent: "center",
-    margin: "32px 0",
-    flexWrap: "wrap",
-    overflow: "hidden",
-  },
-  dishCard: {
-    background: "#f6f8fa",
-    border: "1px solid #eaecef",
-    borderRadius: 16,
-    width: 220,
-    boxShadow: "0 2px 8px rgba(34,139,34,0.07)",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: 18,
-    transition: "transform 0.15s",
-    cursor: "pointer",
-  },
-  dishImage: {
-    width: 90,
-    height: 90,
-    borderRadius: "50%",
-    objectFit: "cover",
-    marginBottom: 14,
-    border: "3px solid #1a7f37",
-    background: "#fff",
-  },
-  dishTitle: {
-    fontWeight: 600,
-    fontSize: "1.1rem",
-    marginBottom: 6,
-    color: "#1a7f37",
-    textAlign: "center",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: "5px",
-  },
-  dishDesc: {
-    fontSize: "0.97rem",
-    color: "#444",
-    textAlign: "center",
-    marginBottom: 0,
-  },
-  message: {
-    display: "flex",
-    marginBottom: 18,
-  },
-  messageUser: {
-    flexDirection: "row-reverse",
-  },
-  avatar: {
-    width: 36,
-    height: 36,
-    borderRadius: "50%",
-    background: "#eaecef",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    margin: "0 12px",
-    fontSize: "1.5rem",
-    border: "2px solid #1a7f37", // green touch
-  },
-  bubble: {
-    maxWidth: "70%",
-    padding: "14px 20px",
-    borderRadius: 18,
-    background: "#0969da",
-    color: "#fff",
-    fontSize: "1.05rem",
-    lineHeight: 1.5,
-  },
-  bubbleBot: {
-    background: "#f6f8fa",
-    color: "#222",
-    border: "1px solid #eaecef",
-  },
-  inputRow: {
-    display: "flex",
-    padding: "20px 24px",
-    borderTop: "1px solid #eaecef",
-    background: "#fff",
-  },
-  input: {
-    flex: 1,
-    padding: "12px 16px",
-    borderRadius: 10,
-    border: "1px solid #eaecef",
-    background: "#f6f8fa",
-    color: "#222",
-    fontSize: "1.05rem",
-    outline: "none",
-  },
-  sendBtn: {
-    marginLeft: 10,
-    background: "#1a7f37", // green
-    color: "#fff",
-    border: "none",
-    borderRadius: 10,
-    padding: "0 22px",
-    fontSize: "1.3rem",
-    cursor: "pointer",
-    transition: "background 0.2s",
-  },
-};
-
-const userGenerate = {
-  width: "200px",
-  minHeight: "200px",
-  maxHeight: "200px",
-  margin: "0 auto 32px auto",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  gap: "8px",
-  overflowX: "hidden",
-  overflowY: "auto",
-  background: "#f6f8fa",
-  border: "1px solid #eaecef",
-  borderRadius: "14px",
-  padding: "18px 20px",
-  boxShadow: "0 2px 8px rgba(34,139,34,0.06)",
-};
-
-const dishCards = [];
-// const dishCards = [
-//   {
-//     generationid: 1,
-//     name: "Quinoa Avocado Salad",
-//     imageurl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
-//   },
-//   {
-//     generationid: 2,
-//     name: "Margherita Pizza",
-//     imageurl: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
-//   },
-//   {
-//     generationid: 3,
-//     name: "Chicken Biriyani",
-//     imageurl: "https://dindugalbiriyani.com/wp-content/uploads/2024/10/Chicken-Biryani-Recipe-1.jpg",
-//   },
-// ];
-
-function Generate() {
+const Generate = () => {
   let { register, handleSubmit, reset } = useForm();
-  // let [userGenerated, setUserGenerated] = useState(
-  //   Array(2).fill({ rid: 10, name: "Veg Pasta" })
-  // );
-  let [userGenerated, setUserGenerated] = useState(dishCards);
+  let [userGenerated, setUserGenerated] = useState([]);
   let navigate = useNavigate();
+  
   useEffect(() => {
     async function authHanlder() {
       try {
@@ -217,7 +36,6 @@ function Generate() {
             withCredentials: true,
           }
         );
-        // console.log(response.data);
         if (response.data.length > 0) {
           setUserGenerated(response.data);
         }
@@ -252,19 +70,13 @@ function Generate() {
       }, 1000);
       reset();
     } catch (err) {
-      // alert(err.message);
       console.log(err.message);
-      // toast.error("Error Generatig the recipe.");
     }
-    // reset();
-    // alert(data.prompt);
   }
 
   async function deleteHandler(e, gid) {
-    e.preventDefault(); // stops the link navigation
+    e.preventDefault();
     e.stopPropagation();
-    // console.log(e.currentTarget.value);
-    // alert("delete button clicked for " + gid);
     try {
       let response = await axios.post(
         "https://healthyfy-1.onrender.com/healthyfy/deleteGeneratedRecipe",
@@ -290,61 +102,158 @@ function Generate() {
     }
   }
 
+  // Responsive styles
+  const styles = {
+    chatContainer: {
+      width: "100%",
+      minHeight: "100vh",
+      margin: 0,
+      background: "#fff",
+      color: "#222",
+      display: "flex",
+      flexDirection: "column",
+      fontFamily: "'Segoe UI', 'Roboto', Arial, sans-serif",
+    },
+    header: {
+      padding: "1rem 1.5rem",
+      fontSize: "clamp(1.2rem, 4vw, 1.5rem)",
+      fontWeight: 700,
+      background: "#f6f8fa",
+      borderBottom: "1px solid #eaecef",
+      display: "flex",
+      alignItems: "center",
+      gap: "0.625rem",
+      color: "#1a7f37",
+      position: "sticky",
+      top: 0,
+      zIndex: 10,
+    },
+    messages: {
+      flex: 1,
+      padding: "1.5rem 1rem",
+      overflowY: "auto",
+      background: "#fff",
+    },
+    dishCardsRow: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+      gap: "1.5rem",
+      justifyContent: "center",
+      margin: "2rem 0",
+    },
+    dishCard: {
+      background: "#f6f8fa",
+      border: "1px solid #eaecef",
+      borderRadius: "1rem",
+      boxShadow: "0 2px 8px rgba(34,139,34,0.07)",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      padding: "1.125rem",
+      transition: "transform 0.15s, box-shadow 0.15s",
+      cursor: "pointer",
+      textDecoration: "none",
+      color: "inherit",
+    },
+    dishImage: {
+      width: "5.625rem",
+      height: "5.625rem",
+      borderRadius: "50%",
+      objectFit: "cover",
+      marginBottom: "0.875rem",
+      border: "3px solid #1a7f37",
+      background: "#fff",
+    },
+    dishTitle: {
+      fontWeight: 600,
+      fontSize: "1.1rem",
+      marginBottom: "0.375rem",
+      color: "#1a7f37",
+      textAlign: "center",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      gap: "0.3125rem",
+      width: "100%",
+    },
+    inputRow: {
+      display: "flex",
+      padding: "1.25rem 1.5rem",
+      borderTop: "1px solid #eaecef",
+      background: "#fff",
+      position: "sticky",
+      bottom: 0,
+    },
+    input: {
+      flex: 1,
+      padding: "0.75rem 1rem",
+      borderRadius: "0.625rem",
+      border: "1px solid #eaecef",
+      background: "#f6f8fa",
+      color: "#222",
+      fontSize: "1.05rem",
+      outline: "none",
+    },
+    sendBtn: {
+      marginLeft: "0.625rem",
+      background: "#1a7f37",
+      color: "#fff",
+      border: "none",
+      borderRadius: "0.625rem",
+      padding: "0 1.375rem",
+      fontSize: "1.3rem",
+      cursor: "pointer",
+      transition: "background 0.2s",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+  };
+
   return (
-    <div
-      style={styles.chatContainer}
-      className="copilot-chat-container healthyfy-generate-root"
-    >
-      <div style={styles.header} className="copilot-header healthyfy-header">
+    <div style={styles.chatContainer}>
+      <div style={styles.header}>
         <GiRobotGolem size={28} />
         Healthyfy Bot
       </div>
-      <div
-        style={{ ...styles.messages }}
-        className="copilot-messages healthyfy-messages"
-      >
+      <div style={styles.messages}>
         {userGenerated.length === 0 ? (
-          <h1 style={{ color: "green", textAlign: "center" }}>
+          <h1 style={{ color: "green", textAlign: "center", marginBottom: "2rem" }}>
             Generate Custom Recipes Now...
           </h1>
         ) : (
-          <h1 style={{ color: "green", textAlign: "center" }}>
+          <h1 style={{ color: "green", textAlign: "center", marginBottom: "2rem" }}>
             My Generated Recipes
           </h1>
         )}
-        <div style={styles.dishCardsRow} className="healthyfy-dish-cards-row">
+        <div style={styles.dishCardsRow}>
           {userGenerated?.map((dish, idx) => (
             <Link
               key={idx}
-              style={{ textDecoration: "none" }}
               to={`/generatedrecipe/${dish.generationid}`}
+              style={styles.dishCard}
             >
-              <div
-                key={idx}
-                style={styles.dishCard}
-                className="dish-card healthyfy-dish-card"
-              >
-                <img
-                  src={dish.imageurl}
-                  alt={dish.name}
-                  style={styles.dishImage}
-                  className="healthyfy-dish-image"
-                  loading="lazy"
-                />
-                <div style={styles.dishTitle} className="healthyfy-dish-title">
-                  {dish.name.toUpperCase()}
-                  <button
-                    value={dish.generationid}
-                    onClick={(e) => deleteHandler(e, dish.generationid)}
-                    style={{
-                      border: "none",
-                      background: "transparent",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <FaTrash style={{ color: "brown", fontSize: "1.2rem" }} />
-                  </button>
-                </div>
+              <img
+                src={dish.imageurl}
+                alt={dish.name}
+                style={styles.dishImage}
+                loading="lazy"
+              />
+              <div style={styles.dishTitle}>
+                <span>{dish.name.toUpperCase()}</span>
+                <button
+                  value={dish.generationid}
+                  onClick={(e) => deleteHandler(e, dish.generationid)}
+                  style={{
+                    border: "none",
+                    background: "transparent",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaTrash style={{ color: "brown", fontSize: "1.2rem" }} />
+                </button>
               </div>
             </Link>
           ))}
@@ -353,98 +262,83 @@ function Generate() {
       <form
         onSubmit={handleSubmit(SubmitPrompt)}
         style={styles.inputRow}
-        className="copilot-input-row healthyfy-input-row"
       >
         <input
           type="text"
           {...register("prompt")}
           style={styles.input}
-          className="copilot-input healthyfy-input"
           placeholder="Ask Healthyfy Bot about recipes…"
         />
         <button
           style={styles.sendBtn}
-          className="copilot-send-btn healthyfy-send-btn"
+          type="submit"
         >
-          <span role="img" aria-label="Send">
-            <AiOutlineArrowRight />
-          </span>
+          <AiOutlineArrowRight />
         </button>
       </form>
+      
+      {/* Responsive CSS */}
       <style>{`
-        .healthyfy-generate-root {
-          background: linear-gradient(120deg, #f6f8fa 0%, #e9f5ec 100%);
-        }
-        .healthyfy-header {
-          background: linear-gradient(90deg, #e9f5ec 60%, #f6f8fa 100%);
-          border-bottom: 2px solid #b7e4c7;
-          box-shadow: 0 2px 8px rgba(34,139,34,0.04);
-        }
-        .healthyfy-dish-cards-row {
-          gap: 32px;
-        }
-        .healthyfy-dish-card {
-          transition: transform 0.18s, box-shadow 0.18s;
-        }
-        .healthyfy-dish-card:hover {
-          transform: translateY(-6px) scale(1.04);
-          box-shadow: 0 6px 24px rgba(34,139,34,0.13);
-          border-color: #1a7f37;
-        }
-        .healthyfy-dish-title {
-          font-family: 'Segoe UI Semibold', 'Roboto', Arial, sans-serif;
-          letter-spacing: 0.5px;
-        }
-        .healthyfy-dish-desc {
-          color: #3a3a3a;
-        }
-        .healthyfy-user-generate {
-          box-shadow: 0 2px 12px rgba(34,139,34,0.09);
-          background: linear-gradient(120deg, #e9f5ec 0%, #f6f8fa 100%);
-        }
-        .healthyfy-user-recipe {
-          font-size: 1.07rem;
-          color: #1a7f37;
-          font-weight: 500;
-          margin-bottom: 6px;
-          letter-spacing: 0.2px;
-        }
-        .healthyfy-input-row {
-          background: #f6f8fa;
-          border-top: 2px solid #b7e4c7;
-        }
-        .healthyfy-input {
-          background: #e9f5ec;
-          border: 1.5px solid #b7e4c7;
-          transition: border 0.18s;
-        }
-        .healthyfy-input:focus {
-          border: 1.5px solid #1a7f37;
-          background: #fff;
-        }
-        .healthyfy-send-btn {
-          background: linear-gradient(90deg, #1a7f37 60%, #43c67a 100%);
-          box-shadow: 0 2px 8px rgba(34,139,34,0.09);
-          font-weight: 600;
-        }
-        .healthyfy-send-btn:hover {
-          background: linear-gradient(90deg, #43c67a 60%, #1a7f37 100%);
-        }
-        @media (max-width: 700px) {
-          .healthyfy-dish-cards-row {
-            flex-direction: column;
-            align-items: center;
-            gap: 18px;
+        @media (max-width: 768px) {
+          .dish-cards-row {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+            gap: 1rem !important;
           }
-          .healthyfy-dish-card {
-            width: 90vw !important;
-            min-width: 0;
+          
+          .dish-card {
+            padding: 1rem !important;
+          }
+          
+          .dish-image {
+            width: 80px !important;
+            height: 80px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .dish-cards-row {
+            grid-template-columns: 1fr !important;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          .header {
+            padding: 0.75rem 1rem !important;
+          }
+          
+          .messages {
+            padding: 1rem 0.5rem !important;
+          }
+          
+          .input-row {
+            padding: 1rem !important;
+          }
+        }
+        
+        @media (min-width: 1200px) {
+          .dish-cards-row {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+            gap: 2rem !important;
+          }
+        }
+        
+        /* Hover effects for larger screens */
+        @media (hover: hover) {
+          .dish-card:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 6px 24px rgba(34,139,34,0.13);
+            border-color: #1a7f37;
+          }
+          
+          .send-btn:hover {
+            background: linear-gradient(90deg, #43c67a 60%, #1a7f37 100%) !important;
           }
         }
       `}</style>
       <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
-}
+};
 
 export default Generate;

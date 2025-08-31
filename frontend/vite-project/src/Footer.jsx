@@ -1,6 +1,7 @@
 import { FaEnvelope, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-function Header() {
+
+function Footer() {
   return (
     <footer
       style={{
@@ -15,25 +16,29 @@ function Header() {
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "40px 20px",
+          padding: "2.5rem 1.25rem",
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "20px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "2.5rem",
         }}
       >
         {/* Brand Section */}
         <div>
           <h2
             style={{
-              fontSize: "1.5rem",
+              fontSize: "clamp(1.25rem, 4vw, 1.5rem)",
               fontWeight: "bold",
-              marginBottom: "10px",
+              marginBottom: "0.625rem",
             }}
           >
             Healthyfy
           </h2>
-          <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.8)" }}>
-            Bring the entire world cuisine in your small kitchen.
+          <p style={{ 
+            fontSize: "clamp(0.8rem, 2.5vw, 0.9rem)", 
+            color: "rgba(255,255,255,0.8)",
+            lineHeight: "1.5"
+          }}>
+            Bring the entire world cuisine to your small kitchen.
           </p>
         </div>
 
@@ -41,9 +46,9 @@ function Header() {
         <div>
           <h3
             style={{
-              fontSize: "1.1rem",
+              fontSize: "clamp(1rem, 3vw, 1.1rem)",
               fontWeight: "600",
-              marginBottom: "10px",
+              marginBottom: "0.625rem",
             }}
           >
             Quick Links
@@ -53,34 +58,39 @@ function Header() {
               listStyle: "none",
               padding: 0,
               margin: 0,
-              fontSize: "0.9rem",
+              fontSize: "clamp(0.8rem, 2.5vw, 0.9rem)",
             }}
           >
-            <li style={{ marginBottom: "6px", cursor: "pointer" }}>
-              <Link style={{ textDecoration: "none", color: "white" }} to={"/"}>
+            <li style={{ marginBottom: "0.5rem" }}>
+              <Link 
+                style={{ textDecoration: "none", color: "white", display: "block" }} 
+                to={"/"}
+              >
                 Home
               </Link>
             </li>
-            <li style={{ marginBottom: "6px", cursor: "pointer" }}>
+            <li style={{ marginBottom: "0.5rem" }}>
               <Link
-                style={{ textDecoration: "none", color: "white" }}
+                style={{ textDecoration: "none", color: "white", display: "block" }}
                 to={"/about"}
               >
                 About
               </Link>
             </li>
-            <li style={{ marginBottom: "6px", cursor: "pointer" }}>
+            <li style={{ marginBottom: "0.5rem" }}>
               <Link
-                style={{ textDecoration: "none", color: "white" }}
+                style={{ textDecoration: "none", color: "white", display: "block" }}
                 to={"/generate"}
               >
                 Generated Recipes
               </Link>
             </li>
-            <li style={{ marginBottom: "6px", cursor: "pointer" }}>
+            <li style={{ marginBottom: "0.5rem" }}>
               <Link
-                style={{ textDecoration: "none", color: "white" }}
+                style={{ textDecoration: "none", color: "white", display: "block" }}
                 to={"https://ice-scoop.onrender.com/icescoop/"}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Other Projects
               </Link>
@@ -92,110 +102,124 @@ function Header() {
         <div>
           <h3
             style={{
-              fontSize: "1.1rem",
+              fontSize: "clamp(1rem, 3vw, 1.1rem)",
               fontWeight: "600",
-              marginBottom: "10px",
+              marginBottom: "0.625rem",
             }}
           >
             Contacts
           </h3>
 
-          {/* Emails */}
-          <p
-            style={{
-              fontSize: "1rem",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <FaEnvelope /> debottamkar2003@gmail.com
-            <FaGithub
-              style={{ fontSize: "1.8rem", cursor: "pointer" }}
-              onMouseOver={(e) => (e.currentTarget.style.color = "#000000ff")}
-              onMouseOut={(e) => (e.currentTarget.style.color = "white")}
-            />
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              target="_blank"
-              to="https://github.com/Debottam2003"
-            >
-              Debottam
-            </Link>
-          </p>
-          <p
-            style={{
-              fontSize: "1rem",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <FaEnvelope /> samratkarmakarnaihati@gmail.com
-            <FaGithub
-              style={{ fontSize: "1.8rem", cursor: "pointer" }}
-              onMouseOver={(e) => (e.currentTarget.style.color = "#000000ff")}
-              onMouseOut={(e) => (e.currentTarget.style.color = "white")}
-            />
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              target="_blank"
-              to="https://github.com/Shubh-2025"
-            >
-              Shubhranil
-            </Link>
-          </p>
-          <p
-            style={{
-              fontSize: "1rem",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <FaEnvelope /> mondalgaganandra@gmail.com
-            <FaGithub
-              style={{ fontSize: "1.8rem", cursor: "pointer" }}
-              onMouseOver={(e) => (e.currentTarget.style.color = "#000000ff")}
-              onMouseOut={(e) => (e.currentTarget.style.color = "white")}
-            />
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              target="_blank"
-              to="https://github.com/Gaganandra-Mondal"
-            >
-              Gagan
-            </Link>
-          </p>
+          {/* Team Members */}
+          <div style={{ marginBottom: "1rem" }}>
+            <div style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "0.5rem",
+              flexWrap: "wrap",
+              marginBottom: "0.5rem"
+            }}>
+              <FaEnvelope size={14} />
+              <span style={{ fontSize: "clamp(0.8rem, 2.5vw, 1rem)" }}>
+                debottamkar2003@gmail.com
+              </span>
+              <Link
+                style={{ 
+                  textDecoration: "none", 
+                  color: "white", 
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.25rem"
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+                to="https://github.com/Debottam2003"
+              >
+                <FaGithub size={18} />
+                <span>Debottam</span>
+              </Link>
+            </div>
+            
+            <div style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "0.5rem",
+              flexWrap: "wrap",
+              marginBottom: "0.5rem"
+            }}>
+              <FaEnvelope size={14} />
+              <span style={{ fontSize: "clamp(0.8rem, 2.5vw, 1rem)" }}>
+                samratkarmakarnaihati@gmail.com
+              </span>
+              <Link
+                style={{ 
+                  textDecoration: "none", 
+                  color: "white", 
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.25rem"
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+                to="https://github.com/Shubh-2025"
+              >
+                <FaGithub size={18} />
+                <span>Shubhranil</span>
+              </Link>
+            </div>
+            
+            <div style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "0.5rem",
+              flexWrap: "wrap",
+              marginBottom: "0.5rem"
+            }}>
+              <FaEnvelope size={14} />
+              <span style={{ fontSize: "clamp(0.8rem, 2.5vw, 1rem)" }}>
+                mondalgaganandra@gmail.com
+              </span>
+              <Link
+                style={{ 
+                  textDecoration: "none", 
+                  color: "white", 
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.25rem"
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+                to="https://github.com/Gaganandra-Mondal"
+              >
+                <FaGithub size={18} />
+                <span>Gagan</span>
+              </Link>
+            </div>
+          </div>
 
-          {/* Phone */}
-          <p
-            style={{
-              fontSize: "0.9rem",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              marginTop: "8px",
-            }}
-          ></p>
-
-          {/* Social Icons */}
-          <div style={{ display: "flex", gap: "15px", marginTop: "12px" }}>
-            <FaGithub
-              style={{
-                fontSize: "1.8rem",
-                cursor: "pointer",
-                fontFamily: "Arial",
+          {/* Project Github Link */}
+          <div style={{ 
+            display: "flex", 
+            alignItems: "center", 
+            gap: "0.5rem",
+            flexWrap: "wrap"
+          }}>
+            <Link
+              style={{ 
+                textDecoration: "none", 
+                color: "white", 
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem"
               }}
-              onMouseOver={(e) => (e.currentTarget.style.color = "#000000ff")}
-              onMouseOut={(e) => (e.currentTarget.style.color = "white")}
-            />{" "}
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
               target="_blank"
+              rel="noopener noreferrer"
               to="https://github.com/Debottam2003/healthyfy"
             >
-              Healthyfy Github
+              <FaGithub size={20} />
+              <span style={{ fontSize: "clamp(0.8rem, 2.5vw, 1rem)" }}>
+                Healthyfy Github
+              </span>
             </Link>
           </div>
         </div>
@@ -206,8 +230,8 @@ function Header() {
         style={{
           background: "rgb(15, 100, 50)",
           textAlign: "center",
-          padding: "15px 0",
-          fontSize: "0.85rem",
+          padding: "0.9375rem 0",
+          fontSize: "clamp(0.75rem, 2.5vw, 0.85rem)",
           color: "rgba(255,255,255,0.8)",
         }}
       >
@@ -217,4 +241,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Footer;
