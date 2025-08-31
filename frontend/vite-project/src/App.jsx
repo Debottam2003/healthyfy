@@ -4,15 +4,23 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div style={{ display: "flex" }}>
-      <Navber></Navber>
-      {/* <div className="recipes-area">
-          <MultipleInteractionCard /> 
-           </div> */}
-      <div style={{ position: "relative", marginLeft: "105px" }}>
-        <Outlet />
-        <Footer></Footer>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
+      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }} >
+        <Navber />
+        <main
+          style={{
+            flex: 1,
+            marginLeft: 0,
+            paddingTop: "60px", // Space for fixed navbar on mobile
+            width: "100%",
+          }}
+        >
+          <Outlet />
+        </main>
       </div>
+      <Footer />
     </div>
   );
 }
