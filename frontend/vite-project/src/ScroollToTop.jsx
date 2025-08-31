@@ -49,7 +49,6 @@ const ScroollToTop = () => {
     visible && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-5 right-5 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700"
         style={scrollToTopStyle}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
