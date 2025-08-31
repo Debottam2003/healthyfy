@@ -31,8 +31,11 @@ A **smart recipe platform** that leverages **AI to generate personalized recipes
 ---
 
 ## 🛠 Tech Stack
-- **Frontend:** React.js (with CSS-3 for styling).  
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" />  **+** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" />   
+- **Frontend:** React + Vite (with CSS-3 for styling).  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" />  **+**
+<img src="https://cdn.simpleicons.org/vite/646CFF" width="40" alt="Vite" />
+**+** 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" />   
 
 - **Backend:** Node.js, Express.js.  
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js" />  **+** <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />   
@@ -120,9 +123,9 @@ Deployed on **Vercel** using npm run build.
 Deployed on **Render** with environment variables configured.   
 
 ## Steps: 
-**1.Render may get the backend server closed(Temporaily) ,in case if you don't get to use the App you might have to hit the backend URL first [ Sorry for the inconvinence USER ].**    
+**1.Render may get the backend server closed(Temporaily) ,You need to wait for some time to let the backend server start [ Sorry for the inconvinence USER ].**    
 
-**2.After Render starts yor can hit the Frontend URL....💌**
+**2.After some wait you can hit the Frontend URL....💌**
 
 # 📬 Contact Us
 

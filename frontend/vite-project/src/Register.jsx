@@ -6,28 +6,25 @@ import toast, { Toaster } from "react-hot-toast";
 const greenAccent = "#43a047";
 const greenAccentLight = "#81c784";
 
-const LinkStyle = {
-  textDecoration: "none",
-  color: greenAccent,
-  fontWeight: "bold",
-};
-
 const whiteThemeStyles = {
   background: "#fff",
-  color: "#222",
-  maxHeight: "100vh",
+  // color: "#222",
+  // maxHeight: "100vh",
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  width: "100vw",
+  width: "100%",
+  height:"100%",
   fontFamily: "Inter, Arial, sans-serif",
-  gap: "60px",
-  padding: "2rem",
+  gap: "1rem",
+  padding: "5rem",
   boxSizing: "border-box",
   overFlow: "hidden",
   backgroundImage: "url('/images/background.png')",
   backgroundSize: "cover",
+  backgroundPosition:"center",
+  backgroundRepeat:"no-repeat",
 };
 
 const formStyles = {
@@ -55,28 +52,10 @@ const inputStyles = {
   transition: "border 0.2s",
 };
 
-const buttonStyles = {
-  padding: "0.85rem",
-  borderRadius: "6px",
-  border: "none",
-  background: `linear-gradient(90deg, ${greenAccent} 0%, ${greenAccentLight} 100%)`,
-  color: "#fff",
-  fontWeight: "bold",
-  cursor: "pointer",
-  fontFamily: "inherit",
-  fontSize: "1.1rem",
-  letterSpacing: "0.5px",
-  transition: "background 0.2s",
-  marginTop: "0.5rem",
-};
-
 const sideTextStyles = {
   fontSize: "3rem",
   color: "white",
   fontWeight: "bold",
-  lineHeight: 1.2,
-  marginBottom: "1rem",
-  textAlign: "left",
 };
 
 function Register() {
@@ -116,9 +95,9 @@ function Register() {
   return (
     <div className="auth-background" style={whiteThemeStyles}>
       <div style={sideTextStyles} className="register-side-text">
-        <div>Sign up to</div>
-        <div>generate</div>
-        <div>Healthy Recipes</div>
+        <h3>Sign up to</h3>
+        <h3>generate</h3>
+        <h3>Healthy Recipes</h3>
       </div>
       <div
         className="auth-form"
@@ -165,7 +144,7 @@ function Register() {
             required
             placeholder="Nationality"
           />
-          <button type="submit" style={buttonStyles}>
+          <button type="submit" className="submit">
             Register
           </button>
           <p
@@ -177,17 +156,16 @@ function Register() {
             }}
           >
             Already have an account?{" "}
-            <span
-              style={{
-                color: greenAccent,
-                cursor: "pointer",
-                textDecoration: "underline",
-              }}
-            >
-              <Link style={LinkStyle} to="/login">
+              <Link
+                style={{
+                  color: "green",
+                  fontWeight: "bold",
+                  textDecoration:"none",
+                }}
+                to="/login"
+              >
                 Login
               </Link>
-            </span>
           </p>
         </form>
       </div>
@@ -201,7 +179,7 @@ function Register() {
             padding: 1rem !important;
           }
           .register-side-text {
-            font-size: 1.3rem !important;
+            font-size: 2.5rem !important;
             text-align: center !important;
           }
         }
