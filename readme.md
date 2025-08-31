@@ -120,10 +120,11 @@ Deployed on **Vercel** using npm run build.
 
 Deployed on **Render** with environment variables configured.   
 
-## Steps: 
-**1.Render may get the backend server closed(Temporaily) ,You need to wait for some time to let the backend server start [ Sorry for the inconvinence USER ].**    
+## Steps:    
 
-**2.After some wait you can hit the Frontend URL....💌**
+**1.Hit the Frontend URL....💌**
+
+**2.Render may get the backend server closed(Temporaily) ,You need to wait for some time to let the backend server start [ Sorry for the inconvinence USER ].** 
 
 # 📬 Contact Us
 
