@@ -6,7 +6,7 @@ import "./index.css";
 
 function GeneratedRecipe() {
   const { gid } = useParams();
-  const [recipeImage, setImage] = useState("/images/redLove.png");
+  const [recipeImage, setImage] = useState("https://media.istockphoto.com/id/943483254/vector/fresh-tasty-grilled-roasted-chicken-turkey-legs-with-vegetables-sliced-potato-cucumber.jpg?s=612x612&w=0&k=20&c=qNYr2kI9cku2On18No0EsLO7-GYmCtaMbv2ZBKYzrfQ=");
   const recipeRef = useRef();
 
   useEffect(() => {

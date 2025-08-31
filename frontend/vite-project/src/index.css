@@ -292,7 +292,7 @@ body {
   border-color: #219653;
 }
 
-.auth-form button {
+.auth-form button, .download-btn {
   padding: 0.85rem;
   border-radius: 6px;
   border: none;
@@ -1442,3 +1442,17 @@ html, body {
   border-radius: 0 0 0 18px;
   opacity: 0.7;
 }
+
+/* top top top*/
+@media print {
+  html, body {
+    height: auto;
+  }
+  * {
+    page-break-inside: avoid; /* Reduce awkward splits */
+  }
+  .recipe-background, .recipe-header, .nav, .mobile-menu-toggle, .footer, .download-btn {
+    display: none;
+  }
+}
+

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer
+      className="footer"
       style={{
         background: "rgb(18, 130, 64)",
         color: "#fff",
@@ -12,7 +13,7 @@ function Footer() {
       }}
     >
       {/* Top Section */}
-      <div
+      <div    
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
