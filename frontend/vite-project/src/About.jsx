@@ -31,19 +31,13 @@ function About() {
               {member.image ? (
                 <img
                   src={member.image}
-                  alt={member.name}
-                  onError={(e) => {
-                    e.target.style.display = "none";
-                    e.target.nextSibling.style.display = "flex";
-                  }}
+                  alt={member.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                  className="user-img"
                 />
               ) : null}
-              <div className="member-initials">
-                {member.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")}
-              </div>
             </div>
 
             <h2 className="about-member-name">{member.name}</h2>
