@@ -11,16 +11,13 @@ const Generate = () => {
   let { register, handleSubmit, reset } = useForm();
   let [userGenerated, setUserGenerated] = useState([]);
   let navigate = useNavigate();
-
+  
   useEffect(() => {
     async function authHanlder() {
       try {
-        let response = await axios.get(
-          "https://healthyfy-1.onrender.com/healthyfy/auth",
-          {
-            withCredentials: true,
-          }
-        );
+        let response = await axios.get("https://healthyfy-1.onrender.com/healthyfy/auth", {
+          withCredentials: true,
+        });
         console.log(response.data.message);
       } catch (err) {
         console.log(err.message);
@@ -221,23 +218,11 @@ const Generate = () => {
       </div>
       <div style={styles.messages}>
         {userGenerated.length === 0 ? (
-          <h1
-            style={{
-              color: "green",
-              textAlign: "center",
-              marginBottom: "2rem",
-            }}
-          >
+          <h1 style={{ color: "green", textAlign: "center", marginBottom: "2rem" }}>
             Generate Custom Recipes Now...
           </h1>
         ) : (
-          <h1
-            style={{
-              color: "green",
-              textAlign: "center",
-              marginBottom: "2rem",
-            }}
-          >
+          <h1 style={{ color: "green", textAlign: "center", marginBottom: "2rem" }}>
             My Generated Recipes
           </h1>
         )}
@@ -274,18 +259,24 @@ const Generate = () => {
           ))}
         </div>
       </div>
-      <form onSubmit={handleSubmit(SubmitPrompt)} style={styles.inputRow}>
+      <form
+        onSubmit={handleSubmit(SubmitPrompt)}
+        style={styles.inputRow}
+      >
         <input
           type="text"
           {...register("prompt")}
           style={styles.input}
           placeholder="Ask Healthyfy Bot about recipes…"
         />
-        <button style={styles.sendBtn} type="submit">
+        <button
+          style={styles.sendBtn}
+          type="submit"
+        >
           <AiOutlineArrowRight />
         </button>
       </form>
-
+      
       {/* Responsive CSS */}
       <style>{`
         @media (max-width: 768px) {
