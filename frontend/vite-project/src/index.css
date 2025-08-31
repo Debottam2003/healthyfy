@@ -238,7 +238,19 @@ body {
   justify-content: center;
   background-image: url("/images/background.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 1rem;
+  color: rgb(255, 255, 255);
+}
+.auth-form-wrapper{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .auth-form {
@@ -253,6 +265,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-decoration: none;
 }
 
 .auth-form h2 {
@@ -310,6 +323,14 @@ body {
   cursor: pointer;
   text-decoration: underline;
   font-weight: bold;
+}
+.auth-background{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.auth-info-text{
+  font-size: 1.5rem;
 }
 
 /* Profile Page */

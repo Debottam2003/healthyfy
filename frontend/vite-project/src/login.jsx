@@ -57,7 +57,11 @@ function Login() {
             <p>
               Do not have an account?{" "}
               <span>
-                <Link className="auth-link" to="/register">
+                <Link style={{
+                  color: "green",
+                  fontWeight: "bold",
+                  textDecoration:"none",
+                }} to="/register">
                   Register
                 </Link>
               </span>
