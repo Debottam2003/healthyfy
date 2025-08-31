@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import ScroollToTop from "./ScroollToTop";
 
 const Generate = () => {
   let { register, handleSubmit, reset } = useForm();
@@ -226,6 +227,7 @@ const Generate = () => {
             My Generated Recipes
           </h1>
         )}
+        <ScroollToTop/>
         <div style={styles.dishCardsRow}>
           {userGenerated?.map((dish, idx) => (
             <Link
