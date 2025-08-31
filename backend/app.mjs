@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 app.use(cors({
-    origin: "https://healthyfy-lzod.vercel.app",
+    origin: ["https://healthyfy-lzod.vercel.app", "http://localhost:5173"],
     credentials: true
 }));
 const PORT = process.env.PORT || 4000;

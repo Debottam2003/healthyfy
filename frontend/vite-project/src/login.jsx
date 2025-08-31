@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 const LinkStyle = {
@@ -13,8 +12,7 @@ const LinkStyle = {
 const whiteThemeStyles = {
   background: "#fff",
   color: "#222",
-  height: "100vh",
-  overFlow: "hidden",
+  minHeight: "100vh",
   width: "100vw",
   display: "flex",
   flexDirection: "column",
@@ -24,6 +22,7 @@ const whiteThemeStyles = {
   boxSizing: "border-box",
   backgroundImage: "url('/images/background.png')",
   backgroundSize: "cover",
+  backgroundPosition: "center",
 };
 
 const formStyles = {
@@ -66,7 +65,7 @@ const buttonStyles = {
 const infoStyles = {
   fontSize: "2rem",
   textAlign: "center",
-  color: "#ffffffff",
+  color: "#fff",
   fontWeight: "bold",
   margin: "2rem 0 0 0",
 };
@@ -82,10 +81,7 @@ function Login() {
         data,
         { withCredentials: true }
       );
-      // alert("Login Successful");
-      // reset();
       if (response.status === 200 || response.statusText === "OK") {
-        // alert("Login Successful");
         reset();
         toast.success("Logged in Successfully.");
         setTimeout(() => {
@@ -93,44 +89,19 @@ function Login() {
         }, 2000);
       }
     } catch (error) {
-      if (error.response.data.message) {
-        // alert(error.response.data.message);
+      if (error.response?.data?.message) {
         toast.error(error.response.data.message);
-        console.log(error.response.statusText + " " + error.response.status);
       } else {
-        console.log(error.message);
         toast.error(error.message);
-        // alert(error.message);
       }
     }
   }
 
   return (
-    <div
-      style={{
-        ...whiteThemeStyles,
-        padding: "0",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          gap: "60px",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          minHeight: "100vh",
-          padding: "2rem 1rem",
-        }}
-      >
-        <div
-          style={{
-            flex: "1 1 350px",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
+    <div style={whiteThemeStyles}>
+      <div className="login-container">
+        {/* Form */}
+        <div className="login-form-wrapper">
           <form style={formStyles} onSubmit={handleSubmit(submitForm)}>
             <h2
               style={{
@@ -170,13 +141,7 @@ function Login() {
               }}
             >
               Do not have an account?{" "}
-              <span
-                style={{
-                  color: "#219653",
-                  cursor: "pointer",
-                  textDecoration: "underline",
-                }}
-              >
+              <span style={{ textDecoration: "underline" }}>
                 <Link style={LinkStyle} to="/register">
                   Register
                 </Link>
@@ -184,15 +149,9 @@ function Login() {
             </p>
           </form>
         </div>
-        <div
-          style={{
-            flex: "1 1 350px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+
+        {/* Info side */}
+        <div className="login-info-wrapper">
           <div style={infoStyles}>
             <h1 style={{ margin: 0 }}>Log in</h1>
             <h1 style={{ margin: 0 }}>to generate</h1>
@@ -200,31 +159,74 @@ function Login() {
           </div>
         </div>
       </div>
-      {/* Responsive styles */}
+
+      {/* Scoped responsive CSS */}
       <style>
         {`
+          .login-container {
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+          }
+
+          .login-form-wrapper,
+          .login-info-wrapper {
+            flex: 1 1 350px;
+            display: flex;
+            justify-content: center;
+          }
+
+          .login-info-wrapper {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          /* Tablet and below */
           @media (max-width: 900px) {
-            div[style*="flex-direction: row"] {
-              flex-direction: column !important;
-              gap: 24px !important;
-              padding: 2rem 0.5rem !important;
+            .login-container {
+              flex-direction: column;
+              gap: 24px;
+              padding: 2rem 0.5rem;
             }
-            div[style*="flex: 1 1 350px"] {
-              width: 100% !important;
-              max-width: 400px !important;
+
+            .login-form-wrapper,
+            .login-info-wrapper {
+              width: 100%;
+              max-width: 450px;
             }
           }
+
+          /* Mobile */
           @media (max-width: 500px) {
             form {
               min-width: 0 !important;
-              max-width: 100vw !important;
+              max-width: 100% !important;
               padding: 1rem !important;
             }
             h2 {
-              font-size: 1.1rem !important;
+              font-size: 1.2rem !important;
             }
-            div[style*="font-size: 1.3rem"] h1 {
-              font-size: 1.1rem !important;
+            .login-info-wrapper h1 {
+              font-size: 1.2rem !important;
+            }
+          }
+
+          /* Large screens */
+          @media (min-width: 1200px) {
+            .login-container {
+              gap: 120px;
+              padding: 4rem;
+            }
+            .login-form-wrapper {
+              max-width: 400px;
+            }
+            .login-info-wrapper h1 {
+              font-size: 2.5rem;
             }
           }
         `}
