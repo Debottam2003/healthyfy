@@ -175,17 +175,19 @@ function Top({ stateChange }) {
                 boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
               }}
             />
-            <div style={{ 
-              fontWeight: 600, 
-              fontSize: "clamp(13px, 2.5vw, 15px)",
-              wordWrap: "break-word"
-            }}>
+            <div
+              style={{
+                fontWeight: 600,
+                fontSize: "clamp(13px, 2.5vw, 15px)",
+                wordWrap: "break-word",
+              }}
+            >
               {cuisine.name}
             </div>
           </div>
         ))}
       </div>
-      
+
       {/* Responsive CSS */}
       <style>{`
         @media (max-width: 768px) {

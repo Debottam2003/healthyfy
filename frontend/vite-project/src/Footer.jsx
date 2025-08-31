@@ -33,11 +33,13 @@ function Footer() {
           >
             Healthyfy
           </h2>
-          <p style={{ 
-            fontSize: "clamp(0.8rem, 2.5vw, 0.9rem)", 
-            color: "rgba(255,255,255,0.8)",
-            lineHeight: "1.5"
-          }}>
+          <p
+            style={{
+              fontSize: "clamp(0.8rem, 2.5vw, 0.9rem)",
+              color: "rgba(255,255,255,0.8)",
+              lineHeight: "1.5",
+            }}
+          >
             Bring the entire world cuisine to your small kitchen.
           </p>
         </div>
@@ -62,8 +64,12 @@ function Footer() {
             }}
           >
             <li style={{ marginBottom: "0.5rem" }}>
-              <Link 
-                style={{ textDecoration: "none", color: "white", display: "block" }} 
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  display: "block",
+                }}
                 to={"/"}
               >
                 Home
@@ -71,7 +77,11 @@ function Footer() {
             </li>
             <li style={{ marginBottom: "0.5rem" }}>
               <Link
-                style={{ textDecoration: "none", color: "white", display: "block" }}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  display: "block",
+                }}
                 to={"/about"}
               >
                 About
@@ -79,7 +89,11 @@ function Footer() {
             </li>
             <li style={{ marginBottom: "0.5rem" }}>
               <Link
-                style={{ textDecoration: "none", color: "white", display: "block" }}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  display: "block",
+                }}
                 to={"/generate"}
               >
                 Generated Recipes
@@ -87,7 +101,11 @@ function Footer() {
             </li>
             <li style={{ marginBottom: "0.5rem" }}>
               <Link
-                style={{ textDecoration: "none", color: "white", display: "block" }}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  display: "block",
+                }}
                 to={"https://ice-scoop.onrender.com/icescoop/"}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -112,24 +130,26 @@ function Footer() {
 
           {/* Team Members */}
           <div style={{ marginBottom: "1rem" }}>
-            <div style={{ 
-              display: "flex", 
-              alignItems: "center", 
-              gap: "0.5rem",
-              flexWrap: "wrap",
-              marginBottom: "0.5rem"
-            }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                flexWrap: "wrap",
+                marginBottom: "0.5rem",
+              }}
+            >
               <FaEnvelope size={14} />
               <span style={{ fontSize: "clamp(0.8rem, 2.5vw, 1rem)" }}>
                 debottamkar2003@gmail.com
               </span>
               <Link
-                style={{ 
-                  textDecoration: "none", 
-                  color: "white", 
+                style={{
+                  textDecoration: "none",
+                  color: "white",
                   display: "flex",
                   alignItems: "center",
-                  gap: "0.25rem"
+                  gap: "0.25rem",
                 }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -139,25 +159,27 @@ function Footer() {
                 <span>Debottam</span>
               </Link>
             </div>
-            
-            <div style={{ 
-              display: "flex", 
-              alignItems: "center", 
-              gap: "0.5rem",
-              flexWrap: "wrap",
-              marginBottom: "0.5rem"
-            }}>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                flexWrap: "wrap",
+                marginBottom: "0.5rem",
+              }}
+            >
               <FaEnvelope size={14} />
               <span style={{ fontSize: "clamp(0.8rem, 2.5vw, 1rem)" }}>
                 samratkarmakarnaihati@gmail.com
               </span>
               <Link
-                style={{ 
-                  textDecoration: "none", 
-                  color: "white", 
+                style={{
+                  textDecoration: "none",
+                  color: "white",
                   display: "flex",
                   alignItems: "center",
-                  gap: "0.25rem"
+                  gap: "0.25rem",
                 }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -167,25 +189,27 @@ function Footer() {
                 <span>Shubhranil</span>
               </Link>
             </div>
-            
-            <div style={{ 
-              display: "flex", 
-              alignItems: "center", 
-              gap: "0.5rem",
-              flexWrap: "wrap",
-              marginBottom: "0.5rem"
-            }}>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                flexWrap: "wrap",
+                marginBottom: "0.5rem",
+              }}
+            >
               <FaEnvelope size={14} />
               <span style={{ fontSize: "clamp(0.8rem, 2.5vw, 1rem)" }}>
                 mondalgaganandra@gmail.com
               </span>
               <Link
-                style={{ 
-                  textDecoration: "none", 
-                  color: "white", 
+                style={{
+                  textDecoration: "none",
+                  color: "white",
                   display: "flex",
                   alignItems: "center",
-                  gap: "0.25rem"
+                  gap: "0.25rem",
                 }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -198,19 +222,21 @@ function Footer() {
           </div>
 
           {/* Project Github Link */}
-          <div style={{ 
-            display: "flex", 
-            alignItems: "center", 
-            gap: "0.5rem",
-            flexWrap: "wrap"
-          }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              flexWrap: "wrap",
+            }}
+          >
             <Link
-              style={{ 
-                textDecoration: "none", 
-                color: "white", 
+              style={{
+                textDecoration: "none",
+                color: "white",
                 display: "flex",
                 alignItems: "center",
-                gap: "0.5rem"
+                gap: "0.5rem",
               }}
               target="_blank"
               rel="noopener noreferrer"
