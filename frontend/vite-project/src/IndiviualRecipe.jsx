@@ -5,7 +5,9 @@ import axios from "axios";
 function IndiviualRecipe() {
   const { rid } = useParams();
   //   let [recipeName, setName] = useState("DishName");
-  let [recipeImage, setImage] = useState("");
+  let [recipeImage, setImage] = useState(
+    "https://media.istockphoto.com/id/943483254/vector/fresh-tasty-grilled-roasted-chicken-turkey-legs-with-vegetables-sliced-potato-cucumber.jpg?s=612x612&w=0&k=20&c=qNYr2kI9cku2On18No0EsLO7-GYmCtaMbv2ZBKYzrfQ="
+  );
   let recipeRef = useRef();
   useEffect(() => {
     async function getRecipe() {
@@ -51,3 +53,10 @@ function IndiviualRecipe() {
 }
 
 export default IndiviualRecipe;
+
+// setRecipe(recipe);
+
+// <div
+//   className="recipe-body"
+//   dangerouslySetInnerHTML={{ __html: recipe }}
+// />
