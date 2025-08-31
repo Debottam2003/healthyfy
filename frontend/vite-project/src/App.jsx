@@ -1,6 +1,7 @@
 import Navber from "./Navber";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
+import ScroollToTop from "./ScroollToTop";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Outlet />
       </div>
       <Footer />
+      <ScroollToTop />
     </div>
   );
 }

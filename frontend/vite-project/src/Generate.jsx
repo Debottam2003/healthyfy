@@ -6,7 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import ScroollToTop from "./ScroollToTop";
 
 const Generate = () => {
   let { register, handleSubmit, reset } = useForm();
@@ -216,7 +215,6 @@ const Generate = () => {
 
   return (
     <div style={styles.chatContainer}>
-      <ScroollToTop />
       <div style={styles.header}>
         <GiRobotGolem size={28} />
         Healthyfy Bot

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Top from "./Top.jsx";
 import { Link } from "react-router-dom";
-import ScroollToTop from "./ScroollToTop.jsx";
 import toast, { Toaster } from "react-hot-toast";
 
 function RecipeCard() {
@@ -220,7 +219,7 @@ function RecipeCard() {
             </div>
           );
         })}
-        <ScroollToTop />
+        {/* <ScroollToTop /> */}
         <Toaster position="top-right" reverseOrder={false} />
       </div>
     </>
