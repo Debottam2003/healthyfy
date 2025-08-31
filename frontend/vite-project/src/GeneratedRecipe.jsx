@@ -1,59 +1,56 @@
+// IndividualRecipe.js
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "./index.css";
 
 function GeneratedRecipe() {
   const { gid } = useParams();
-  const [recipeImage, setImage] = useState(
-    "https://via.placeholder.com/500x350?text=Recipe+Image"
-  );
+  const [recipeImage, setImage] = useState("/images/redLove.png");
   const recipeRef = useRef();
 
   useEffect(() => {
     async function getRecipe() {
       try {
-        const response = await axios.get(
-          `https://healthyfy-1.onrender.com/healthyfy/userGenerations/${gid}`,
-          { withCredentials: true }
+        let response = await axios.get(
+          `https://healthyfy-1.onrender.com/healthyfy/userGenerations/${gid}`,{withCredentials:true}
         );
-        const { imageurl, content: recipe } = response.data;
+        let { imageurl, content:recipe } = response.data;
         setImage(imageurl);
         recipeRef.current.innerHTML = recipe;
       } catch (err) {
-        console.error(err.response?.statusText || err.message);
+        if (err.response) {
+          console.log(err.response.statusText);
+          console.log(err.response.data.message);
+        } else {
+          console.log(err.message);
+        }
       }
     }
     getRecipe();
   }, [gid]);
 
   return (
-    <div style={styles.container}>
-      <img src={recipeImage} alt="Recipe" style={styles.image} />
-      <div className="recipe-body" ref={recipeRef} style={styles.recipeBody}></div>
+    <div className="recipe-page">
+      <div 
+        className="recipe-background" 
+        style={{ backgroundImage: `url("${recipeImage}")` }}
+      ></div>
+      
+      <div className="recipe-content">
+        <div className="recipe-header">
+          <h1 className="recipe-title">Awesome Recipes from Healthyfy</h1>
+        </div>
+        
+        <div className="recipe-container">
+          <div className="recipe-image-container">
+            <img src={recipeImage} alt="Recipe" className="recipe-image" />
+          </div>
+          <div className="recipe-body" ref={recipeRef}></div>
+        </div>
+      </div>
     </div>
   );
 }
-
-const styles = {
-  container: {
-    padding: "2rem",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    gap: "20px",
-    flexWrap: "wrap", // allows wrapping on smaller screens
-  },
-  recipeBody: {
-    maxWidth: "600px",
-    flex: "1 1 300px",
-  },
-  image: {
-    width: "100%",
-    maxWidth: "500px",
-    height: "auto",
-    objectFit: "cover",
-    flex: "1 1 300px",
-  },
-};
 
 export default GeneratedRecipe;
