@@ -33,8 +33,7 @@ A **smart recipe platform** that leverages **AI to generate personalized recipes
 ## 🛠 Tech Stack
 - **Frontend:** React + Vite (with CSS-3 for styling).  
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React" />  **+**
-<img src="https://cdn.simpleicons.org/vite/646CFF" width="40" alt="Vite" />
-**+** 
+<img src="https://cdn.simpleicons.org/vite/646CFF" width="40" alt="Vite" />   **+** 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" alt="CSS3" />   
 
 - **Backend:** Node.js, Express.js.  
