@@ -1,61 +1,59 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import ScroollToTop from "./ScroollToTop";
 
 function GeneratedRecipe() {
   const { gid } = useParams();
-  //   let [recipeName, setName] = useState("DishName");
-  let [recipeImage, setImage] = useState(
-    `c:/Users/DEBOTTAM/AppData/Local/Temp/world-food-day-2020.png.webp`
+  const [recipeImage, setImage] = useState(
+    "https://via.placeholder.com/500x350?text=Recipe+Image"
   );
-  let recipeRef = useRef();
+  const recipeRef = useRef();
+
   useEffect(() => {
     async function getRecipe() {
       try {
-        let response = await axios.get(
+        const response = await axios.get(
           `https://healthyfy-1.onrender.com/healthyfy/userGenerations/${gid}`,
-          {
-            withCredentials: true,
-          }
+          { withCredentials: true }
         );
-        // console.log(response.statusText === "OK");
-        // console.log(response.data);
-        let { imageurl, content: recipe } = response.data;
-        //   setName(name);
+        const { imageurl, content: recipe } = response.data;
         setImage(imageurl);
         recipeRef.current.innerHTML = recipe;
       } catch (err) {
-        if (err.response.data.message) {
-          console.log(err.response.statusText);
-          console.log(err.response.data.message);
-        } else {
-          console.log(err.message);
-        }
+        console.error(err.response?.statusText || err.message);
       }
     }
     getRecipe();
-  }, []);
+  }, [gid]);
+
   return (
-    <div
-      style={{
-        padding: "2rem",
-        justifyContent: "center",
-        display: "flex",
-        flexDirection: "row",
-        gap: "20px",
-      }}
-    >
-      {/* <h1>{recipeName}</h1> */}
-      <div className="recipe-body" ref={recipeRef}></div>
-      <img
-        src={recipeImage}
-        alt="Picture"
-        style={{ width: "500px", height: "350px" }}
-      />
-      <ScroollToTop />
+    <div style={styles.container}>
+      <img src={recipeImage} alt="Recipe" style={styles.image} />
+      <div className="recipe-body" ref={recipeRef} style={styles.recipeBody}></div>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    padding: "2rem",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: "20px",
+    flexWrap: "wrap", // allows wrapping on smaller screens
+  },
+  recipeBody: {
+    maxWidth: "600px",
+    flex: "1 1 300px",
+  },
+  image: {
+    width: "100%",
+    maxWidth: "500px",
+    height: "auto",
+    objectFit: "cover",
+    flex: "1 1 300px",
+  },
+};
 
 export default GeneratedRecipe;
