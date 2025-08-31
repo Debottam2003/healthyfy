@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import ScroollToTop from "./ScroollToTop";
 
 function GeneratedRecipe() {
   const { gid } = useParams();
@@ -52,6 +53,7 @@ function GeneratedRecipe() {
         alt="Picture"
         style={{ width: "500px", height: "350px" }}
       />
+      <ScroollToTop />
     </div>
   );
 }
