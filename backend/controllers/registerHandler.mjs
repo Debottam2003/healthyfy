@@ -15,7 +15,7 @@ const registerHandler = async (req, res) => {
             return res.status(400).json({ message: "Email already registered" });
         }
         let { rows } = await pool.query("insert into husers ( name , email , password , nationality ) values($1 , $2 , $3  , $4 ) returning uid", [user.name, user.email, user.password, user.nationality]);
-        let token = jwt.sign({ uid: rows[0].uid }, secret, { expiresIn: '10m' });
+        let token = jwt.sign({ uid: rows[0].uid }, secret, { expiresIn: '7d' });
         res.cookie('token', token, { maxAge:  7 * 24 * 60 * 60 * 1000, httpOnly: true, secure: true, sameSite: 'none' });
         res.status(200).json({ message: "Registered Successfully" });
     } catch (error) {
