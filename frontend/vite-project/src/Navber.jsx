@@ -72,7 +72,7 @@ function Navbar() {
         ></div>
       )}
 
-      <style jsx>{`
+      <style>{`
         /* Base Navbar Styles */
         .nav {
           position: fixed;

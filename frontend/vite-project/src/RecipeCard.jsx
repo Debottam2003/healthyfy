@@ -11,7 +11,9 @@ function RecipeCard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("https://healthyfy-1.onrender.com/healthyfy/");
+        const response = await axios.get(
+          "https://healthyfy-1.onrender.com/healthyfy/"
+        );
         setData(response.data);
         try {
           let userLikes = await axios.get(
