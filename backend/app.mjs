@@ -28,5 +28,14 @@ async function main() { // entry point of the application
         console.error(err);
         process.exit(1);
     }
+    setInterval(() => {
+        try {
+            console.log("pinging the server to keep it alive");
+            fetch("https://healthyfy-1.onrender.com/healthyfy");
+        } catch (err) {
+            console.error(err.message);
+        }
+    }, 1000 * 60 * 60);// 
+
 }
 main();
