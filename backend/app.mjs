@@ -30,12 +30,13 @@ async function main() { // entry point of the application
     }
     setInterval(() => {
         try {
-            console.log("pinging the server to keep it alive");
+            console.log("pinging the server to keep it alive both healthyfy and icescoop");
             fetch("https://healthyfy-1.onrender.com/healthyfy");
+            fetch("https://ice-scoop.onrender.com/icescoop/");
         } catch (err) {
             console.error(err.message);
         }
-    }, 1000 * 60 * 60);
+    }, 60000);// ping the server every 60 seconds to keep it alive
 
 }
 main();
