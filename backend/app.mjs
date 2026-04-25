@@ -35,7 +35,7 @@ async function main() { // entry point of the application
         } catch (err) {
             console.error(err.message);
         }
-    }, 1000 * 60 * 60);// 
+    }, 1000 * 60 * 60);
 
 }
 main();
